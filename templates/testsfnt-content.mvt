@@ -1,0 +1,190 @@
+<mvt:item name="ry_toolbelt" param="Array_FromList|
+    l.all_settings:fcats|'in-stock-encaustic-cement-tile,pacific-collection-cement-tile,terrazzo-encaustic-cement-tile,pacific-shapes-collection-cement-tile,mexican-encaustic-cement-tile,cement-tile-shop-collection'" />
+
+<!--begin slider-->
+<mvt:item name="ry_toolbelt" param="category_children|'slideshow'" />
+<mvt:item name="ry_toolbelt" param="counter|nbr=1" />
+<div id="headerslider">
+    <div class="wrap">
+        <div id="slide-holder">
+            <div id="slide-runner">
+	    <mvt:foreach iterator="subcat" array="category_children">
+	    <mvt:item name="ry_toolbelt" param="Lookup|ctgy_header|g.cathead|l.all_settings:subcat:code" />
+                <a href="&mvt:global:cathead;"><img id="slide-img-&mvt:global:counter:nbr;" src="&mvt:subcat:image_title;" class="slide" alt="&mvt:subcat:name;" /></a>
+	    <mvt:item name="ry_toolbelt" param="counter|nbr+1" />
+	    </mvt:foreach>
+              
+                <div id="slide-controls">
+                 <p id="slide-client" class="text"><strong></strong><span></span></p>
+                 <p id="slide-desc" class="text"></p>
+                 <p id="slide-nav"></p>
+                </div>
+            </div>
+        </div>
+       <mvt:item name="ry_toolbelt" param="counter|nbr=1" />
+       <script type="text/javascript">
+
+       $(function() {
+          if (!window.slider) slider={};
+          slider.data=[
+            <mvt:foreach iterator="subcat" array="category_children">
+              <mvt:item name="ry_toolbelt" param="Lookup|ctgy_footer|g.catfoot|l.all_settings:subcat:code" />
+                {"id":"slide-img-&mvt:global:counter:nbr;","client":"","desc":"&mvt:global:catfoot;"},
+              <mvt:item name="ry_toolbelt" param="counter|nbr+1" />
+            </mvt:foreach>
+          ];
+       });
+
+       </script>
+    </div>
+</div>
+<!--end slider-->
+
+  <!-- Promotional Banner-->
+  <div id="free-shipping">
+      <mvt:if expr="NOT ISNULL l.settings:skincust:promo_banner_link">    
+          <a href="&mvte:skincust:promo_banner_link;"/><span>Free Shipping</span></a>
+      </mvt:if>
+  </div>
+
+<style>
+
+
+</style>
+<!-- Uses assigned categories and displays link and title image -->
+<mvt:item name="ry_toolbelt" param="counter|nbr=1" />
+<div style="padding-top:12px;float:left;">
+	<mvt:foreach iterator="fcat" array="fcats">
+	<mvt:item name="ry_toolbelt" param="Category_Load|g.found|l.all_settings:fcat" />
+	<div class="tile-&mvt:global:counter:nbr;">
+		<div><a href="https://&mvt:global:domain:name;/cement-tile/&mvt:fcat;.html"><img src="&mvte:category:image_tree;" border="0"></a></div>
+		<div style="padding-top:8px;"><a href="https://&mvt:global:domain:name;/cement-tile/&mvt:fcat;.html" style="text-decoration: none;">&mvte:category:name;</a></div>
+	</div>
+	<mvt:item name="ry_toolbelt" param="counter|nbr+1" />
+</mvt:foreach>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>	
+
+    <!-- Featured Products pulled from featured_products category -->
+    <div id="featured-products">
+        <mvt:item name="featured_products" />
+    </div>
+
+
+
+<div id="instagram" style="display: none; position: relative;">
+<div class="column whole ">
+	<div class="row instagram-products">
+		<div class="column whole h3 np"><span class="inline-block">Instagram</span></div>
+
+                    
+		<div class='overlay-insta-feed'></div>
+             <div class="content-insta-photo prod" >
+<mvt:comment>
+   <!-- post item -->
+    <div class="post-item column half medium-one-third" style="display:none;">
+        <img class="post-thumb" src=""/>
+        <div class="post-container" data-id=""> 
+            <div>
+                <div class="arrow-button prev-post"></div>
+                <i class="fa fa-times close" aria-hidden="true"></i>
+            
+                <img class="post-img" src=""/>
+                
+                <div class="right-show-insta">
+                    
+                    <div class="insta-user"> 
+                        <img class="avatar" src=""/>
+                        <a class="user-name" href="#" target="_blank"></a>
+                    </div>
+                    
+                    <p class="likes"><span></span> likes</p>
+                    <a class="date" href="#" target="_blank"></a>
+                    
+                    <div class="text-insta-feed"> 
+                        <p>
+                            seximxo Crea lol qipe <span>#Lmado</span>
+                            <span>#Lmado</span><span>#Lmado</span><span>#Lmado</span><span>#Lmado</span>
+                        </p>
+                    </div>
+                    
+                    <h3>SHOP THE PRODUCTS</h3>
+                    <div class="attached-products"></div>
+                    
+                </div>
+                <div class="arrow-button next-post"></div>
+            </div>
+        </div>
+    </div> <!-- post item end -->
+</mvt:comment>
+
+              </div>
+</div>
+
+
+
+        </div>
+</div>
+
+
+
+
+
+   <!-- Welcome text -->
+    <div id="welcome-banner">
+	<mvt:item name="welcome_text" />
+    </div>
+
+<div id="visualizer-sfnt-media">
+		<h1 style="margin: 9px 0 0;padding: 12px 0 13px 8px;color: #523f29;font-size: 18px;font-weight: normal;">Cement Tile Shop Room Visualizer</h1>
+		<p style="color: #523f29;font-size: 13px;margin-top: 10px;padding: 0 7px 10px;">With our revolutionary Cement Tile Shop <a href="https://cementtileshop.chameleonpower.com/" target="_blank">Room Visualizer</a> you can now apply our cement tiles to a room scene or even upload your own room. Click on the image below to get started on your dream room!</p>
+		<a href="https://cementtileshop.chameleonpower.com/" target="_blank"><img src="/images/visualizer.jpg" style="width:100%;"/></a>
+		<h1 style="margin: 23px 0 0;padding: 12px 0 13px 8px;color: #523f29;font-size: 18px;font-weight: normal;">Cement Tile Shop Customizer</h1>
+		<p style="color: #523f29;font-size: 13px;margin-top: 10px;padding: 0 7px 10px;">Our unique <a href="https://customizer.cementtileshop.com/ " target="_blank">Tile Customizer</a> allows you to take any of our cement tile patterns and customize them in the colors of your choice. Once customized, save your choices for future use, share on social media or via email, or easily submit a request for a quote. Click on the image below to begin, the possibilities are endless!</p>
+		<a href="https://customizer.cementtileshop.com/ " target="_blank"><img src="/images/customizer.jpg" style="width:100%;"/></a>
+	</div>
+
+<div id="social-media">
+<h1 style="margin: 10px 0 0;padding: 12px 0 13px 8px;">Follow Us</h1>
+<div id="social-icons-holder">
+   <!-- Social Media Icons-->
+
+                <a href="https://instagram.com/cementtileshop" target="_blank"><i class="sprite sprite-instagram" title="Instagram"></i></a>
+                <a href="https://pinterest.com/cementtileshop/" target="_blank"><i class="sprite sprite-pinterest"></i></a>
+
+    <mvt:if expr="NOT ISNULL l.settings:skincust:facebook_account">
+    	<a href="https://www.facebook.com/&mvte:skincust:facebook_account;" target="_blank"><i class="sprite sprite-facebook"></i></a>
+    </mvt:if>
+	
+		<a href="https://www.houzz.com/pro/cementtileshop/cement-tile-shop" target="_blank"><i class="sprite sprite-houzz"></i></a>
+
+    <mvt:if expr="NOT ISNULL l.settings:skincust:twitter_account">
+    	<a href="https://www.twitter.com/&mvte:skincust:twitter_account;" target="_blank"><i class="sprite sprite-twitter"></i></a>
+    </mvt:if>
+  
+		<a href="https://plus.google.com/+Cementtileshopusa" target="_blank"><i class="sprite sprite-googleplus"></i></a>
+		<a href="https://www.youtube.com/CementTileShop" target="_blank"><i class="sprite sprite-youtube"></i></a>
+  
+    <mvt:comment><mvt:if expr="NOT ISNULL l.settings:skincust:youtube_account">
+    	<a href="https://www.youtube.com/user/&mvte:skincust:youtube_account;" target="_blank"><i class="sprite sprite-youtube"></i></a>
+    </mvt:if></mvt:comment>
+    
+    <mvt:if expr="NOT ISNULL l.settings:skincust:blog_url">
+    	<a href="&mvte:skincust:blog_url;" target="_blank"><img src="/images/blogger.jpg" class="social-icons" title="Blog" alt="Blog"/></a>
+    </mvt:if>
+
+    	
+		
+		
+</div>
+	
+<div id="mc_embed_signup">
+<form action="https://cementtileshop.us5.list-manage.com/subscribe/post?u=0a330c8f8b85daf42e5db75b8&amp;id=57c7a4c3bd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <label for="mce-EMAIL">Subscribe to receive cement tile inspiration!</label>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+
+</div>

@@ -1,0 +1,28 @@
+{
+    "hdft": {
+        "footer": {
+            "template_filename": "affr-footer.mvc",
+            "template_id": 898
+        },
+        "header": {
+            "template_filename": "affr-header.mvc",
+            "template_id": 897
+        }
+    },
+    "seo_settings": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    }
+}

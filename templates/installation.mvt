@@ -1,0 +1,328 @@
+<mvt:item name="html_profile" />
+<head>
+	<title>&mvt:store:name;: Installation</title>
+	<base href="&mvt:global:basehref;" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<mvt:item name="head" param="css_list" />
+<!-- Begin MailChimp Signup Form -->
+	<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+                #mc_embed_signup{background:#fff; clear:left; font-size:14px; }
+                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	</style>
+	<mvt:item name="head" param="head_tag" />
+
+<style type="text/css">
+#secondary .widget-title {
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    margin-right: 0px;
+    /* font-size: 22px; */
+    background: #eee;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+    background-image: url("https://www.cementtileshop.com/mm5/graphics/00000001/plus13.png");
+    background-repeat: no-repeat;
+    background-position: 8px 6px;
+}
+
+
+#secondary .widget .widget-content {
+    display: none;
+    margin-top: 10px;
+}
+#secondary .widget.active .widget-title, #secondary .widget.active ul {
+
+    background: #666;
+    color: #fff;
+    background-image: url("https://www.cementtileshop.com/mm5/graphics/00000001/minus13.png");
+    background-repeat: no-repeat;
+    background-position: 8px 6px;
+}
+
+#printables h1 {
+    background: #fff;
+}
+
+#secondary ol {
+	list-style-type: decimal;
+	padding-left: 75px;
+	line-height: 1.25;
+}
+
+#secondary li {
+	position: relative; 
+	left: -20px; 
+	margin-top: 6px;
+}
+
+</style>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+</head>
+<body class="INSTALL">
+<div id="site-container">
+<mvt:item name="hdft" param="global_header" />
+
+	<section class="o-layout">
+		<div class="o-layout__item u-width-12">
+			<section class="t-expanded-block u-bg-white">
+				<div class="o-layout__item t-expanded-block__item">
+					<br>
+					<div class="o-layout o-layout--column-reverse o-layout--row-reverse--l">
+						<div class="o-layout__item u-width-12 u-width-9--l">
+							<section class="o-layout">
+								<div class="o-layout__item">
+									<h1 class="c-heading-delta">&mvte:page:name;</h1>
+									<hr class="c-keyline">
+								</div>
+							</section>
+					
+							<section class="o-layout">
+								<div class="o-layout__item">
+									<mvt:item name="hdft" param="header" />
+								</div>
+							</section>
+				
+							<section class="o-layout" id="content-container">
+								<div class="o-layout__item">
+									<h1><strong>Cement Tile Installation Guidelines</strong></h1>
+
+<p>When properly installed, cement tiles will result in a beautiful, durable, easy to maintain surface that can be enjoyed for many years. These instructions are provided as a helpful guide to installing your cement tiles. Cement Tile Shop will not be held responsible for improper installation of your cement tile or specific jobsite conditions. Please consult a professional contractor to advise on installation.</p>
+<p>Be sure to have a copy of these recommendations and familiarize yourself and the installer with these recommendations prior to starting installation. You and your installer are responsible for ensuring proper installation and sealing of the tiles.</p>
+
+
+<div id="printables"><h1 align="center"><a href="https://www.cementtileshop.com/mm5/graphics/00000001/Installation_Guidelines_English.pdf" target="_blank">Printable Instructions (English)</a></h1> </div>
+<div id="printables"><h1 align="center"><a href="https://www.cementtileshop.com/mm5/graphics/00000001/Installation_Guidelines_Spanish.pdf" target="_blank">Printable Instructions (Spanish)</a></h1> </div>
+
+<aside id="secondary" class="col-md-3 col-sm-3">
+    <div class="row">
+
+        <!-- .widget STARTS -->
+        <div class="widget">
+            <div class="widget-inner">
+                <h1 class="widget-title">Installation</h1>
+
+                <div id="code" class="widget-content">
+                    
+                     <ol>
+                       <li>
+                    <p>Inspect your order carefully. Cement Tile Shop will not be responsible for material that has been cut or installed. Throughout the installation process and handling of the tile, be careful not to damage the finished surface or corners of the tiles.</p></li>
+                    
+                       <li><p>Do not let the cement tile boxes get wet! Store material in a dry area. Moisture or dampness can cause the tiles to get stained, have faded color, a damaged surface or efflorescence causing a white powdery effect on the surface of the tile from moisture coming through from the bottom of the tile.</p></li>
+                       <li>
+                    <p>Allow interior tiles to season in their final environment prior to installation.</p></li>
+                       <li>
+                    <p>Cement Tile is a cement-based product and may have residue on the surface. This will be removed during the cleaning prior to grouting, and buffing process after installation, as well as after implementation of an ongoing maintenance routine. It is recommended to wipe the back of the tiles with a damp sponge prior to placing in thin set to remove concrete dust residue and enable proper adhesion.</p></li>
+                       <li>
+                    <p>Install over flat, level and stable cured concrete surface or suitable stable sub-floor (such as Hardibacker, Durock or Ditra) or wall surface. Wall installation on drywall is acceptable when installed with appropriate non-sag setting materials.</p></li>
+                    
+                       <li><p>Cement tile, as a product of natural materials, is subject to color and tonal variations and may require blending of tiles. It is recommended to shuffle tile from different boxes during installation to achieve a uniform effect.</p></li>
+                       <li>
+                    <p>Use a high quality, medium-bed thin set adhesive, such as a Laticrete or Mapei product. Contact adhesive manufacturer to recommend the appropriate adhesive. Follow adhesive manufacturer's instructions. Cement tiles are not intended for installation methods employing large quantities of water.</p></li>
+                       <li>
+                    <p>Make sure that adhesive is applied to the full back of each tile (100% coverage) using a large notch trowel (At least 1/2” notched trowel). Spread floor and also back butter the tiles like a natural stone installation. Make sure all tiles are level so there is not any lipping. Do not beat with a mallet or rubber hammer to set tiles, level the tiles using hand pressure. Remove any excess adhesive from the surface with a damp cloth or sponge while it is fresh. Tiles should be cut using a sharp diamond blade in conjunction with water to avoid chipping of edges. Recommended grout joint width is a tight joint of 1/16" - 1/8". If using spacers, we recommend a soft, flexible spacer.</p> </li>
+                    
+                    </ol>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <!-- .widget ENDS -->
+
+        <!-- .widget STARTS -->
+        <div class="widget">
+            <div class="widget-inner">
+                 <h1 class="widget-title">Grouting and Sealing</h1>
+
+                <div id="store" class="widget-content">
+                 
+                 
+                    <ol start="9">
+                       <li><p>Although our cement tiles are pre-sealed at the factory for protection during shipping, sealing with an impregnating or penetrating sealer for natural stone is still necessary during installation. Sealer should be applied to clean tiles prior to grouting. Only use a PH neutral cleaner, do not use any acids or alkalines to clean tiles. Look for cleaning products suitable for use on natural stone. Be sure tiles and setting material are thoroughly dry prior to sealing. Apply sealer in thin layers, until the tiles will not soak up any more. Wipe off any excess sealer before it dries, and allow the sealer to cure according to the manufacturer’s instructions. When properly sealed, water should bead on the surface of the tile. We sell a penetrating sealer, Miracle 511 Porous Plus, in gallon (covers approx. 200-250 sq. ft.) and quart sizes (covers approx. 40-60 sq. ft.). </p></li>
+                    
+                       <li><p>Cement Tile Shop recommends <a href="http://www.mapei.com/US-EN/Tile-&-Stone-Installation-Systems/Ready-to-Use-Products/MAPEI-Flexcolor-CQ" target="_blank">MAPEI Flexcolor CQ Grout</a></h1>. MAPEI Flexcolor CQ is formulated with the latest innovation in quartz aggregate, which ensures color consistency, ease of cleanability and improved workability. In addition, this grout can be used on sensitive tile surfaces once tested and cures naturally from evaporation of the low level of water in the formulation. When grouting, do not spread the entire floor with grout like a porcelain or ceramic tile. Work in small areas, typically 15-30 sq. ft. at a time and clean thouroughly before moving on to a new area. With quartz grout, dark colors (even black) can be used when installed correctly.<p><b>Note: If using a standard unsanded grout (such as Mapei, Custom or Laticrete), follow manufacturer's instructions. Typically cement tile is grouted with white or light colored grout. If you decide to use colored grout we recommend that it be a color that is the same, or lighter than, the lightest color used in the pattern. Dark colored grout is not recommended. Dark grout can cause stains on the tile that can be difficult to remove. Joints should be full and free of all voids and pits. Grout should be applied in small areas and immediately cleaned. Do not spread the entire floor with grout like a porcelain or ceramic tile. Once grout has been applied and starts to dry, remove excess grout immediately. Grout that sits too long can be difficult to remove from the tile. Do not affix duct tape, gaffer tape or acid tape directly onto cement tiles surface. Tape can discolor or stain your cement tiles. </b></p></li>
+                    
+                       <li><p>After installation, wash floor with a neutral detergent. Any extra residue or mortar should be removed immediately. Do not allow water or other liquids to spot, pond or ring on the surface (ie: Do not leave spillages, drips or wet buckets, cups, footmarks, etc. on the surface at any time). For hard to remove residue, a single disc floor machine with a white pad may be used. Be sure to wet the surface first when using a floor machine or other polisher, and clean any residue immediately.</p></li>
+                       <li><p>Seal the clean floor, including grout, a second time with the penetrating sealer. Again, tiles and grout must be thoroughly dry prior to sealing. </p></li>
+		       <li><p>Cover the tile immediately after completion with a protective covering to prevent staining and damage during the remainder of construction.</p></li>
+                    </ol>                 
+                 
+                </div>
+            </div>
+        </div>
+        <!-- .widget ENDS -->
+
+        <!-- .widget STARTS -->
+        <div class="widget">
+            <div class="widget-inner">
+                 <h1 class="widget-title">Maintenance</h1>
+
+                <div id="books" class="widget-content">
+
+                    <ol start="14">
+                       
+                    
+                       <li><p>For ongoing maintenance, clean regularly with a neutral detergent and buff tiles with a white pad. A natural patina will occur as the floor is maintained and experiences natural wear. Water spotting will be eliminated through an ongoing maintenance routine. The use of properly sized walk-off mats at entrances and sweeping or dust mopping is important to remove abrasive grit.</p></li>
+                    
+                           </ol>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- .widget ENDS -->
+<div class="o-layout__item">
+									
+<h1 style="padding-top:40px;"> <strong>Zellige Tile Installation Guidelines</strong></h1>
+
+<p>When properly installed, zellige tiles will result in a beautiful, durable, easy to maintain surface that can be enjoyed for many years. These instructions are provided as a helpful guide to installing your cement tiles. Cement Tile Shop will not be held responsible for improper installation of your zellige tile or specific jobsite conditions. Please consult a professional contractor to advise on installation.</p>
+<p>Be sure to have a copy of these recommendations and familiarize yourself and the installer with these recommendations prior to starting installation. You and your installer are responsible for ensuring proper installation of the tiles.</p>
+
+
+<div id="printables"><h1 align="center"><a href="https://www.cementtileshop.com/mm5/graphics/00000001/Zellige Installation Guidelines.pdf" target="_blank">Printable Instructions (English)</a></h1> </div>
+
+        <!-- .widget STARTS -->
+        <div class="widget">
+            <div class="widget-inner">
+                 <h1 class="widget-title">Installation</h1>
+
+                <div id="books" class="widget-content">
+
+                    <ol start="1">
+                       
+                    
+                       <li><p>Inspect your order carefully. Cement Tile Shop will not be responsible for material that has been cut or installed. Throughout the installation process and handling of the tile, be careful not to damage the finished surface, edges or corners of the tiles. Use caution and clean hands.</p></li>
+                    
+                       <li><p>Store the material in a dry area. Allow interior tiles to acclimate in their final environment at least 12 hours prior to installation. Work in a clean and well-ventilated room.</p></li>
+                       
+			<li><p>Zellige tiles may have dust residue on the surface of the tiles. It is recommended dip each tile in water or to wipe the tiles, front and back, with a clean, damp sponge prior to placing in thin set to remove dust residue and enable proper adhesion.</p></li>
+                       
+			<li><p>Install over flat, level and stable wall surface or cured concrete surface or suitable stable sub-floor (such as Hardibacker, Durock or Ditra). Wall installation on drywall is acceptable when installed with appropriate non-sag setting materials. Zellige tiles can be used on floors, but are recommended in only areas that get light traffic. Unglazed zellige tiles <strong>(Seashell Unglazed and Unglazed Terracotta only)</strong> can be used in heavier traffic areas.</p></li>
+                       
+			<li><p>Zellige tile, as a handmade product of natural materials, is subject to color and tonal variations from the kiln firing process and requires blending of tiles. It is recommended to shuffle tile from different boxes during installation to achieve a uniform effect.</p></li>
+                    
+                       <li><p>Use a high quality, medium-bed thin set adhesive, such as a Laticrete or Mapei product. Contact adhesive manufacturer to recommend the appropriate adhesive. Follow adhesive manufacturer's instructions.</p></li>
+                       
+			<li><p>Make sure that adhesive is applied to the full back of each tile (100% coverage) using a large, notched trowel (At least 1/2”). Spread the wall/floor and the back of tiles with adhesive. Zellige tiles have varying thicknesses. Not all tiles will be perfectly even. Do not beat with a mallet or rubber hammer to set tiles, level your tiles using hand pressure. We recommend placing the tiles as close together as possible. Remove any excess adhesive from the surface with a damp cloth or sponge while it is fresh.</p></li>
+                       
+			<li><p>Tiles should be cut using a sharp diamond blade in conjunction with water to avoid chipping of edges. <strong>If using spacers, we recommend a soft, flexible spacer.</strong></p> </li>
+                       
+			<li><p>Our zellige tiles are of the highest quality, but they are also handmade. Some tiles may have minor damage or imperfections that you may not like. Use the good parts of these tiles for cuts or use along edges or corners.</p></li>
+                    
+                           </ol>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- .widget ENDS -->
+
+<!-- .widget STARTS -->
+        <div class="widget">
+            <div class="widget-inner">
+                 <h1 class="widget-title">Grouting</h1>
+
+                <div id="books" class="widget-content">
+
+                    <ol start="10">
+                       
+                       <li><p>Unglazed zellige tiles <strong>(Seashell Unglazed and Unglazed Terracotta only)</strong> require sealer. Apply sealer in thin layers, until the tiles will not soak up any more. Wipe off any excess sealer before it dries and allow the sealer to cure according to the manufacturer’s instructions. When properly sealed, water should bead on the surface of the tile. Again, tiles and grout must be thoroughly dry prior to sealing. We sell a penetrating sealer, Miracle 511 Porous Plus, in gallon (covers approx. 200-250 sq. ft.) and quart sizes (covers approx. 40-60 sq. ft.).</p></li>
+                    
+                       <li><p>The tile should dry for 24 hours prior to grouting. For interior use, Cement Tile Shop recommends Mapei Flexcolor CQ Grout. This product is formulated with the latest innovation in quartz aggregate, which ensures color consistency, and ease of cleanability. This grout is premixed and ready to use. In addition, this grout can be used on sensitive tile surfaces once tested and cures naturally from evaporation of the low level of water in the formulation. With quartz grout, dark colors (even black) can be used when installed correctly. We sell Mapei Flexcolor CQ Grout in 1 Gallon containers (covers 138-278 sq. ft.).</b></p>
+			    <p>For exterior, sauna/steam rooms, pool use or any other wet area, use a grout such as Mapei Ultracolor Plus. (Epoxy and acrylic grouts do not perform well in exterior applications.) Grout should be sealed with a penetrating sealer when used outdoors. White grout is recommended to avoid grout color loss over time due to sun exposure. To ensure long term performance for a pool installation, use Mapelastic Turbo waterproofer on the pool substrate, GraniRapid thin set to set the tile, Ultracolor Plus FA grout and a penetrating sealer (such as Ultracare Penetrating SB or 511 Porous Plus) on the grout. In a sauna/steam room, make sure the area is completely waterproofed prior to installation and grouting.</p></li>
+                    
+                       <li><p>Joints should be full and free of all voids and pits. When grouting, do not spread the entire wall/floor with grout like you would with a porcelain or ceramic tile. Work in small areas, typically 15-30 sq. ft. at a time and clean thoroughly before moving on to a new area. Remove any excess grout immediately. Grout that sits too long can be difficult to remove from the tile. Do not affix duct, painters, gaffer or acid tape directly onto the tile surface. Tape can discolor or stain your tiles.</p></li>
+                       
+			<li><p>After installation, clean wall/floor again. Any extra residue, mortar and/or grout should be removed immediately. Do not allow water or other liquids to spot or pool on the surface (i.e. Do not leave spills, drips or wet buckets, cups, footmarks, etc. on the surface at any time).</p></li>
+		       
+			<li><p>Cover the tile immediately after completion with a protective covering to prevent staining and damage during the remainder of construction.</p></li>
+                    
+                           </ol>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- .widget ENDS -->
+
+<!-- .widget STARTS -->
+        <div class="widget">
+            <div class="widget-inner">
+                 <h1 class="widget-title">Maintenance</h1>
+
+                <div id="books" class="widget-content">
+
+                    <ol start="15">
+                       
+                    
+                       <li><p>Zellige tiles are not difficult to maintain. The surface can be cleaned with non-acidic products that are suitable for use on natural stone. Mild tile soaps or neutral PH cleaners are appropriate. (Check with the cleaner manufacturer for approved uses).</p></li>
+                       
+			<li><p>Always follow the usage and dilution instructions from the manufacturer, and test new products in an inconspicuous area. <strong>Only non-acidic cleaning products should be used.</strong> Acid will etch the tiles, resulting in discoloration and/or pitting on the surface of the tile. Do not use vinegar, or products containing vinegar.</p></li>
+			
+			<li><p>For best results on floors, sweep and mop floors regularly. Use mats at entryways to catch debris. Any spills or moisture should be cleaned up in a timely manner to best prevent staining.</p></li>
+                       
+			<li><p>If used on floors, tiles will develop a natural patina that is part of their timeless beauty. This finish gives the tile its character and uniqueness.</p></li>
+			
+			<li><p><strong>Note for unglazed zellige tiles only:</strong> Depending on the brand of sealer used and the amount of wear experienced, the unglazed zellige tiles <strong>(Seashell Unglazed and Unglazed Terracotta only)</strong>, may need to be resealed periodically. The specific brand of sealer used will have a recommended timeframe for resealing, typically anywhere from 3 to 10 years. Extremely heavy wear may require additional cleaning and sealing.</p>
+			<p>When resealing the tiles, the surface should be clean and completely dry. The tiles should be resealed using the same steps as in the installation process. Apply thin coats, wipe excess sealer before it dries, and allow the sealer to cure per the manufacturer’s instructions. We recommend Miracle 511 Porous Plus, or other high quality, penetrating sealers for natural stone such as DryTreat or Stonetech Impregnator Pro.</p></li>
+                    
+                           </ol>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- .widget ENDS -->
+
+
+    </div>
+</aside>
+
+<br />
+
+<p> <b>If you have any questions, contact us before cutting or installing tiles.</b></p>
+<p><b>Note:</b> These installation instructions are offered as guidelines only. Cement Tile Shop will not be held responsible for errors, issues or problems due to installation or job site conditions.</p>
+			
+								</div>
+							</section>
+							
+							<section class="o-layout">
+								<div class="o-layout__item">
+									<mvt:item name="hdft" param="footer" />
+								</div>
+							</section>
+						</div>
+						<aside class="o-layout__item u-width-12 u-width-3--l category_tree_items category">
+							<mvt:item name="readytheme" param="navigationset( 'resources_navigation' )" />
+						</aside>
+					</div>
+					<br>
+				</div>
+			</section>
+		</div>
+	</section>
+	<br>
+	
+	<mvt:item name="hdft" param="global_footer" />
+
+
+<script>
+(function ($) {
+    $("#secondary").on('click', '.widget-title', function (e) {
+        $(this).next('.widget-content').toggle(1200);
+        $(this).parents('.widget').toggleClass('active');
+    });
+})(jQuery);
+</script>
+
+</body>
+</html>

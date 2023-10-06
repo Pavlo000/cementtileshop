@@ -1,0 +1,114 @@
+{
+    "HDFT": {
+        "FOOTER": {
+            "TEMPLATE_FILENAME": "srch-footer.mvc",
+            "TEMPLATE_ID": 43
+        },
+        "HEAD": {
+            "TEMPLATE_FILENAME": "srch-head.mvc",
+            "TEMPLATE_ID": 41
+        },
+        "HEADER": {
+            "TEMPLATE_FILENAME": "srch-header.mvc",
+            "TEMPLATE_ID": 42
+        }
+    },
+    "SEARCH_RESULTS": {
+        "additionalprice": "base",
+        "ADVANCED": 1,
+        "B_HEIGHT": 360,
+        "B_WIDTH": 360,
+        "BUTTON_ADD": 1,
+        "COL_NUM": 4,
+        "COL_SEL": "D",
+        "CONSTRAIN": "B",
+        "DEFAULT_SORT": "disp_order",
+        "displaydiscounts": 0,
+        "FIELD_CODE": 1,
+        "field_desc": 0,
+        "FIELD_NAME": 1,
+        "FIELD_PRICE": 1,
+        "field_sku": 0,
+        "field_weight": 0,
+        "fields_custom": [
+            {
+                "code": "alt1",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "main",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "Length",
+                "module": "customfields"
+            },
+            {
+                "code": "Width",
+                "module": "customfields"
+            }
+        ],
+        "FORMAT": "X",
+        "IMAGE": "T",
+        "IMAGEMACHINE_ENABLED": 1,
+        "INVMSG": "L",
+        "ITEMS_PER_PAGE_FILTER": 1,
+        "LINKEXCLUDECAT": 0,
+        "MODE": "srch",
+        "PAGE_DISP_COUNT": 3,
+        "PER_PAGE": 20,
+        "predictdiscounts": 1,
+        "price": "sale",
+        "reverse_default_disp_order": 0,
+        "SORT_BY": {
+            "BEST": 1,
+            "code": 0,
+            "name": 0,
+            "NEW": 1,
+            "PRICE": 1,
+            "SWITCH": 1
+        },
+        "TEMPLATE_FILENAME": "srch-search_results.mvc",
+        "TEMPLATE_ID": 44
+    },
+    "SEARCH_RESULTS_IMAGEMACHINE": {
+        "CLOSEUP_ACTIVE": 0,
+        "CLOSEUP_CLOSE": "closeup_close_%product_id%",
+        "CLOSEUP_DIV": "closeup_div_%product_id%",
+        "CLOSEUP_HEIGHT": 500,
+        "CLOSEUP_IMAGE": "closeup_image_%product_id%",
+        "CLOSEUP_SIZE": "N",
+        "CLOSEUP_WIDTH": 500,
+        "ENABLED": 1,
+        "HEAD": {
+            "TEMPLATE_FILENAME": "srch-search_results_imagemachine-head.mvc",
+            "TEMPLATE_ID": 303
+        },
+        "IMAGE_HEIGHT": 140,
+        "IMAGE_SIZE": "B",
+        "IMAGE_WIDTH": 140,
+        "LEGACY_IMAGE": "T",
+        "MAIN_IMAGE": "main_image_%product_id%",
+        "PRELOAD": 0,
+        "THUMB_ACTIVE": 1,
+        "THUMB_HEIGHT": 42,
+        "THUMB_WIDTH": 42,
+        "THUMBNAILS": "thumbnails_%product_id%"
+    },
+    "SEO_SETTINGS": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    }
+}

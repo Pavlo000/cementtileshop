@@ -1,0 +1,8 @@
+<mvt:item name="customerlink" />
+<mvt:item name="affiliatelink" />
+<span class="grey">|</span>
+<mvt:if expr="g.Basket:cust_id">
+<mvt:item name="cssui_links" param="orderhistory">Order History</mvt:item>
+<mvt:else>
+<mvt:item name="cssui_links" param="orderhistory_login">Order History</mvt:item>
+</mvt:if>

@@ -1,0 +1,70 @@
+<mvt:item name="html_profile" />
+<head>
+	<title>&mvt:store:name;: Cement Tile Description</title>
+	<base href="&mvt:global:basehref;" />
+	<mvt:item name="head" param="css_list" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin MailChimp Signup Form -->
+	<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+                #mc_embed_signup{background:#fff; clear:left; font-size:14px; }
+                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	</style>
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="DESCRIPTION">
+<mvt:item name="hdft" param="global_header" />
+
+	<section class="o-layout">
+		<div class="o-layout__item u-width-12">
+			<section class="t-expanded-block u-bg-white">
+				<div class="o-layout__item t-expanded-block__item">
+					<br>
+					<div class="o-layout o-layout--column-reverse o-layout--row-reverse--l">
+						<div class="o-layout__item u-width-12 u-width-9--l">
+							<section class="o-layout">
+								<div class="o-layout__item">
+									<h1 class="c-heading-delta">&mvte:page:name;</h1>
+									<hr class="c-keyline">
+								</div>
+							</section>
+					
+							<section class="o-layout">
+								<div class="o-layout__item">
+									<mvt:item name="hdft" param="header" />
+								</div>
+							</section>
+				
+							<section class="o-layout" id="content-container">
+								<div class="o-layout__item">
+									<p><p>Encaustic Cement Tile is a classic, colorful, and durable covering for floors and walls. This type of tile is called Encaustic Cement Tile or Cuban tile in the United States and various forms of Hydraulic Tile or Mosaicos Hidraulicos in other parts of the world. This ancient form of mosaic floor tile is available in patterns and colors to coordinate with any type of decor.</p> 
+<p>We offer the largest selection of cement tile available in the United States. Order our in stock tiles for immediate shipment or create your own custom tile or pattern. Each tile is hand made to order in the same way that hydraulic encaustic tiles have been crafted since the 1800's and passed from generation to generation. Cement Tile is suitable for both commercial and residential applications.</P>
+<p>Encaustic Cement Tile is a green, environmentally friendly product, created using basic earth components and a centuries old method. They are colored with natural pigments and do not give off any fumes at all. Minimum energy, except human 'elbow grease', is used to make our cement tiles. Cement tiles are completely handmade and never have to be fired in a kiln, which means that the amount of energy
+used in the manufacturing process is very low. Because no firing is required, no pollution creating fossil fuels are used in production of the tile. The process does not use any harsh chemicals that might affect the environment. Cement Tile is the most indestructible, decorative and handsome floor and wall tile on the market.</P> 
+<p>These tiles go by many names. They include Cement Tiles, Cuban Tiles, Mosaicos Hidraulicos, Mission Tile, Encaustic Tile, Hydraulic Tile, Carreaux de Ciment, Redondo Tile, Incrusted Tile, Victorian Tiles, Mattonelle Cementine, Baldosas Hidraulicas, Ladrilhos Hidraulicos, Impasta, Barcelona Tile, Encausti or Mattonelle Vittoriane, Portugese tegels, Baldosas de mosaicos hidraulicos also known as Manilans as Malaga in the Philippines and called simply cement tile (carrelages du ciment) in France and Belgium.</P>
+<p>The tradition of Encaustic Cement Tiles is to create interlocking designs by making a group of 4 tiles by rotating every tile by 90 degrees in each quadrant to form one design unit. When laid side by side, these 4 tile squares also form an interlocking pattern.</P>
+<p>Field tiles are often surrounded by coordinating border tiles to create a rug-like design on the floor of solid color tiles. Solid color tiles are available in all colors you see in the patterned tiles.</P> 
+								</div>
+							</section>
+							
+							<section class="o-layout">
+								<div class="o-layout__item">
+									<mvt:item name="hdft" param="footer" />
+								</div>
+							</section>
+						</div>
+						<aside class="o-layout__item u-width-12 u-width-3--l category_tree_items category">
+							<mvt:item name="readytheme" param="navigationset( 'resources_navigation' )" />
+						</aside>
+					</div>
+					<br>
+				</div>
+			</section>
+		</div>
+	</section>
+	<br>
+	
+	<mvt:item name="hdft" param="global_footer" />
+</body>
+</html>

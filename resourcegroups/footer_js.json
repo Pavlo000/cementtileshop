@@ -1,0 +1,9 @@
+{
+    "code": "footer_js",
+    "linked_js_resources": [
+        "settings",
+        "site-scripts",
+        "contact"
+    ],
+    "linked_css_resources": []
+}

@@ -1,0 +1,184 @@
+<mvt:if expr="g.r eq 'mixed_basket'">
+    <mvt:assign name="l.result" value="miva_output_header( 'Location', l.settings:urls:BASK:auto $ '?error=mixed_basket')" />
+    <mvt:assign name="l.result" value="miva_output_header( 'Status', '302 Moved Temporarily' )" />
+<mvt:elseif expr="g.r EQ 'invalid_number'">
+    <mvt:assign name="l.result" value="miva_output_header( 'Location', l.settings:urls:BASK:auto $ '?error=invalid_number' )" />
+    <mvt:assign name="l.result" value="miva_output_header( 'Status', '302 Moved Temporarily' )" />
+<mvt:elseif expr="g.r EQ 'total_limit'">
+    <mvt:assign name="l.result" value="miva_output_header( 'Location', l.settings:urls:BASK:auto $ '?error=total_limit' )" />
+    <mvt:assign name="l.result" value="miva_output_header( 'Status', '302 Moved Temporarily' )" />
+</mvt:if>     
+
+<mvt:comment><mvt:item name="ry_toolbelt" param="eval|varlist('l', 'basket', l.all_settings)" /></mvt:comment>
+
+
+<mvt:assign name="g.cart_has_samples" value="0" />
+<mvt:assign name="g.cart_has_non_samples" value="0" />
+<mvt:foreach iterator="group" array="basket:groups">
+    <mvt:if expr="g.product_code EQ l.settings:group:code">
+        <mvt:assign name="g.group_id" value="l.settings:group:group_id" />      
+    </mvt:if>
+
+    <mvt:if expr="'_sample' CIN tolower(l.settings:group:code)">
+        <mvt:assign name="g.cart_has_samples" value="1" />
+    <mvt:else>
+        <mvt:assign name="g.cart_has_non_samples" value="1" />
+    </mvt:if>
+</mvt:foreach>
+
+<mvt:if expr="g.cart_has_non_samples AND l.settings:global_minibasket:basket_count LT 4">
+    <mvt:assign name="g.minimum_qty_error" value="1" /> 
+</mvt:if>
+
+    
+<mvt:if expr="g.action EQ 'ADPR'">
+
+    <mvt:if expr="g.cart_has_samples AND g.cart_has_non_samples">
+        <mvt:assign name="l.result" value="miva_output_header( 'Location', l.settings:urls:BASK:auto $ '?Action=RGRP&r=mixed_basket&Basket_group=' $ g.group_id )" />
+        <mvt:assign name="l.result" value="miva_output_header( 'Status', '302 Moved Temporarily' )" />
+    </mvt:if>   
+
+</mvt:if>
+
+
+
+<mvt:comment>
+    /**
+     * This controls the sample qty limit
+     */
+</mvt:comment>
+
+    <mvt:if expr="g.ajax">
+        <mvt:assign name="g.ajax_str" value="'&ajax=1'" /> 
+    </mvt:if>
+
+    <mvt:assign name="g.total_samples_qty" value="0" />
+    <mvt:foreach iterator="group" array="basket:groups">
+
+        <mvt:if expr="'_sample' CIN tolower(l.settings:group:code)">
+            <mvt:assign name="g.total_samples_qty" value="g.total_samples_qty + l.settings:group:quantity" />
+
+            <mvt:if expr="l.settings:group:code CIN 'CirculosBlack30_sample, CirculosWhite30_sample, PCBlack30_sample, PCwhite30_sample, CTS3900_sample, CTS3901_sample, CTS3902_sample, CTS3905_sample, CTS3998_sample, CTS4902_sample'">
+                <mvt:assign name="g.group_max" value="2" /> 
+            <mvt:else>
+                <mvt:assign name="g.group_max" value="4" /> 
+            </mvt:if>
+
+            <mvt:if expr="l.settings:group:quantity GT g.group_max">
+                <mvt:assign name="l.result" value="miva_output_header( 'Location', l.settings:urls:BASK:auto $ '?action=QTYG&basket_group=' $ l.settings:group:group_id $ '&quantity=' $ g.group_max $ '&r=invalid_number' $ g.ajax_str)" />
+            </mvt:if>
+
+            <mvt:if expr="g.total_samples_qty GT 12">
+                <mvt:assign name="g.diff" value="g.total_samples_qty - 12" />
+                <mvt:assign name="g.new_qty" value="l.settings:group:quantity - g.diff" />
+                <mvt:assign name="l.result" value="miva_output_header( 'Location', l.settings:urls:BASK:auto $ '?action=QTYG&basket_group=' $ l.settings:group:group_id $ '&quantity=' $ g.new_qty $ '&r=invalid_number' $ g.ajax_str)" />
+            </mvt:if>
+
+        </mvt:if>
+
+    </mvt:foreach>
+
+
+<mvt:comment>
+    /**
+     * This controls the data return for the AJAX add-to-cart call.
+    */
+</mvt:comment>
+
+<mvt:if expr="g.ajax EQ 1">
+    <mvt:item name="html_profile" />
+    <head>
+        <meta charset="utf-8">
+    </head>
+        <body id="js-&mvte:page:code;">
+        <mvt:item name="readytheme" param="contentsection( 'mini_basket' )" />
+    </body>
+    </html>
+    <mvt:exit>
+</mvt:if>
+
+<mvt:comment>
+    /**
+     * This controls the `Delete Entire Cart` function.
+    */
+</mvt:comment>
+<mvt:if expr="g.Clear_Cart">
+    <mvt:do file="g.Module_Library_DB" name="l.settings:result" value="Basket_Reset_Contents( g.Basket )" />
+    <mvt:assign name="l.result" value="miva_output_header( 'Location', l.settings:urls:BASK:auto )" />
+    <mvt:assign name="l.result" value="miva_output_header( 'Status', '302 Moved Temporarily' )" />
+</mvt:if>
+
+<mvt:item name="html_profile" />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="&mvt:global:basehref;">
+    <mvt:if expr="NOT ISNULL l.settings:page:title">
+        <title>&mvt:page:title;</title>
+    <mvt:else>
+        <title>&mvt:store:name;: &mvt:page:name;</title>
+    </mvt:if>
+    <mvt:item name="head" param="css_list" />
+    <mvt:item name="head" param="head_tag" />
+    <mvt:comment>
+        <!-- If you are using Amazon Pay, this is where the `amazonpay` and `"amazonpay_button" param="head"` items go. -->
+        <mvt:item name="amazonpay" />
+        <mvt:item name="amazonpay_button" param="head" />
+    </mvt:comment>
+</head>
+<mvt:if expr="g.error EQ 'mixed_basket'">
+    <body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvt:global:pageClass; mixed-basket">
+<mvt:elseif expr="g.error EQ 'invalid_number'">
+    <body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvt:global:pageClass; invalid_number">
+<mvt:else>
+    <body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvt:global:pageClass;">
+</mvt:if>  
+    <mvt:item name="hdft" param="global_header" />
+
+    <section class="o-layout">
+        <div class="o-layout__item u-width-12">
+            <section class="t-expanded-block t-account-landing-section u-bg-white">
+                <div class="o-layout__item t-expanded-block__item t-account-landing-section__header">
+                    <h1 class="c-heading-delta t-account-landing-section__heading">
+                        <mvt:if expr="l.settings:global_minibasket:basket_count GT 1">
+                            Your Cart: &mvte:global_minibasket:basket_count; Items
+                        <mvt:else>
+                            Your Cart: &mvte:global_minibasket:basket_count; Item
+                        </mvt:if>
+                    </h1>
+                    <mvt:item name="hdft" param="header" />
+                    <mvt:item name="readytheme" param="contentsection( 'messages' )" />
+                    
+                        <!-- If you are using PayPal Express, this is where the `PaypalErrorMsg` item goes. -->
+                        <mvt:item name="PaypalErrorMsg"/>
+                    
+                </div>
+                <div class="o-layout__item t-expanded-block__item t-account-landing-section__content">
+
+
+                    <mvt:item name="basket" />
+                </div>
+            </section>
+        </div>
+    </section>
+    
+    <section class="o-layout">
+        <div class="o-layout__item">
+            <mvt:item name="hdft" param="footer" />
+        </div>
+    </section>
+
+    <mvt:item name="hdft" param="global_footer" />
+
+<div id="confirm-reset-popup-overlay" style="display: none;"></div>
+<div id="confirm-reset-popup" style="display: none;">
+<div class="close_block"></div>
+    Are you sure you want to remove the item from the basket? <div class="buttons">
+        <a href="" id="confirm-reset" class="c-button"><span>Confirm</span></a>
+        <mvt:comment><a href="/BASK.html" id="close-reset-popup">Go back &rarr;</a></mvt:comment>
+    </div>
+</div>
+
+</body>
+</html>

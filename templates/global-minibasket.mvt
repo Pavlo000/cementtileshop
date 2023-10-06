@@ -1,0 +1,84 @@
+
+<section class="u-bg-gray-10 x-mini-basket" data-hook="mini-basket" data-item-count="&mvt:global_minibasket:basket_count;" data-subtotal="&mvt:global_minibasket:formatted_total;">
+    <div class="x-mini-basket__content">
+        <mvt:if expr="NOT l.settings:global_minibasket:empty">
+            <header>
+                <p class="c-heading-echo u-text-bold u-text-center u-text-uppercase">
+                    <span class="u-font-tiny u-text-regular">Cart Subtotal: </span>
+                    <span>&mvt:global_minibasket:formatted_total;</span>
+                </p>
+                <hr class="c-keyline">
+            </header>
+            <ul class="x-mini-basket__list">
+                <mvt:foreach iterator="item" array="global_minibasket:groups">
+                    <mvt:do file="g.Module_Library_DB" name="l.success" value="Product_Load_Code(l.settings:item:code, l.settings:item_p )" />
+                    <mvt:do file="g.Module_Feature_URI_UT" name="l.settings:item:uri" value="Store_Product_URL(l.settings:item_p, NULL)" />
+                    <li class="x-mini-basket__line">
+                        <figure class="x-mini-basket__image">
+                            <img src="&mvte:item:imagetypes:main;" alt="&mvt:item:name;">
+                            <mvt:if expr="'_sample' IN l.settings:item:code">
+                                <div class="sample_image">
+                                    <mvt:item name="readytheme" param="image( 'sample' )" />
+                                </div>
+                            </mvt:if>
+                        </figure>
+                        <div class="x-mini-basket__item">
+                            <mvt:if expr="'_sample' IN l.settings:item:code">
+                                <mvt:assign name="l.settings:item:link:sample" value="glosub( l.settings:item:link, '_sample', '' )" />
+                                    <a href="&mvte:item:link:sample;" class="x-mini-basket__item-name">&mvt:item:name;</a>
+                                    <mvt:else>
+                                    <a class="x-mini-basket__item-name" href="&mvt:item:uri;">&mvt:item:name;</a>
+                                </mvt:if>
+                            <span class="x-mini-basket__item-price u-text-medium">&mvt:item:formatted_subtotal;</span>
+                            <mvt:foreach iterator="option" array="item:options">
+                                <span class="x-mini-basket__item-attributes">
+                                    <mvt:if expr="l.settings:option:option_id">
+                                        <span class="u-font-small u-text-uppercase">&mvt:option:attr_prompt;:</span> <span class="u-text-medium">&mvt:option:opt_prompt;</span>
+                                    <mvt:elseif expr="NOT ISNULL l.settings:option:data">
+                                        <span class="u-font-small u-text-uppercase">&mvt:option:attr_prompt;:</span> <span class="u-text-medium">&mvt:option:data;</span>
+                                    <mvt:elseif expr="NOT ISNULL l.settings:option:data_long">
+                                        <span class="u-font-small u-text-uppercase">&mvt:option:attr_prompt;:</span> <span class="u-text-medium">&mvt:option:data_long;</span>
+                                    <mvt:else>
+                                        <span class="u-font-small u-text-uppercase">&mvt:option:attr_prompt;</span>
+                                    </mvt:if>
+                                </span>
+                            </mvt:foreach>
+                            <mvt:if expr="l.settings:item:subterm_id">
+                                <span class="x-mini-basket__item-subscription">
+                                    <span class="u-font-small u-text-uppercase">Subscription:</span> <span class="u-text-medium">&mvte:item:productsubscriptionterm:descrip;</span>
+                                </span>
+                            </mvt:if>
+
+                            <span class="x-mini-basket__item-total">
+
+                                <mvt:if expr="'_sample' IN l.settings:item:code">
+                                    <span class="x-mini-basket__item-quantity">
+                                        <span class="u-font-small u-text-uppercase">Pieces:</span> <span class="u-text-medium">&mvte:item:quantity;</span>
+                                    </span>
+                                        <mvt:else>
+                                    <span class="x-mini-basket__item-quantity">
+                                        <span class="u-font-small u-text-uppercase">Boxes:</span> <span class="u-text-medium">&mvte:item:quantity;</span>
+                                    </span>
+                                    <span >
+                                        <mvt:item name="customfields" param="Read_Product_Code(l.settings:item:code, 'coverage', l.settings:item:coverage)"/>
+                                        <span class="u-font-small u-text-uppercase">Sq. Ft:</span> <span class="u-text-medium"><mvt:eval expr="l.settings:item:coverage * l.settings:item:quantity"/></span>
+                                    </span>
+                                    </mvt:if>
+                             
+                                <a class="u-font-small u-text-uppercase" href="&mvte:urls:_self:auto_sep;Basket_Line=&mvte:item:line_id;&amp;Action=RPRD">Remove</a>
+                            </span>
+                        </div>
+                    </li>
+                </mvt:foreach>
+            </ul>
+    
+            <footer class="x-mini-basket__footer">
+                <a class="c-button c-button--full c-button--huge u-bg-secondary u-color-white u-font-small u-text-medium u-text-uppercase" href="&mvte:urls:BASK:auto;">View Cart &amp; Checkout</a>
+            </footer>
+        <mvt:else>
+            <footer class="x-mini-basket__footer">
+                <div class="x-messages x-messages--info u-text-center u-text-medium u-text-uppercase">Your Shopping Cart Is Empty</div>
+            </footer>
+        </mvt:if>
+    </div>
+</section>

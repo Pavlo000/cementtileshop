@@ -1,0 +1,21 @@
+{
+    "code": "mmx-image-across",
+    "type": "Z",
+    "is_global": false,
+    "active": true,
+    "attributes": [
+        {
+            "name": "type",
+            "value": "text/javascript"
+        },
+        {
+            "name": "integrity",
+            "value": "sha256-J1PfiAEtjVWkAMxIBETX341zdbBEgJthFTzoDD5GEGM= sha384-mSrk9P4mZmypQXYdtwyAvLKg02Hp9iHoSLybFc11iizQDkRJ4NnFxD2CKdYsUjtl sha512-cWHJF6eVxu7g0eueuE37lVThAYZUyCcoRI82FGdUdLpNck4a48EM7Cdc2wrd7fgKMquS4Jw8SPjH8rGzqKRDZA=="
+        },
+        {
+            "name": "crossorigin",
+            "value": "anonymous"
+        }
+    ],
+    "linked_pages": []
+}

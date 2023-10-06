@@ -1,0 +1,24 @@
+<mvt:assign name="g.newline"	value="asciichar(10)" />
+<mvt:assign name="g.delimiter"	value="asciichar(9)" />
+<mvt:eval expr="
+		'id'						$ g.delimiter $
+		'title'						$ g.delimiter $
+		'description'					$ g.delimiter $
+		'condition'					$ g.delimiter $
+		'price'						$ g.delimiter $
+		'sale_price'					$ g.delimiter $
+		'availability'					$ g.delimiter $
+		'link'						$ g.delimiter $
+		'image_link'					$ g.delimiter $
+		'google_product_category'			$ g.delimiter $
+		'gtin'						$ g.delimiter $
+		'mpn'						$ g.delimiter $
+		'brand'						$ g.delimiter $
+		'size'						$ g.delimiter $
+		'color'						$ g.delimiter $
+		'item_group_id'					$ g.delimiter $
+		'shipping_weight'				$ g.delimiter $
+		'shipping_length'				$ g.delimiter $
+		'shipping_height'				$ g.delimiter $
+		'shipping_width'				$ g.delimiter $
+		'product_type'					$ g.newline"/>

@@ -1,0 +1,16 @@
+{
+    "ORDER_CONTENTS": {
+        "advanced": 1,
+        "B_HEIGHT": 75,
+        "B_WIDTH": 75,
+        "CONSTRAIN": "B",
+        "payments": 0,
+        "TEMPLATE_FILENAME": "email_orderconf_customer-order_contents.mvc",
+        "TEMPLATE_ID": 223
+    },
+    "ORDER_CUSTOMER": {
+        "prevent_template_auto_update": 0,
+        "TEMPLATE_FILENAME": "email_orderconf_customer-order_customer.mvc",
+        "TEMPLATE_ID": 222
+    }
+}

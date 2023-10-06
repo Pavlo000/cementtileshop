@@ -1,0 +1,43 @@
+{
+    "hdft": {
+        "footer": {
+            "template_filename": "cpce-footer.mvc",
+            "template_id": 578
+        },
+        "header": {
+            "template_filename": "cpce-header.mvc",
+            "template_id": 577
+        }
+    },
+    "mivapay": {
+        "paymentcardfields": {
+            "cardtype_prompt": "Card Type:",
+            "cardtype_prompt_hidden": 0,
+            "mode": "paymentcard_edit",
+            "storecard_checkedbydefault": 0,
+            "storecard_prompt": "Store This Card For Future Use",
+            "template_filename": "cpce-mivapay.mvc",
+            "template_id": 579
+        },
+        "paymentcardfields_css": {
+            "template_filename": "cpce-mivapay_css.mvc",
+            "template_id": 580
+        }
+    },
+    "seo_settings": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    }
+}

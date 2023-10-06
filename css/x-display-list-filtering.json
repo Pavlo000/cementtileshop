@@ -1,0 +1,8 @@
+{
+    "code": "x-display-list-filtering",
+    "type": "L",
+    "branchless_filepath": "themes/colossus/extensions/display-list-filtering/display-list-filtering.css",
+    "is_global": true,
+    "active": true,
+    "attributes": []
+}

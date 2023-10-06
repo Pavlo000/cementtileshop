@@ -1,0 +1,89 @@
+{
+    "BASKET": {
+        "advanced": 1,
+        "applycoupons": 0,
+        "B_HEIGHT": 80,
+        "B_WIDTH": 80,
+        "button_wish": 0,
+        "CONSTRAIN": "B",
+        "discounts": 1,
+        "EDITABLE": 0,
+        "groups": 1,
+        "HANDLING": 1,
+        "imagetypes": [
+            "main"
+        ],
+        "lineitemcoupons": 0,
+        "lineitemdiscounts": 1,
+        "lineitemprice": "base",
+        "redeemgiftcerts": 1,
+        "SALESTAX": 1,
+        "SHIPPING": 1,
+        "splitpayments": 1,
+        "TEMPLATE_FILENAME": "osel-basket.mvc",
+        "TEMPLATE_ID": 151
+    },
+    "CUSTOMER": {
+        "EDITABLE": 0,
+        "MODE": "order",
+        "prevent_template_auto_update": 0,
+        "TEMPLATE_FILENAME": "osel-customer.mvc",
+        "TEMPLATE_ID": 150
+    },
+    "HDFT": {
+        "FOOTER": {
+            "TEMPLATE_FILENAME": "osel-footer.mvc",
+            "TEMPLATE_ID": 149
+        },
+        "HEAD": {
+            "TEMPLATE_FILENAME": "osel-head.mvc",
+            "TEMPLATE_ID": 147
+        },
+        "HEADER": {
+            "TEMPLATE_FILENAME": "osel-header.mvc",
+            "TEMPLATE_ID": 148
+        }
+    },
+    "paypalcp_credit": {
+        "flex": {
+            "color": "blue",
+            "ratio": "1x1"
+        },
+        "layout": "text",
+        "placement": "payment",
+        "text": {
+            "color": "black",
+            "logo": "primary",
+            "position": "left"
+        }
+    },
+    "PAYPALEDITADDR": {
+        "TEMPLATE_FILENAME": "osel-PaypalEditAddr.mvc",
+        "TEMPLATE_ID": 264
+    },
+    "PAYPALERRORMSG": {
+        "TEMPLATE_FILENAME": "osel-PaypalErrorMsg.mvc",
+        "TEMPLATE_ID": 263
+    },
+    "return": {
+        "b_height": 75,
+        "b_width": 75,
+        "constrain": "B"
+    },
+    "SEO_SETTINGS": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    }
+}

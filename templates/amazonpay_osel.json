@@ -1,0 +1,63 @@
+{
+    "amazonpay": {
+        "template_filename": "amazonpay_osel-amazonpay.mvc",
+        "template_id": 708
+    },
+    "amazonpay_address": {
+        "center": 1,
+        "editable": 0,
+        "height": 185,
+        "template_filename": "amazonpay_osel-amazonpay_address.mvc",
+        "template_id": 711,
+        "width": 400
+    },
+    "basket": {
+        "advanced": 1,
+        "applycoupons": 0,
+        "b_height": 80,
+        "b_width": 80,
+        "button_wish": 0,
+        "constrain": "B",
+        "discounts": 1,
+        "editable": 0,
+        "groups": 0,
+        "handling": 1,
+        "imagetypes": [
+            "main"
+        ],
+        "lineitemcoupons": 0,
+        "lineitemdiscounts": 0,
+        "redeemgiftcerts": 0,
+        "salestax": 1,
+        "shipping": 1,
+        "splitpayments": 0,
+        "template_filename": "amazonpay_osel-basket.mvc",
+        "template_id": 712
+    },
+    "hdft": {
+        "footer": {
+            "template_filename": "amazonpay_osel-footer.mvc",
+            "template_id": 710
+        },
+        "header": {
+            "template_filename": "amazonpay_osel-header.mvc",
+            "template_id": 709
+        }
+    },
+    "seo_settings": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    }
+}

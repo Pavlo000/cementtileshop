@@ -1,0 +1,684 @@
+{
+    "affiliate": {
+        "template_filename": "ctus-eu-affiliate.mvc",
+        "template_id": 493
+    },
+    "all_products": {
+        "b_height": 234,
+        "b_width": 234,
+        "button_add": 1,
+        "button_buy": 1,
+        "col_num": 4,
+        "constrain": "B",
+        "default_sort": "disp_order",
+        "displaydiscounts": 0,
+        "field_code": 1,
+        "field_name": 1,
+        "field_price": 1,
+        "fields_custom": [
+            {
+                "code": "AsShown",
+                "module": "customfields"
+            },
+            {
+                "code": "Availability",
+                "module": "customfields"
+            },
+            {
+                "code": "basket_inv",
+                "module": "baskinv"
+            },
+            {
+                "code": "Collection",
+                "module": "customfields"
+            },
+            {
+                "code": "ColorChart",
+                "module": "customfields"
+            },
+            {
+                "code": "Designer",
+                "module": "customfields"
+            },
+            {
+                "code": "alcohol",
+                "module": "mvfedexsoap"
+            },
+            {
+                "code": "dry_ice",
+                "module": "mvfedexsoap"
+            },
+            {
+                "code": "dryicewt",
+                "module": "mvfedexsoap"
+            },
+            {
+                "code": "nonstdcont",
+                "module": "mvfedexsoap"
+            },
+            {
+                "code": "signature",
+                "module": "mvfedexsoap"
+            },
+            {
+                "code": "alt1",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt10",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt11",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt12",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt13",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt14",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt15",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt16",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt17",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt18",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt19",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt2",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt3",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt4",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt5",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt6",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt7",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt8",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt9",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "main",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "Length",
+                "module": "customfields"
+            },
+            {
+                "code": "description",
+                "module": "cmp-mv-prodctgy-meta"
+            },
+            {
+                "code": "keywords",
+                "module": "cmp-mv-prodctgy-meta"
+            },
+            {
+                "code": "Notes",
+                "module": "customfields"
+            },
+            {
+                "code": "Pieces",
+                "module": "customfields"
+            },
+            {
+                "code": "PricePerPiece",
+                "module": "customfields"
+            },
+            {
+                "code": "footer",
+                "module": "cmp-cssui-pchdft"
+            },
+            {
+                "code": "header",
+                "module": "cmp-cssui-pchdft"
+            },
+            {
+                "code": "Coverage",
+                "module": "customfields"
+            },
+            {
+                "code": "Thickness",
+                "module": "customfields"
+            },
+            {
+                "code": "total_inv",
+                "module": "baskinv"
+            },
+            {
+                "code": "Width",
+                "module": "customfields"
+            }
+        ],
+        "format": "X",
+        "image": "type:main",
+        "imagemachine_enabled": 1,
+        "imagetypes": [
+            "main"
+        ],
+        "invmsg": "L",
+        "items_per_page_filter": 1,
+        "linkexcludecat": 0,
+        "mode": "plst",
+        "page_disp_count": 3,
+        "per_page": 40,
+        "predictdiscounts": 0,
+        "price": "base",
+        "reverse_default_disp_order": 0,
+        "sort_by": {
+            "best": 1,
+            "new": 1,
+            "price": 1,
+            "switch": 1
+        },
+        "template_filename": "ctus-eu-all_products.mvc",
+        "template_id": 494
+    },
+    "all_products_imagemachine": {
+        "closeup_active": 0,
+        "closeup_height": 500,
+        "closeup_size": "N",
+        "closeup_width": 500,
+        "enabled": 1,
+        "head": {
+            "template_filename": "ctus-eu-all_products_imagemachine-head.mvc",
+            "template_id": 495
+        },
+        "image_height": 100,
+        "image_size": "B",
+        "image_width": 100,
+        "legacy_image": "N",
+        "main_image": "main_image",
+        "preload": 1,
+        "thumb_active": 0,
+        "thumb_height": 42,
+        "thumb_width": 42,
+        "thumbnails": "thumbnails"
+    },
+    "attributemachine": {
+        "dependency_resolution": "first",
+        "enabled": 1,
+        "inv_short": 0,
+        "invalid_msg": "Please select a valid combination of attributes.",
+        "missing_radio_msg": "<br>An option must be selected for <b>%attribute_prompt%</b>.",
+        "missing_text_msg": "<br>A value must be entered for <b>%attribute_prompt%</b>.",
+        "predictdiscounts": 0,
+        "preload": 1,
+        "price": "base",
+        "template_filename": "ctus-eu-attributemachine.mvc",
+        "template_id": 496
+    },
+    "basket": {
+        "advanced": 1,
+        "applycoupons": 0,
+        "b_height": 75,
+        "b_width": 75,
+        "constrain": "B",
+        "discounts": 0,
+        "groups": 1,
+        "handling": 0,
+        "imagetypes": [
+            "main"
+        ],
+        "lineitemcoupons": 0,
+        "lineitemdiscounts": 1,
+        "lineitemprice": "retail",
+        "redeemgiftcerts": 0,
+        "salestax": 0,
+        "shipping": 0,
+        "splitpayments": 0,
+        "template_filename": "ctus-eu-basket.mvc",
+        "template_id": 497
+    },
+    "category_listing": {
+        "b_height": 234,
+        "b_width": 234,
+        "button_add": 1,
+        "button_buy": 1,
+        "col_num": 2,
+        "constrain": "B",
+        "default_sort": "disp_order",
+        "displaydiscounts": 0,
+        "field_code": 1,
+        "field_name": 1,
+        "field_price": 1,
+        "format": "X",
+        "image": "T",
+        "imagemachine_enabled": 0,
+        "invmsg": "L",
+        "items_per_page_filter": 1,
+        "linkexcludecat": 1,
+        "mode": "ctgy",
+        "page_disp_count": 3,
+        "per_page": 10,
+        "predictdiscounts": 0,
+        "price": "base",
+        "reverse_default_disp_order": 0,
+        "sort_by": {
+            "best": 1,
+            "new": 1,
+            "price": 1,
+            "switch": 1
+        },
+        "template_filename": "ctus-eu-category_listing.mvc",
+        "template_id": 498
+    },
+    "category_listing_imagemachine": {
+        "closeup_active": 0,
+        "closeup_height": 500,
+        "closeup_size": "N",
+        "closeup_width": 500,
+        "enabled": 0,
+        "head": {
+            "template_filename": "ctus-eu-category_listing_imagemachine-head.mvc",
+            "template_id": 499
+        },
+        "image_height": 100,
+        "image_size": "N",
+        "image_width": 100,
+        "legacy_image": "N",
+        "preload": 0,
+        "thumb_active": 0,
+        "thumb_height": 42,
+        "thumb_width": 42
+    },
+    "content": {
+        "template_filename": "ctus-eu-content.mvc",
+        "template_id": 500
+    },
+    "customer": {
+        "editable": 0,
+        "mode": "order",
+        "prevent_template_auto_update": 0,
+        "template_filename": "ctus-eu-customer.mvc",
+        "template_id": 838
+    },
+    "hdft": {
+        "footer": {
+            "template_filename": "ctus-eu-footer.mvc",
+            "template_id": 492
+        },
+        "head": {
+            "template_filename": "ctus-eu-head.mvc",
+            "template_id": 490
+        },
+        "header": {
+            "template_filename": "ctus-eu-header.mvc",
+            "template_id": 491
+        }
+    },
+    "product_attributes": {
+        "template_filename": "ctus-eu-product_attributes.mvc",
+        "template_id": 502
+    },
+    "product_display": {
+        "b_height": 274,
+        "b_width": 274,
+        "constrain": "N",
+        "displaydiscounts": 0,
+        "field_code": 1,
+        "field_desc": 1,
+        "field_name": 1,
+        "field_price": 1,
+        "field_weight": 1,
+        "fields_custom": [
+            {
+                "code": "AsShown",
+                "module": "customfields"
+            },
+            {
+                "code": "Availability",
+                "module": "customfields"
+            },
+            {
+                "code": "basket_inv",
+                "module": "baskinv"
+            },
+            {
+                "code": "Collection",
+                "module": "customfields"
+            },
+            {
+                "code": "ColorChart",
+                "module": "customfields"
+            },
+            {
+                "code": "Designer",
+                "module": "customfields"
+            },
+            {
+                "code": "alcohol",
+                "module": "mvfedexsoap"
+            },
+            {
+                "code": "dry_ice",
+                "module": "mvfedexsoap"
+            },
+            {
+                "code": "dryicewt",
+                "module": "mvfedexsoap"
+            },
+            {
+                "code": "nonstdcont",
+                "module": "mvfedexsoap"
+            },
+            {
+                "code": "signature",
+                "module": "mvfedexsoap"
+            },
+            {
+                "code": "alt1",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt10",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt11",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt12",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt13",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt14",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt15",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt16",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt17",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt18",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt19",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt2",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt3",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt4",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt5",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt6",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt7",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt8",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt9",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "main",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "Length",
+                "module": "customfields"
+            },
+            {
+                "code": "description",
+                "module": "cmp-mv-prodctgy-meta"
+            },
+            {
+                "code": "keywords",
+                "module": "cmp-mv-prodctgy-meta"
+            },
+            {
+                "code": "Notes",
+                "module": "customfields"
+            },
+            {
+                "code": "Pieces",
+                "module": "customfields"
+            },
+            {
+                "code": "PricePerPiece",
+                "module": "customfields"
+            },
+            {
+                "code": "footer",
+                "module": "cmp-cssui-pchdft"
+            },
+            {
+                "code": "header",
+                "module": "cmp-cssui-pchdft"
+            },
+            {
+                "code": "Coverage",
+                "module": "customfields"
+            },
+            {
+                "code": "Thickness",
+                "module": "customfields"
+            },
+            {
+                "code": "total_inv",
+                "module": "baskinv"
+            },
+            {
+                "code": "Width",
+                "module": "customfields"
+            }
+        ],
+        "image": "F",
+        "imagemachine_enabled": 1,
+        "invmsg": "L",
+        "predictdiscounts": 0,
+        "price": "base",
+        "template_filename": "ctus-eu-product_display.mvc",
+        "template_id": 503
+    },
+    "product_display_imagemachine": {
+        "closeup_active": 0,
+        "closeup_close": "closeup_close",
+        "closeup_div": "closeup_div",
+        "closeup_height": 500,
+        "closeup_image": "closeup_image",
+        "closeup_size": "N",
+        "closeup_width": 500,
+        "enabled": 1,
+        "head": {
+            "template_filename": "ctus-eu-product_display_imagemachine-head.mvc",
+            "template_id": 504
+        },
+        "image_height": 200,
+        "image_size": "B",
+        "image_width": 200,
+        "legacy_image": "N",
+        "main_image": "main_image",
+        "preload": 1,
+        "thumb_active": 1,
+        "thumb_height": 100,
+        "thumb_width": 100,
+        "thumbnails": "thumbnails"
+    },
+    "quote_info": {
+        "advanced": 0,
+        "code": 1,
+        "created": 1,
+        "expires": 1,
+        "fields_custom": 1,
+        "fields_custom_order": 1,
+        "imagetypes": 1,
+        "order_id": 1,
+        "paginate": 1,
+        "per_page": 10,
+        "quote_id": 1,
+        "status": 1,
+        "template_filename": "ctus-eu-miva-quote-info.mvc",
+        "template_id": 869
+    },
+    "quote_notes": {
+        "advanced": 0,
+        "code": 1,
+        "created": 1,
+        "expires": 1,
+        "fields_custom": 1,
+        "fields_custom_order": 1,
+        "imagetypes": 1,
+        "order_id": 1,
+        "paginate": 1,
+        "per_page": 10,
+        "quote_id": 1,
+        "status": 1,
+        "template_filename": "ctus-eu-miva-quote-notes.mvc",
+        "template_id": 868
+    },
+    "related_products": {
+        "b_height": 234,
+        "b_width": 234,
+        "button_add": 1,
+        "button_buy": 1,
+        "col_num": 2,
+        "constrain": "B",
+        "default_sort": "disp_order",
+        "displaydiscounts": 0,
+        "field_code": 1,
+        "field_name": 1,
+        "field_price": 1,
+        "format": "X",
+        "image": "T",
+        "imagemachine_enabled": 0,
+        "invmsg": "L",
+        "items_per_page_filter": 1,
+        "linkexcludecat": 0,
+        "mode": "relp",
+        "page_disp_count": 3,
+        "per_page": 10,
+        "predictdiscounts": 0,
+        "price": "base",
+        "reverse_default_disp_order": 0,
+        "sort_by": {
+            "best": 1,
+            "new": 1,
+            "price": 1,
+            "switch": 1
+        },
+        "template_filename": "ctus-eu-related_products.mvc",
+        "template_id": 505
+    },
+    "related_products_imagemachine": {
+        "closeup_active": 0,
+        "closeup_height": 500,
+        "closeup_size": "N",
+        "closeup_width": 500,
+        "enabled": 0,
+        "head": {
+            "template_filename": "ctus-eu-related_products_imagemachine-head.mvc",
+            "template_id": 506
+        },
+        "image_height": 100,
+        "image_size": "N",
+        "image_width": 100,
+        "legacy_image": "N",
+        "preload": 0,
+        "thumb_active": 0,
+        "thumb_height": 42,
+        "thumb_width": 42
+    },
+    "request_quote": {
+        "code": 1,
+        "created": 1,
+        "expires": 1,
+        "fields_custom": 1,
+        "fields_custom_order": 1,
+        "imagetypes": 1,
+        "order_id": 1,
+        "paginate": 1,
+        "per_page": 10,
+        "quote_id": 1,
+        "status": 1,
+        "template_filename": "ctus-eu-miva-request-quote.mvc",
+        "template_id": 832
+    },
+    "seo_settings": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    }
+}

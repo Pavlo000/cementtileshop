@@ -1,0 +1,22 @@
+
+<table style="width:100%; border:0;">
+	<tr>
+		<td style="padding:2px; vertical-align:middle; color:#000000; font-weight:bold;">
+			Fast, Secure Checkout with PayPal
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mvt:if expr="l.settings:PaypalExButton:ExpressCheckoutToken">
+			To continue with your PayPal checkout, enter any required information below and click on "Continue"
+			<mvt:else>
+			<a href="&mvte:global:secure_sessionurl;Store_Code=&mvte:global:Store_Code;&amp;Action=PAL1&amp;Screen=PAL1&amp;NextScreen=&mvte:global:Screen;&amp;NextAction=&amp;CancelScreen=&mvte:global:Screen;"><img src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" style="margin-right:7px; border:0;" alt="" /></a>
+			PayPal
+			</mvt:if>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+	

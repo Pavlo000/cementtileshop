@@ -1,0 +1,156 @@
+<mvt:item name="html_profile" />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="&mvt:global:basehref;">
+    <mvt:if expr="NOT ISNULL l.settings:page:title">
+        <title>&mvt:page:title;</title>
+    <mvt:else>
+        <title>&mvt:store:name;: &mvt:page:name;</title>
+    </mvt:if>
+    <mvt:item name="head" param="css_list" />
+    <mvt:item name="head" param="head_tag" />
+</head>
+<body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvt:global:pageClass;">
+    <mvt:item name="hdft" param="global_header" />
+
+    <section class="o-layout">
+        <div class="o-layout__item u-width-12">
+            <section class="t-expanded-block u-bg-white">
+                <div class="o-layout__item t-expanded-block__item">
+                    <br>
+                    <div class="o-layout o-layout--column-reverse o-layout--row-reverse--l">
+                        <div class="o-layout__item u-width-12 u-width-9--l u-width-10--w">
+                            <section class="o-layout">
+                                <div class="o-layout__item">
+                                    <h1 class="c-heading-delta">&mvte:page:name;</h1>
+                                    <hr class="c-keyline">
+                                </div>
+                            </section>
+                    
+                            <section class="o-layout">
+                                <div class="o-layout__item">
+                                    <mvt:item name="hdft" param="header" />
+                                </div>
+                            </section>
+                
+                            <section class="o-layout">
+                                <div class="o-layout__item u-width-12">
+                                    <div class="local-page">
+
+                                    <div class="text">
+                                        
+                                            <p>We would love for you to visit one of our design centers to see, touch and feel our beautiful cement tiles! Our knowledgeable staff would be glad help you with design ideas using our current stock options or assist in creating a completely customized tile for your commercial or residential project.</p>
+                                            
+                                        </p>
+                                        <p>
+                                            See location specific details below.
+                                        </p>
+                                      
+
+                                    </div>
+
+                                    <div class="content">
+                                    
+                                        <div class="o-layout__item item">
+                                            <h3><b>Tampa, FL</b></h3>
+
+                                           <div class="image u-text-center">
+                                                <div class="hover">
+                                                    <mvt:item name="readytheme" param="image( 'flagship_2' )" />
+                                                </div>
+                                                <div class="no-hover">
+                                                    <mvt:item name="readytheme" param="image( 'flagship' )" />
+                                                </div>
+                                            </div>
+                                            <ul>
+                                             
+                                                    6506 N. Florida Ave.<br>
+                                                    Tampa, FL 33604<br><br><br>
+                                                
+                                                    <strong>Monday - Friday</strong> 9:00 AM - 5:00 PM (EST)<br><br>
+                                              
+                                                    
+                                                
+                                                    Notes:  <br><strong><font color = red>Showroom open to the public during regular business hours.</strong></font><br>For appointments call</b></font> <a href="tel:(800) 704-2701">(800) 704-2701</a>
+                                                </li>
+                                            </ul>
+
+                                            <a href="https://www.google.com/maps/place/Cement+Tile+Shop/@28.0072872,-82.4620745,17z/data=!4m13!1m7!3m6!1s0x88c2c6a465aca145:0x31df7f397446aa6c!2zNjUwNiBOIEZsb3JpZGEgQXZlLCBUYW1wYSwgRkwgMzM2MDQsINCh0KjQkA!3b1!8m2!3d28.0072825!4d-82.4598858!3m4!1s0x88c2b8c76df139a9:0xdd613b2e8e97c05f!8m2!3d28.007307!4d-82.459937" class="c-button local c-button--full c-button--large c-button--secondary" target="_blank">Locate Store</a>
+                                        </div>
+
+                                        <div class="o-layout__item item">
+                                            <h3><b>Scottsdale, AZ</b></h3>
+                                            <div class="image u-text-center">
+                                                <div class="hover">
+                                                    <mvt:item name="readytheme" param="image( 'Scottsdale_2' )" />
+                                                </div>
+                                                <div class="no-hover">
+                                                    <mvt:item name="readytheme" param="image( 'Scottsdale' )" />
+                                                </div>
+                                            </div>
+                                            <ul>
+                                              
+                                                    7051 E. 5th Ave. (next to Berdena's Coffee)<br>
+                                                    Suite H<br>
+                                                    Scottsdale, AZ 85251<br><br>
+                                                
+                                                    <strong>Monday - Friday</strong> 9:00 AM - 5:00 PM (MST)<br><br>
+                                                
+                                                    
+                                               
+                                                    Notes:  <br><strong><font color = red>Showroom open to the public during regular business hours.</strong></font><br>For appointments call</b></font> <a href="tel:(800) 704-2701">(800) 704-2701</a>
+                                                </li>
+                                            </ul>
+
+                                            <a href="https://www.google.com/maps/place/Cement+Tile+Shop/@33.4975171,-111.9295141,21z/data=!4m13!1m7!3m6!1s0x872b0b96088c49b9:0xdbdec2d1ca3f40a5!2zNzA1MSBFIDV0aCBBdmUsIFNjb3R0c2RhbGUsIEFaIDg1MjUxLCDQodCo0JA!3b1!8m2!3d33.497622!4d-111.9292546!3m4!1s0x872b0b9608c1b763:0x87b24c6dd5b5817b!8m2!3d33.4974185!4d-111.9295002" class="c-button c-button--full c-button--large local c-button--secondary" target="_blank">Locate Store</a>
+                                        </div>
+                                    </div>
+
+					<div class="o-layout__item" style="padding-left:0px;">
+						<br />
+						<h1 class="c-heading-delta">Warehouse Locations - Shipping Only, No Showroom</h1>
+						<hr class="c-keyline">
+					</div>                                        
+                                        <div class="o-layout o-layout--center">
+
+                                            <div class="o-layout__item u-text-center">
+                                                   <b>East Coast Warehouse</b><br><br>
+                                                    Tampa, FL 33619
+                                            </div>
+
+                                                
+                                            <div class="o-layout__item u-text-center">
+                                                     <b>Arizona Warehouse</b><br><br>
+                                                    Phoenix, AZ 85031
+                                            </div>
+                                                
+                                          
+                                                
+                                        </div>
+                                </div>
+                                </div>
+                        
+                            </section>
+                            
+                            <section class="o-layout">
+                                <div class="o-layout__item">
+                                    <mvt:item name="hdft" param="footer" />
+                                </div>
+                            </section>
+                        </div>
+                        <aside class="o-layout__item u-width-12 u-width-3--l u-width-2--w">
+                            <mvt:item name="readytheme" param="navigationset( 'static_navigation' )" />
+                        </aside>
+                    </div>
+                    <br>
+                </div>
+            </section>
+        </div>
+    </section>
+    <br>
+
+    <mvt:item name="hdft" param="global_footer" />
+</body>
+</html>

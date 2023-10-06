@@ -1,0 +1,18 @@
+{
+    "order_contents": {
+        "advanced": 0,
+        "b_height": 75,
+        "b_width": 75,
+        "constrain": "B",
+        "groups": 1,
+        "lineitemcoupons": 1,
+        "lineitemdiscounts": 1,
+        "lineitemprice": "base",
+        "template_filename": "email_po_warehouse-order_contents.mvc",
+        "template_id": 444
+    },
+    "order_customer": {
+        "template_filename": "email_po_warehouse-order_customer.mvc",
+        "template_id": 445
+    }
+}

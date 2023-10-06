@@ -1,0 +1,21 @@
+{
+    "code": "mmx-hero",
+    "type": "Z",
+    "is_global": false,
+    "active": true,
+    "attributes": [
+        {
+            "name": "type",
+            "value": "text/javascript"
+        },
+        {
+            "name": "integrity",
+            "value": "sha256-zOoCEoEaqYl1+KGISpB6sgyyEaDFsTKRDhnmFmQAmDE= sha384-C4fMusJf3vMn+AkvxxtN1AgEgHISSML+mlZvJivu0bZh390j1SL+YeWXCaKqeKJY sha512-tHYoIxaS0b6t041OY98h9x/uulBOhNlE0NRqYZOLfb78NOE6Lvto9L7kW0n6q7I+/JJwrYc29PfMPlXnfQWA8A=="
+        },
+        {
+            "name": "crossorigin",
+            "value": "anonymous"
+        }
+    ],
+    "linked_pages": []
+}

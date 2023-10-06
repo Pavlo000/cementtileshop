@@ -1,0 +1,116 @@
+<mvt:item name="html_profile" />
+<head>
+	<title>&mvt:store:name;: Available Sizes</title>
+	<base href="&mvt:global:basehref;" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<mvt:item name="head" param="css_list" />
+<!-- Begin MailChimp Signup Form -->
+	<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+                #mc_embed_signup{background:#fff; clear:left; font-size:14px; }
+                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	</style>
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="SIZES">
+<mvt:item name="hdft" param="global_header" />
+
+	<section class="o-layout">
+		<div class="o-layout__item u-width-12">
+			<section class="t-expanded-block u-bg-white">
+				<div class="o-layout__item t-expanded-block__item">
+					<br>
+					<div class="o-layout o-layout--column-reverse o-layout--row-reverse--l">
+						<div class="o-layout__item u-width-12 u-width-9--l">
+							<section class="o-layout">
+								<div class="o-layout__item">
+									<h1 class="c-heading-delta">&mvte:page:name;</h1>
+									<hr class="c-keyline">
+								</div>
+							</section>
+					
+							<section class="o-layout">
+								<div class="o-layout__item">
+									<mvt:item name="hdft" param="header" />
+								</div>
+							</section>
+				
+							<section class="o-layout" id="content-container">
+								<div class="o-layout__item">
+									<p><strong>Available Tile Sizes</strong></p>
+<p>The standard size for cement tile is 8" x 8" (20cm x 20cm). There are other sizing options to meet your needs (all measurements listed are nominal). Please see below for alternate sizes which may be available for special order. Please call us for more information and pricing.</P>
+<p>
+<p><b>Pacific Collection</b></p>
+<p>12" x 12" Square (30cm x 30cm x 2cm)</p>
+<p>8" x 8" Square (20cm x 20cm x 1.6cm)</p>
+<p>6" x 6" Square (15cm x 15cm)</p>
+<p>5.5" x 5.5" Square (14cm x 14cm)</p>
+<p>4" x 4" Square (10cm x 10cm)</p>
+<p>2.8" x 2.8" Square (7cm x 7cm)</p>
+<p>2" x 2" Square (5cm x 5cm)</p>
+<p>8" x 16" Rectangle (20cm x 40cm x 1.8cm)</p>
+<p>4" x 8" Rectangle (10cm x 20cm)</p>
+<p>2.36" x 8" Rectangle (6cm x 20cm)</p>
+<p>2.8" x 5.5" Rectangle (7cm x 14cm)</p>
+<p>8" x 9" Hexagon (20cm x 23cm)</p>
+<p>6" x 6.7" Hexagon (15cm x 17.2cm)</p>
+<p>8" x 12" Elongated Hexagon (20cm x 30cm)</p>
+<p>8" x 4.5" Diamond (20cm x 11.5cm)</p>
+<p>8" x 8.01" Fish Scale (20cm x 20.4cm)</p>
+<p>8" x 8" Lantern (20cm x 20cm)</p>
+<p>Bullnose and cove base are also available.</p>
+<p>Standard thickness of the tiles is 5/8". Thinner tiles (7/16") for some sizes are available via special order. Restrictions and minimums may apply. Please contact us for more information.</p><p>
+<p>Not all patterns are available in all sizes and may require a custom mold. Please contact us for more information.</p><p>
+<p>
+<p><b>Mexican Collection</b></p>
+<p>12" x 12" Square x .79" (30cm x 30cm x 2cm)</p>
+<p>10" x 10" x .79" Square (25cm x 25cm x 2cm)</p>
+<p>8" x 8" Square (20cm x 20cm)</p>
+<p>6" x 6" Square (15cm x 15cm)</p>
+<p>4" x 4" Square (10cm x 10cm)</p>
+<p>3" x 3" Square (7.5cm x 7.5cm)</p>
+<p>6" x 12" Rectangle (15cm x 30cm)</p>
+<p>4" x 12" Rectangle (10cm x 30cm)</p>
+<p>2" x 8" Rectangle (5cm x 20cm)</p>
+<p>4" x 8" Rectangle (10cm x 20cm)</p>
+<p>8" x 12" Rectangle (20cm x 30cm)</p>
+<p>11.81" x 13.58" x .79 " Hexagon (30cm x 34.5cm x 2cm)</p>
+<p>9.84" x 11.3" x .79" Hexagon (25cm x 28.7cm x 2cm)</p>
+<p>7.87" x 9.06" x .63" Hexagon (20cm x 23cm x 1.6cm)</p>
+<p>10.2" x 10.2" x Arabesque (26cm x 26cm)</p>
+<p>8" x 8" Arabesque (20cm x 20cm)</p>
+<p>10" x 10" San Felipe (25cm x 25cm)</p>
+<p>8" x 8" Fish Scale (20cm x 20cm)</p>
+<p>4" x 8" Diamond (10cm x 20cm)</p>
+<p>Bullnose and cove base are also available. (Black, White and Charcoal bullnose are in stock.)</p> 
+<p>Standard thickness of the tiles is 5/8" (Exceptions noted abvove). Thinner tiles (3/8") for some sizes are available via special order. Not all patterns are available in all sizes and may require a custom mold. Please contact us for more information.</b></p>
+
+
+
+<p><p><b>Special Order Services</b></p>
+<p>We have the capability to provide terrazzo tiles up to 24" x 24" via special order or to create new shapes. Restrictions and minimums may apply. Please contact us at (800) 704-2701 for more information.</p>
+			
+								</div>
+							</section>
+							
+							<section class="o-layout">
+								<div class="o-layout__item">
+									<mvt:item name="hdft" param="footer" />
+								</div>
+							</section>
+						</div>
+						<aside class="o-layout__item u-width-12 u-width-3--l category_tree_items category">
+							<mvt:item name="readytheme" param="navigationset( 'resources_navigation' )" />
+						</aside>
+					</div>
+					<br>
+				</div>
+			</section>
+		</div>
+	</section>
+	<br>
+	
+	<mvt:item name="hdft" param="global_footer" />
+</body>
+</html>

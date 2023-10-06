@@ -1,0 +1,75 @@
+<mvt:if expr="l.settings:record:customfield:googleshopping_ignore_product EQ 1">
+	<mvt:exit />
+</mvt:if>
+
+<mvt:if expr="ISNULL l.settings:record:code">
+	<mvt:exit />
+</mvt:if>
+
+<mvt:assign name="l.settings:record:title" value=" l.settings:record:name " />
+
+<mvt:comment>
+|
+| product description is “(title) handmade cement tile” 
+|
+</mvt:comment>
+
+<mvt:assign name="l.settings:record:descrip" value="' Handmade Cement Tile'" />
+
+<mvt:assign name="l.settings:record:canonical_uri" value="'https://www.cementtileshop.com/collection/' $ l.settings:record:code $ '.html'" />
+
+<mvt:comment>
+|
+| Product Brand, if empty, use Cement Tile Shop
+|
+</mvt:comment>
+
+<mvt:if expr="ISNULL l.settings:record:customfield:googleshopping_brand">
+	<mvt:assign name="l.settings:record:customfield:googleshopping_brand" value="'Cement Tile Shop'" />
+</mvt:if>
+
+<mvt:assign name="l.settings:record:image_path" value="g.Domain:base_surl $ l.settings:record:customfield:nowatermarkimage" />
+
+<mvt:comment>
+|
+| If the customfield `reg_price` is filled out, we assume there is a sale price on the item
+|
+</mvt:comment>
+
+<mvt:if expr="NOT ISNULL l.settings:record:customfield:reg_price">
+	<mvt:assign name="l.settings:record:sale_price"	value="'USD ' $ l.settings:record:price" />
+	<mvt:assign name="l.settings:record:price" value="'USD ' $ l.settings:record:customfield:reg_price" />
+<mvt:else>
+	<mvt:assign name="l.settings:record:price" value="'USD ' $ l.settings:record:price" />
+	<mvt:assign name="l.settings:record:sale_price"	value="''" />
+</mvt:if>
+
+<mvt:assign name="l.settings:record:availability" value="'in stock'" />
+
+<mvt:assign name="l.settings:record:customfield:googleshopping_product_category" value="'Hardware > Building Materials > Flooring & Carpet'" />
+
+<mvt:assign name="l.settings:record:customfield:keywords" value="glosub( l.settings:record:customfield:keywords, ',', ' > ' )" />
+
+
+<mvt:eval expr="
+	miva_csv_encode( l.settings:record:code,						g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:title,						g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:descrip,						g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( 'new',									g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:price,						g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:sale_price,						g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:availability,			 		g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:canonical_uri,					g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:image_path,						g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:customfield:googleshopping_product_category,		g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:customfield:gtin,					g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:code,						g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:customfield:googleshopping_brand,			g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:customfield:size,					g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:customfield:googleshopping_color,			g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:customfield:item_group,				g.delimiter ) $ g.delimiter $
+	miva_csv_encode( l.settings:record:weight,						g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:shipping_length,					g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:shipping_height,					g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:shipping_width,					g.delimiter ) $ g.delimiter $	
+	miva_csv_encode( l.settings:record:customfield:keywords, 				g.delimiter ) $ g.newline "/>

@@ -1,0 +1,393 @@
+{
+    "feed_id": 1,
+    "templatefeed": {
+        "footer_template": {
+            "id": 679,
+            "name": "TEMPLATEFEED_footer-templatefeed_google-templatefeed.mvc"
+        },
+        "header_template": {
+            "id": 677,
+            "name": "TEMPLATEFEED_header-templatefeed_google-templatefeed.mvc"
+        },
+        "iterator_template": {
+            "id": 678,
+            "name": "TEMPLATEFEED_iterator-templatefeed_google-templatefeed.mvc"
+        },
+        "settings_template": {
+            "advanced": 1,
+            "delimiter": "comma",
+            "encoding": "csv",
+            "id": 676,
+            "in_value": "google-shopping-lp",
+            "load": "in_category",
+            "mode": "product",
+            "name": "TEMPLATEFEED_settings-templatefeed_google-templatefeed.mvc",
+            "products": {
+                "customfields": [
+                    {
+                        "code": "AsShown",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "availability_filter",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "Availability",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "basket_inv",
+                        "module": "baskinv"
+                    },
+                    {
+                        "code": "Collection",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "collection_filter11",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "color",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "ColorChart",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "Designer",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "alcohol",
+                        "module": "mvfedexsoap"
+                    },
+                    {
+                        "code": "fclass",
+                        "module": "mvfedexsoap"
+                    },
+                    {
+                        "code": "fpackage",
+                        "module": "mvfedexsoap"
+                    },
+                    {
+                        "code": "dry_ice",
+                        "module": "mvfedexsoap"
+                    },
+                    {
+                        "code": "dryicewt",
+                        "module": "mvfedexsoap"
+                    },
+                    {
+                        "code": "nonstdcont",
+                        "module": "mvfedexsoap"
+                    },
+                    {
+                        "code": "signature",
+                        "module": "mvfedexsoap"
+                    },
+                    {
+                        "code": "googleshopping_adult_product",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_adwords_redirect_url",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_age_group",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_availability",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_brand",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_is_bundled",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_color",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_condition",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_custom_0",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_custom_1",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_custom_2",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_custom_3",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_custom_4",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_description",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_expiration_date",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_gender",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_ignore_product",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_item_number",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_material",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_multipack",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_part_number",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_pattern",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_product_category",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_product_type",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_sale_price",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_item_size",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_size_system",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_size_type",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_title",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_base_unit",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_base_value",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_unit",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_unit_value",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "googleshopping_weight",
+                        "module": "marketplaces"
+                    },
+                    {
+                        "code": "alt1",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt10",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt11",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt12",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt13",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt14",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt15",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt16",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt17",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt18",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt19",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt2",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt20",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt3",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt4",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt5",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt6",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt7",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt8",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "alt9",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "main",
+                        "module": "productimagecustomfields"
+                    },
+                    {
+                        "code": "Length",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "description",
+                        "module": "cmp-mv-prodctgy-meta"
+                    },
+                    {
+                        "code": "keywords",
+                        "module": "cmp-mv-prodctgy-meta"
+                    },
+                    {
+                        "code": "Notes",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "Pieces",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "PricePerPiece",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "footer",
+                        "module": "cmp-cssui-pchdft"
+                    },
+                    {
+                        "code": "header",
+                        "module": "cmp-cssui-pchdft"
+                    },
+                    {
+                        "code": "product_label",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "reg_price",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "shape11",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "shipping_returns",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "size1",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "specifications",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "Coverage",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "CoverageMeter",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "Thickness",
+                        "module": "customfields"
+                    },
+                    {
+                        "code": "total_inv",
+                        "module": "baskinv"
+                    },
+                    {
+                        "code": "Width",
+                        "module": "customfields"
+                    }
+                ],
+                "load_variants": 0,
+                "predict_discounts": 0
+            }
+        }
+    }
+}

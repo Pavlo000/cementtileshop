@@ -1,0 +1,44 @@
+<mvt:item name="html_profile" />
+
+<head>
+	<title>&mvt:store:name;: &mvt:category:name;</title>
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="https://www.cementtileshop.com/cement-tile/&mvta:category:code;.html" />
+	<mvt:item name="prodctgy_meta" param="ctgy" />
+	<mvt:item name="category_listing_imagemachine" param="head" />
+	<!-- <mvt:item name="head" param="css_list" /> -->
+	<mvt:item name="head" param="head_tag" />
+	<script>
+$(function(){
+if ($(window).width() <= 480) {
+		$("#category-header").hide();
+		$("#main-content h1").click(function(){
+   			$("#category-header").slideToggle();
+		});
+}
+});
+	</script>
+</head>
+<body class="CTGY">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="navigation-bar"><mvt:item name="navbar" /></div>
+	<table id="content-container">
+		<tr>
+			<td id="left-navigation"><mvt:item name="category_tree" /></td>
+			<td id="main-content">
+				<div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div>
+				<h1>&mvte:category:name;</h1>
+				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+				<div id="category-header"><mvt:item name="prod_ctgy_hdft" param="ctgy_header" /></div>
+				<div id="category-listing"><mvt:item name="category_listing" /></div>
+				<div id="category-footer"><mvt:item name="prod_ctgy_hdft" param="ctgy_footer" /></div>
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

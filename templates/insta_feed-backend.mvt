@@ -1,0 +1,62 @@
+<div class="head-insta">
+    <div class='overlay-insta-feed'></div>
+    <h2>INSTAGRAM FEED MANAGER</h2>
+    <div id="options" style="display:none;">
+        <div id="layout-toggler">
+            Layout:
+            <span title="Normal layout" class="active"></span>
+            <span title="Wide layout" class="wide"></span>
+        </div>
+    </div>
+</div>
+
+<div id="progress-bar">
+    <h4>It takes a bit to make sure we deliver you quality posts from Instagram. Thank you for your patience.</h4>
+    <div class="loader"></div>
+</div>
+
+<div class="content-insta-photo ">
+    <div class="post-item column half medium-one-third" style="display:none;">
+        <img class="post-thumb" src=""/>
+        <div class="post-container"> 
+            <div>
+                <div class="arrow-button prev-post"></div>
+                <i class="fa fa-times close" aria-hidden="true"></i>
+            
+                <img class="post-img" src=""/>
+                
+                <div class="right-show-insta">
+                    
+                    
+                    <div class="insta-user"> 
+                        <img class="avatar" src="" onerror="this.src='instagram_feed/img_slider_loader.gif'"/>
+                        <a class="user-name" href="#" target="_blank">saxmexico</a>
+                    </div>
+                    
+                    <p class="likes"><span>111</span> likes</p>
+                    <a class="date" href="#" target="_blank">1d</a>
+                    
+                    <div class="text-insta-feed"> 
+                        <p>
+                            seximxo Crea lol qipe <span>#Lmado</span>
+                            <span>#Lmado</span><span>#Lmado</span><span>#Lmado</span><span>#Lmado</span>
+                        </p>
+                    </div>
+                    
+                    <h3>ATTACHED PRODUCTS</h3>
+                    <button class="attach-products">Add Product(s)</button>
+                    <div class="attached-products"></div>
+                    
+                    <button class="save-changes">Save</button>
+                    <button class="remove-post">Remove</button>
+    
+                </div>
+                <div class="arrow-button next-post"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="load-more" style="display:none;">
+    <button>Load more <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+</div>

@@ -1,0 +1,335 @@
+{
+    "attributemachine": {
+        "dependency_resolution": "first",
+        "enabled": 1,
+        "inv_element_id": "inventory-message",
+        "inv_short": 0,
+        "invalid_msg": "Please select a valid combination of attributes.",
+        "missing_radio_msg": "<br>An option must be selected for <b>%attribute_prompt%</b>.",
+        "missing_text_msg": "<br>A value must be entered for <b>%attribute_prompt%</b>.",
+        "predictdiscounts": 0,
+        "preload": 1,
+        "price": "base",
+        "price_element_id": "price-value",
+        "swatch_element_id": "swatches",
+        "template_filename": "prod-eu-attributemachine.mvc",
+        "template_id": 479
+    },
+    "content": {
+        "template_filename": "prod-eu-content.mvc",
+        "template_id": 788
+    },
+    "hdft": {
+        "footer": {
+            "template_filename": "prod-eu-footer.mvc",
+            "template_id": 484
+        },
+        "head": {
+            "template_filename": "prod-eu-head.mvc",
+            "template_id": 482
+        },
+        "header": {
+            "template_filename": "prod-eu-header.mvc",
+            "template_id": 483
+        }
+    },
+    "product_attributes": {
+        "template_filename": "prod-eu-product_attributes.mvc",
+        "template_id": 486
+    },
+    "product_display": {
+        "advanced": 1,
+        "b_height": 274,
+        "b_width": 274,
+        "constrain": "N",
+        "displaydiscounts": 0,
+        "field_code": 1,
+        "field_desc": 1,
+        "field_name": 1,
+        "field_price": 1,
+        "field_weight": 1,
+        "fields_custom": [
+            {
+                "code": "AsShown",
+                "module": "customfields"
+            },
+            {
+                "code": "Availability",
+                "module": "customfields"
+            },
+            {
+                "code": "basket_inv",
+                "module": "baskinv"
+            },
+            {
+                "code": "Collection",
+                "module": "customfields"
+            },
+            {
+                "code": "ColorChart",
+                "module": "customfields"
+            },
+            {
+                "code": "Designer",
+                "module": "customfields"
+            },
+            {
+                "code": "alcohol",
+                "module": "mvfedexsoap"
+            },
+            {
+                "code": "dry_ice",
+                "module": "mvfedexsoap"
+            },
+            {
+                "code": "dryicewt",
+                "module": "mvfedexsoap"
+            },
+            {
+                "code": "nonstdcont",
+                "module": "mvfedexsoap"
+            },
+            {
+                "code": "signature",
+                "module": "mvfedexsoap"
+            },
+            {
+                "code": "alt1",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt10",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt11",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt12",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt13",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt14",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt15",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt16",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt17",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt18",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt19",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt2",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt3",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt4",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt5",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt6",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt7",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt8",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt9",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "main",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "Length",
+                "module": "customfields"
+            },
+            {
+                "code": "description",
+                "module": "cmp-mv-prodctgy-meta"
+            },
+            {
+                "code": "keywords",
+                "module": "cmp-mv-prodctgy-meta"
+            },
+            {
+                "code": "Notes",
+                "module": "customfields"
+            },
+            {
+                "code": "Pieces",
+                "module": "customfields"
+            },
+            {
+                "code": "PricePerPiece",
+                "module": "customfields"
+            },
+            {
+                "code": "footer",
+                "module": "cmp-cssui-pchdft"
+            },
+            {
+                "code": "header",
+                "module": "cmp-cssui-pchdft"
+            },
+            {
+                "code": "Coverage",
+                "module": "customfields"
+            },
+            {
+                "code": "CoverageMeter",
+                "module": "customfields"
+            },
+            {
+                "code": "Thickness",
+                "module": "customfields"
+            },
+            {
+                "code": "total_inv",
+                "module": "baskinv"
+            },
+            {
+                "code": "Width",
+                "module": "customfields"
+            }
+        ],
+        "image": "F",
+        "imagemachine_enabled": 1,
+        "invmsg": "L",
+        "predictdiscounts": 0,
+        "price": "base",
+        "template_filename": "prod-eu-product_display.mvc",
+        "template_id": 485
+    },
+    "product_display_imagemachine": {
+        "closeup_active": 1,
+        "closeup_close": "closeup_close",
+        "closeup_div": "closeup_div",
+        "closeup_height": 500,
+        "closeup_image": "closeup_image",
+        "closeup_size": "N",
+        "closeup_width": 500,
+        "enabled": 1,
+        "head": {
+            "template_filename": "prod-eu-product_display_imagemachine-head.mvc",
+            "template_id": 480
+        },
+        "image_height": 400,
+        "image_size": "B",
+        "image_width": 400,
+        "legacy_image": "F",
+        "main_image": "main_image",
+        "preload": 0,
+        "thumb_active": 1,
+        "thumb_height": 60,
+        "thumb_width": 60,
+        "thumbnails": "thumbnails"
+    },
+    "related_products": {
+        "advanced": 1,
+        "b_height": 234,
+        "b_width": 234,
+        "button_add": 1,
+        "button_buy": 1,
+        "col_num": 2,
+        "constrain": "B",
+        "default_sort": "disp_order",
+        "displaydiscounts": 0,
+        "field_code": 1,
+        "field_name": 1,
+        "field_price": 1,
+        "format": "X",
+        "image": "T",
+        "imagemachine_enabled": 1,
+        "invmsg": "L",
+        "items_per_page_filter": 1,
+        "linkexcludecat": 0,
+        "mode": "relp",
+        "page_disp_count": 3,
+        "per_page": 12,
+        "predictdiscounts": 0,
+        "price": "base",
+        "reverse_default_disp_order": 0,
+        "sort_by": {
+            "best": 1,
+            "new": 1,
+            "price": 1,
+            "switch": 1
+        },
+        "template_filename": "prod-eu-related_products.mvc",
+        "template_id": 487
+    },
+    "related_products_imagemachine": {
+        "closeup_active": 0,
+        "closeup_close": "closeup_close_%product_id%",
+        "closeup_div": "closeup_div_%product_id%",
+        "closeup_height": 500,
+        "closeup_image": "closeup_image_%product_id%",
+        "closeup_size": "N",
+        "closeup_width": 500,
+        "enabled": 1,
+        "head": {
+            "template_filename": "prod-eu-related_products_imagemachine-head.mvc",
+            "template_id": 481
+        },
+        "image_height": 140,
+        "image_size": "B",
+        "image_width": 140,
+        "legacy_image": "T",
+        "main_image": "main_image_%product_id%",
+        "preload": 0,
+        "thumb_active": 1,
+        "thumb_height": 42,
+        "thumb_width": 42,
+        "thumbnails": "thumbnails_%product_id%"
+    },
+    "seo_settings": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    }
+}

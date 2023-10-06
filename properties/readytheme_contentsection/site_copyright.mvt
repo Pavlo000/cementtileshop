@@ -1,0 +1,4 @@
+<section class="o-wrapper o-wrapper--full t-site-copyright">
+	<p class="u-font-tiny u-text-center u-text-left--l u-text-uppercase">&copy; <mvt:eval expr="s.tm_year" /> &mvt:global:store:company;. All Rights Reserved.</a></p>
+</section>
+<!-- end t-site-copyright -->

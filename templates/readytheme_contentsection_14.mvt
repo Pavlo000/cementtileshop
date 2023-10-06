@@ -1,0 +1,10 @@
+<p><p><strong>Customer Service Hours</strong><br><b>Monday - Friday</b> &nbsp;&nbsp;&nbsp;&nbsp;9:00 AM - 8:00 PM (EST)<br>
+<p><strong>We're Here To Help</strong><br />Your satisfaction is important to us! Use the form to email us your questions about products, quotes, online orders, store experiences and more.</p>
+<p><strong>Telephone Support:</strong><br />We pride ourselves on first class service and customer satisfaction. We will gladly assist you with any cement tile questions you may have. Please do not hesitate to contact customer support at: <a href="tel:+1<mvt:eval expr="glosub(g.store:phone, '.', '')" />"><strong>&mvt:global:store:phone;</strong></a>.</p>
+
+<p><address itemscope itemtype="http://schema.org/LocalBusiness">
+	<strong itemprop="name">&mvt:global:store:company;</strong><br>
+	&mvt:global:store:address;<br>
+	&mvt:global:store:city;, &mvt:global:store:state; &mvt:global:store:zip; &mvt:global:store:country;<br>
+	Customer Service: <span itemprop="telephone"><a href="tel:+1<mvt:eval expr="glosub(g.store:phone, '.', '')" />">&mvt:global:store:phone;</a></span>
+</address>

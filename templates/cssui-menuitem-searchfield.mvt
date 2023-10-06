@@ -1,0 +1,24 @@
+
+
+<mvt:if expr="NOT('_sample' CIN l.settings:product:code OR '_images' CIN l.settings:product:code)">
+            <div class="u-color-black t-search-preview__link">
+                <figure class="t-search-preview__figure">
+                    <picture class="t-search-preview__picture">
+                        <img class="t-search-preview__image" src="&mvte:product:imagetypes:main;" alt="&mvt:product:name;">
+                    </picture>
+                    <figcaption class="t-search-preview__figure-caption">
+                        <span class="t-search-preview__name">&mvt:product:name;</span>
+                        
+                            <mvt:assign name="g.width" value="l.settings:product:customfield_values:customfields:Width" />
+                            <mvt:assign name="g.length" value="l.settings:product:customfield_values:customfields:Length" />
+                            <mvt:do file="g.Module_Library_Utilities" name="l.success" value="SplitString(g.width, '(', g.width)" />
+                            <mvt:do file="g.Module_Library_Utilities" name="l.success" value="SplitString(g.length, '(', g.length)" />
+  
+                            <span class="x-product-list__name" style="font-size:0.7rem;">
+                                &mvt:global:width[1];x 
+                                &mvt:global:length[1];
+                            </span>
+                    </figcaption>
+                </figure>
+            </div>
+</mvt:if>

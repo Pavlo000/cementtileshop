@@ -1,0 +1,84 @@
+
+        <mvt:if expr="g.basket:cust_id Eq '10096'">  <mvt:comment> admin@cementtileshop.com account </mvt:comment>
+               <input type="hidden" name="RequestQuote_Country" value="US">
+               <button type="button" disabled="" class="disabled x-custom-select__title" style="background: #dedede; color: #999; "> <strong>United States</strong></button>
+            <mvt:else>
+                <select name="RequestQuote_Country" id="RequestQuote_Country" class="u-hidden">
+    <option value="">&lt;Select One&gt;</option>
+    <option value="AT">Austria</option>
+    <option value="AB">Albania</option>
+    <option value="AD">Andorra</option>
+    <option value="BY">Belarus</option>
+    <option value="BE">Belgium</option>
+    <option value="BG">Bulgaria</option>
+    <option value="BN">Bosnia</option>
+    <option value="HR">Croatia</option>
+    <option value="CY">Cyprus</option>
+    <option value="CZ">Czech Republic</option>
+    <option value="DK">Denmark</option>
+    <option value="EE">Estonia</option>
+    <option value="FI">Finland</option>
+    <option value="FR">France</option>
+    <option value="DE">Germany</option>
+    <option value="GR">Greece</option>
+    <option value="HU">Hungary</option>
+    <option value="IE">Ireland</option>
+    <option value="IS">Iceland</option>
+    <option value="IT">Italy</option>
+    <option value="LV">Latvia</option>
+    <option value="LT">Lithuania</option>
+    <option value="LU">Luxembourg</option>
+    <option value="MT">Malta</option>
+    <option value="NL">Netherlands</option>
+    <option value="PL">Poland</option>
+    <option value="PT">Portugal</option>
+    <option value="RO">Romania</option>
+    <option value="SK">Slovakia</option>
+    <option value="SI">Slovenia</option>
+    <option value="ES">Spain</option>
+    <option value="SE">Sweden</option>
+    <option value="GB">United Kingdom</option>
+    <option value="IT">Vatican</option>
+    </select>
+        </mvt:if>
+
+        <mvt:comment><mvt:else>
+            <select name="RequestQuote_Country" id="RequestQuote_Country" class="u-hidden">
+    <option value="">&lt;Select One&gt;</option>
+    <option value="AT">Austria</option>
+    <option value="AB">Albania</option>
+    <option value="AD">Andorra</option>
+    <option value="BY">Belarus</option>
+    <option value="BE">Belgium</option>
+    <option value="BG">Bulgaria</option>
+    <option value="BN">Bosnia</option>
+    <option value="HR">Croatia</option>
+    <option value="CY">Cyprus</option>
+    <option value="CZ">Czech Republic</option>
+    <option value="DK">Denmark</option>
+    <option value="EE">Estonia</option>
+    <option value="FI">Finland</option>
+    <option value="FR">France</option>
+    <option value="DE">Germany</option>
+    <option value="GR">Greece</option>
+    <option value="HU">Hungary</option>
+    <option value="IE">Ireland</option>
+    <option value="IS">Iceland</option>
+    <option value="IT">Italy</option>
+    <option value="LV">Latvia</option>
+    <option value="LT">Lithuania</option>
+    <option value="LU">Luxembourg</option>
+    <option value="MT">Malta</option>
+    <option value="NL">Netherlands</option>
+    <option value="PL">Poland</option>
+    <option value="PT">Portugal</option>
+    <option value="RO">Romania</option>
+    <option value="SK">Slovakia</option>
+    <option value="SI">Slovenia</option>
+    <option value="ES">Spain</option>
+    <option value="SE">Sweden</option>
+    <option value="GB">United Kingdom</option>
+    <option value="IT">Vatican</option>
+    </select>
+                
+    </mvt:if></mvt:comment>

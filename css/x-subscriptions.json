@@ -1,0 +1,8 @@
+{
+    "code": "x-subscriptions",
+    "type": "L",
+    "branchless_filepath": "themes/colossus/extensions/subscriptions/subscriptions.css",
+    "is_global": true,
+    "active": true,
+    "attributes": []
+}

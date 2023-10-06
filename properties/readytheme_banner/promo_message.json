@@ -1,0 +1,7 @@
+{
+    "active": 0,
+    "descrip": "top promo message",
+    "link_targ": "_self",
+    "link_type": "N",
+    "message": "<section class=\"t-site-header__top-navigation &mvt:global:checkout_hidden;\">\n\t<div class=\"u-text-center u-text-left--m\">\n\t\t<span class=\"u-text-uppercase t-site-header__message\">\n                 Cyber Monday Sale Extended! 15% off any purchase through Friday December 3rd! Enter code <b>Cyber21</b> at checkout.\n                </span>\n\t</div>\n</section>"
+}

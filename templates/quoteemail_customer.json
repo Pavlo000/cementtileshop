@@ -1,0 +1,9 @@
+{
+    "customer": {
+        "editable": 0,
+        "mode": "order",
+        "prevent_template_auto_update": 0,
+        "template_filename": "quoteemail_customer-customer.mvc",
+        "template_id": 867
+    }
+}

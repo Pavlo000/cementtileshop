@@ -1,0 +1,32 @@
+{
+    "items": [
+        {
+            "active": 1,
+            "disp_order": 450,
+            "id": 450,
+            "link": "<a href=\"https://www.cementtileshop.com/PRPO.html\" target=\"_self\">Privacy Statement</a>",
+            "link_dest": "PRPO",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Privacy Statement",
+            "parent_id": 0,
+            "set_id": 6,
+            "url": "https://www.cementtileshop.com/PRPO.html"
+        },
+        {
+            "active": 1,
+            "disp_order": 481,
+            "id": 481,
+            "link": "<a href=\"https://www.cementtileshop.com/SARP.html\" target=\"_self\">Shipping and Return Policies</a>",
+            "link_dest": "SARP",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Shipping and Return Policies",
+            "parent_id": 0,
+            "set_id": 6,
+            "url": "https://www.cementtileshop.com/SARP.html"
+        }
+    ],
+    "layout": "S",
+    "name": "Global Footer Disclaimer Navigation"
+}

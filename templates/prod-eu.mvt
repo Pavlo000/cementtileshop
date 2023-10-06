@@ -1,0 +1,42 @@
+<mvt:item name="html_profile" />
+<head>
+	<title>&mvt:store:name; &mvte:product:name;</title>
+	<base href="&mvt:global:basehref;" />
+	<link href="https://www.cementtileshop.com/collection/&mvte:product:code;.html" rel="canonical"/>
+	<mvt:item name="prodctgy_meta" param="prod" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+	<mvt:item name="attributemachine" param="head" />
+	<mvt:item name="product_display_imagemachine" param="head" />
+	<mvt:item name="related_products_imagemachine" param="head" />
+</head>
+<body class="PROD">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="navigation-bar"><mvt:item name="navbar" /></div>
+	<table id="content-container">
+		<tr>
+			<td id="left-navigation"><mvt:item name="category_tree" /></td>
+			<td id="main-content">
+				<div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div>
+				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+				<div id="product-header"><mvt:item name="prod_ctgy_hdft" param="prod_header" /></div>
+				<mvt:item name="product_display" />
+				<mvt:item name="attributemachine" param="body" />
+				<mvt:if expr="l.settings:related_product_count NE 0">
+				<div class="related-products">
+					<h2 class="header">Related Item(s)</h2>
+					<mvt:item name="related_products" />
+				</div>
+				</mvt:if>
+				<div id="product-footer"><mvt:item name="prod_ctgy_hdft" param="prod_footer" /></div>
+
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

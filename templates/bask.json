@@ -1,0 +1,153 @@
+{
+    "amazonpay": {
+        "template_filename": "bask-amazonpay.mvc",
+        "template_id": 720
+    },
+    "amazonpay_button": {
+        "advanced": 0,
+        "color": "orange",
+        "size": "medium",
+        "template_filename": "bask-amazonpay_button.mvc",
+        "template_id": 721
+    },
+    "BASKET": {
+        "advanced": 1,
+        "applycoupons": 1,
+        "B_HEIGHT": 208,
+        "B_WIDTH": 208,
+        "button_wish": 1,
+        "CONSTRAIN": "B",
+        "discounts": 1,
+        "EDITABLE": 1,
+        "fields_custom": [
+            {
+                "code": "ColorChart",
+                "module": "customfields"
+            },
+            {
+                "code": "Coverage",
+                "module": "customfields"
+            }
+        ],
+        "groups": 1,
+        "HANDLING": 1,
+        "imagetypes": [
+            "main"
+        ],
+        "lineitemcoupons": 1,
+        "lineitemdiscounts": 1,
+        "lineitemprice": "base",
+        "redeemgiftcerts": 0,
+        "SALESTAX": 1,
+        "SHIPPING": 1,
+        "splitpayments": 0,
+        "TEMPLATE_FILENAME": "bask-basket.mvc",
+        "TEMPLATE_ID": 73
+    },
+    "content": {
+        "template_filename": "bask-content.mvc",
+        "template_id": 400
+    },
+    "HDFT": {
+        "FOOTER": {
+            "TEMPLATE_FILENAME": "bask-footer.mvc",
+            "TEMPLATE_ID": 72
+        },
+        "HEAD": {
+            "TEMPLATE_FILENAME": "bask-head.mvc",
+            "TEMPLATE_ID": 70
+        },
+        "HEADER": {
+            "TEMPLATE_FILENAME": "bask-header.mvc",
+            "TEMPLATE_ID": 71
+        }
+    },
+    "paypalcp_buttons": {
+        "color": "gold",
+        "disable_funding": "card",
+        "label": "paypal",
+        "layout": "vertical",
+        "shape": "rect",
+        "tagline": 0
+    },
+    "paypalcp_credit": {
+        "flex": {
+            "color": "blue",
+            "ratio": "1x1"
+        },
+        "layout": "text",
+        "placement": "cart",
+        "text": {
+            "color": "black",
+            "logo": "primary",
+            "position": "left"
+        }
+    },
+    "PAYPALDISBLADR": {
+        "TEMPLATE_FILENAME": "bask-PaypalDisblAdr.mvc",
+        "TEMPLATE_ID": 267
+    },
+    "PAYPALERRORMSG": {
+        "TEMPLATE_FILENAME": "bask-PaypalErrorMsg.mvc",
+        "TEMPLATE_ID": 265
+    },
+    "PAYPALEXBUTTON": {
+        "advanced": 1,
+        "locale": "en_US",
+        "style": {
+            "color": "gold",
+            "fundingicons": 0,
+            "label": "checkout",
+            "layout": "vertical",
+            "shape": "rect",
+            "size": "responsive",
+            "tagline": 0
+        },
+        "TEMPLATE_FILENAME": "bask-PaypalExButton.mvc",
+        "TEMPLATE_ID": 266
+    },
+    "product_attributes": {
+        "template_filename": "bask-product_attributes.mvc",
+        "template_id": 831
+    },
+    "SEO_SETTINGS": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    },
+    "shipestimate": {
+        "advanced": 1,
+        "mode": "basket",
+        "results_display": "inline",
+        "results_page": "SERT",
+        "ship_addr1": 0,
+        "ship_addr2": 0,
+        "ship_city": 0,
+        "ship_cntry": 1,
+        "ship_comp": 0,
+        "ship_countries": {
+            "US": 1
+        },
+        "ship_email": 0,
+        "ship_fax": 0,
+        "ship_fname": 0,
+        "ship_lname": 0,
+        "ship_phone": 0,
+        "ship_res": 0,
+        "ship_state": 1,
+        "ship_zip": 1,
+        "template_filename": "bask-shipestimate.mvc",
+        "template_id": 725
+    }
+}

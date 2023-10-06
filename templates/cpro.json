@@ -1,0 +1,12 @@
+{
+    "hdft": {
+        "footer": {
+            "template_filename": "cpro-footer.mvc",
+            "template_id": 737
+        },
+        "header": {
+            "template_filename": "cpro-header.mvc",
+            "template_id": 736
+        }
+    }
+}

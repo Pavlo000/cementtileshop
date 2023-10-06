@@ -1,0 +1,135 @@
+window.gallery = [];
+let generate_thumbnail_event = new CustomEvent('ImageMachine_Generate_Thumbnail');
+let thumbnailIndex = 0;
+let thumbnail_width;
+let thumbnail_height;
+let gallery_container;
+let gallery_Index = 0;
+let productName = '&mvtj:product:name;';
+
+gallery_container = document.createElement('div');
+gallery_container.classList.add('x-product-photo-gallery');
+gallery_container.setAttribute('data-hook', 'photo-gallery');
+
+
+/**
+ * This function allows you to prepend or append code to an existing function.
+ * https://stackoverflow.com/questions/9134686/adding-code-to-a-javascript-function-programmatically
+ */
+function functionExtender(container, funcName, prepend, append) {
+	(function () {
+		'use strict';
+		let cachedFunction = container[funcName];
+
+		container[funcName] = function () {
+			if (prepend) {
+				prepend.apply(this);
+			}
+
+			let result = cachedFunction.apply(this, arguments);
+
+			if (append) {
+				append.apply(this);
+			}
+
+			return result;
+		};
+	})();
+}
+
+
+ImageMachine.prototype.oninitialize = function (data) {
+	window.gallery = [];
+	gallery_container.innerHTML = '';
+	gallery_Index = 0;
+	thumbnailIndex = 0;
+	this.Initialize(data);
+	this.main_image.setAttribute('data-index', '0');
+};
+
+
+ImageMachine.prototype.ImageMachine_Generate_Thumbnail = function (thumbnail_image, main_image, closeup_image, type_code) {
+console.log('ImageMachine_Generate_Thumbnail');
+	let img;
+	let thumbnail;
+	let gallery_element;
+	let gallery_image;
+
+	if (!thumbnail_width && !thumbnail_height) {
+		thumbnail_width = this.thumb_width + 'px';
+		thumbnail_height = this.thumb_height + 'px';
+	}
+
+	thumbnail = document.createElement('span');
+	thumbnail.classList.add('x-product-layout-images__thumbnail-image');
+	thumbnail.setAttribute('data-index', thumbnailIndex++);
+	thumbnail.setAttribute('data-main', main_image);
+	thumbnail.setAttribute('data-type', type_code);
+	thumbnail.setAttribute('data-zoom', closeup_image);
+	thumbnail.setAttribute('style', 'width: ' + thumbnail_width + '; display: inline-block; height: ' + thumbnail_height +';');
+
+	if (typeof( thumbnail_image ) === 'string' && thumbnail_image.length > 0) {
+		img = document.createElement('img');
+		img.src = thumbnail_image;
+		img.setAttribute('alt', productName);
+		img.setAttribute('itemprop', 'thumbnail');
+		thumbnail.appendChild(img);
+	}
+
+	/**
+	 * Create a scrollable gallery, append it to the page, and open on main image click.
+	 */
+	gallery_image = (typeof (closeup_image) === 'string' && closeup_image.length > 0) ? closeup_image : main_image;
+
+	if (typeof( closeup_image ) === 'string' && closeup_image.length > 0) {
+		gallery_element = document.createElement('img');
+		gallery_element.src = gallery_image;
+		gallery_element.setAttribute('data-index', gallery_Index++);
+		gallery_element.setAttribute('alt', productName);
+		gallery_container.appendChild(gallery_element);
+	}
+
+	gallery.push({
+		src: gallery_image,
+		title: productName
+	});
+
+	document.dispatchEvent(generate_thumbnail_event);
+
+	return thumbnail;
+};
+
+
+let gallery_template = document.querySelector('[data-hook="photo-gallery-template"]');
+
+if (gallery_template) {
+	gallery_template.appendChild(gallery_container);
+}
+
+
+/**
+ * This controls what happens when you click a thumbnail.
+ */
+functionExtender(
+	ImageMachine.prototype,
+	'onthumbnailimageclick',
+	function () {},
+	function () {
+		let clickedElement = event.target;
+
+		//console.log(clickedElement.getAttribute('data-index'));
+		this.main_image.setAttribute('data-index', clickedElement.getAttribute('data-index'));
+	}
+);
+
+
+/**
+ * This disables the default Miva image zoom functionality.
+ * @return {boolean}
+ */
+ImageMachine.prototype.Closeup_Open = function () {
+	return false;
+};
+
+ImageMachine.prototype.onmainimageclick = function () {
+};

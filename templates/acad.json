@@ -1,0 +1,40 @@
+{
+    "CUSTOMER": {
+        "EDITABLE": 1,
+        "MODE": "customer_add",
+        "PREFIX": "Customer_",
+        "prevent_template_auto_update": 0,
+        "TEMPLATE_FILENAME": "acad-customer.mvc",
+        "TEMPLATE_ID": 100
+    },
+    "HDFT": {
+        "FOOTER": {
+            "TEMPLATE_FILENAME": "acad-footer.mvc",
+            "TEMPLATE_ID": 99
+        },
+        "HEAD": {
+            "TEMPLATE_FILENAME": "acad-head.mvc",
+            "TEMPLATE_ID": 97
+        },
+        "HEADER": {
+            "TEMPLATE_FILENAME": "acad-header.mvc",
+            "TEMPLATE_ID": 98
+        }
+    },
+    "SEO_SETTINGS": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    }
+}

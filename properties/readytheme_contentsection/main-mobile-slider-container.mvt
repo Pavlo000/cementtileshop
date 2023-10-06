@@ -1,0 +1,25 @@
+<style>
+/* let oversize image fit */
+#main-mobile-slider-container img {
+    min-height: 194px;
+    object-fit: cover;
+    object-position: left;
+}
+</style>
+<div id="hero-slider-mobile-container">
+    <div id="hero-slider-mobile">
+		<mvt:item name="readytheme" param="image( 'main_mobile_slide1' )" />
+
+		<mvt:item name="readytheme" param="image( 'main_mobile_slide2' )" />
+
+		<mvt:item name="readytheme" param="image( 'main_mobile_slide3' )" />
+
+		<mvt:item name="readytheme" param="image( 'main_mobile_slide4' )" />
+
+		<mvt:item name="readytheme" param="image( 'main_mobile_slide5' )" />
+
+		<mvt:item name="readytheme" param="image( 'main_mobile_slide6' )" />
+
+		<mvt:item name="readytheme" param="image( 'main_mobile_slide7' )" />
+    </div>
+</div>

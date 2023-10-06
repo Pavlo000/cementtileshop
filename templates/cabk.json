@@ -1,0 +1,33 @@
+{
+    "addressbook": {
+        "prevent_template_auto_update": 1,
+        "template_filename": "cabk-addressbook.mvc",
+        "template_id": 550
+    },
+    "hdft": {
+        "footer": {
+            "template_filename": "cabk-footer.mvc",
+            "template_id": 549
+        },
+        "header": {
+            "template_filename": "cabk-header.mvc",
+            "template_id": 548
+        }
+    },
+    "seo_settings": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    }
+}

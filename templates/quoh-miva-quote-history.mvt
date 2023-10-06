@@ -1,0 +1,126 @@
+
+	<div class="line-item">
+	<table>
+		<tr class="heading">
+				<td class="order-invoice">
+					<mvt:if expr="g.SortBy EQ 'QuoIDAsc' OR ISNULL g.SortBy">
+					<a href="&mvt:global:secure_sessionurl;&amp;Store_Code=&mvta:store:code;&amp;Screen=QUOH&amp;SortBy=QuoIDDesc">Quote ID</a>
+					<mvt:else>
+					<a class="a" href="&mvt:global:secure_sessionurl;&amp;Store_Code=&mvta:store:code;&amp;Screen=QUOH&amp;SortBy=QuoIDAsc">Quote ID</a>
+					</mvt:if>
+				</td>
+				<td class="order-invoice">
+					<mvt:if expr="g.SortBy EQ 'QuoOrIDAsc' OR ISNULL g.SortBy">
+					<a href="&mvt:global:secure_sessionurl;&amp;Store_Code=&mvta:store:code;&amp;Screen=QUOH&amp;SortBy=QuoOrIDDesc">Order ID</a>
+					<mvt:else>
+					<a href="&mvt:global:secure_sessionurl;&amp;Store_Code=&mvta:store:code;&amp;Screen=QUOH&amp;SortBy=QuoOrIDAsc">Order ID</a>		
+					</mvt:if>
+				</td>
+				<td class="order-invoice">
+					Code
+				</td>
+			
+				<td class="order-invoice">
+					<mvt:if expr="g.SortBy EQ 'QuoStAsc' OR ISNULL g.SortBy">
+					<a href="&mvt:global:secure_sessionurl;&amp;Store_Code=&mvta:store:code;&amp;Screen=QUOH&amp;SortBy=QuoStDesc">Status</a>
+					<mvt:else>
+					<a href="&mvt:global:secure_sessionurl;&amp;Store_Code=&mvta:store:code;&amp;Screen=QUOH&amp;SortBy=QuoStAsc">Status</a>
+					</mvt:if>
+				</td>
+			
+				<td class="order-invoice">
+					<mvt:if expr="g.SortBy EQ 'QuoDtAsc' OR ISNULL g.SortBy">
+					<a href="&mvt:global:secure_sessionurl;&amp;Store_Code=&mvta:store:code;&amp;Screen=QUOH&amp;SortBy=QuoDtDesc">Created</a>
+					<mvt:else>
+					<a href="&mvt:global:secure_sessionurl;&amp;Store_Code=&mvta:store:code;&amp;Screen=QUOH&amp;SortBy=QuoDtAsc">Created</a>
+					</mvt:if>
+				</td>
+			
+				<td class="order-invoice">
+					<mvt:if expr="g.SortBy EQ 'QuoExAsc' OR ISNULL g.SortBy">
+					<a href="&mvt:global:secure_sessionurl;&amp;Store_Code=&mvta:store:code;&amp;Screen=QUOH&amp;SortBy=QuoExDesc">Expires</a>
+					<mvt:else>
+					<a href="&mvt:global:secure_sessionurl;&amp;Store_Code=&mvta:store:code;&amp;Screen=QUOH&amp;SortBy=QuoExAsc">Expires</a>
+					</mvt:if>
+				</td>
+			
+				<td class="order-invoice">
+					&nbsp;
+				</td>
+		</tr>
+		<mvt:foreach iterator="quote" array="quotes">
+		<mvt:if expr = "l.pos1 MOD 2">
+		<tr class="alt_row">
+		<mvt:else>
+		<tr>
+		</mvt:if>
+
+			
+				
+				<td class="order-invoice">
+					&mvte:quote:id;
+				</td>
+				<td class="order-invoice">
+					<mvt:if expr = "l.settings:quote:order_id">
+						<a href="&mvt:global:secure_sessionurl;Screen=ORDS&amp;Store_Code=&mvta:global:Store_Code;&amp;SortBy=&mvta:global:SortBy;&amp;Offset=&mvta:global:Offset;&amp;Order_ID=&mvta:quote:order_id;&amp;Order_BillEmail=&mvta:global:Order_BillEmail;&amp;Order_BillZip=&mvta:global:Order_BillZip;">&mvte:quote:order_id;</a>
+					<mvt:else>
+						None
+					</mvt:if>
+				</td>
+				<td class="order-invoice">
+					&mvte:quote:code;
+				</td>
+				<td class="order-status">
+					&mvte:quote:formatted_status;
+				</td>
+				<td class="order-date">
+					&mvte:quote:formatted_created_date;
+				</td>
+				<td class="order-date">
+					&mvte:quote:formatted_expiry_date;
+				</td>
+		<td class="order-view">
+			<a href="&mvt:global:secure_sessionurl;Screen=QUOT&amp;Store_Code=&mvta:global:Store_Code;&amp;QuoteCode=&mvta:quote:code;">View</a>
+		</td>
+		</tr>
+		</mvt:foreach>
+	</table>
+
+	<mvt:if expr="(g.Offset OR g.NextOffset) AND (l.settings:quotehistory_list:per_page NE 0)">
+		<table>
+			<tr>
+				<td class="previous-button">
+					<mvt:if expr="g.Offset EQ 0">
+					&nbsp;
+					<mvt:else>
+					<form method="post" action="&mvt:global:secure_sessionurl;" />
+					<input type="hidden" name="Screen" value="&mvte:global:Screen;" />
+					<input type="hidden" name="Store_Code" value="&mvte:global:Store_Code;" />
+					<input type="hidden" name="SortBy" value="&mvte:global:SortBy;" />
+					<input type="hidden" name="Order_BillEmail" value="&mvte:global:Order_BillEmail;" />
+					<input type="hidden" name="Order_BillZip" value="&mvte:global:Order_BillZip;" />
+					<input type="hidden" name="Offset" value="&mvte:global:PrevOffset;" />
+					<mvt:item name="buttons" param="Previous" />
+					</form>
+					</mvt:if>
+				</td>
+				<td class="next-button">
+					<mvt:if expr="g.NextOffset EQ 0">
+					&nbsp;
+					<mvt:else>
+					<form method="post" action="&mvt:global:secure_sessionurl;">
+					<input type="hidden" name="Screen" value="&mvte:global:Screen;" />
+					<input type="hidden" name="Store_Code" value="&mvte:global:Store_Code;" />
+					<input type="hidden" name="SortBy" value="&mvte:global:SortBy;" />
+					<input type="hidden" name="Order_BillEmail" value="&mvte:global:Order_BillEmail;" />
+					<input type="hidden" name="Order_BillZip" value="&mvte:global:Order_BillZip;" />
+					<input type="hidden" name="Offset" value="&mvte:global:NextOffset;" />
+					<mvt:item name="buttons" param="Next" />
+					</form>
+					</mvt:if>
+				</td>
+			</tr>
+		</table>
+	</mvt:if>
+</div>
+	

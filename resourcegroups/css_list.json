@@ -1,0 +1,16 @@
+{
+    "code": "css_list",
+    "linked_js_resources": [],
+    "linked_css_resources": [
+        "preconnect-google-analytics",
+        "preconnect-google-fonts",
+        "google-fonts",
+        "combofacets",
+        "x-contact",
+        "stylesheet",
+        "theme-styles",
+        "p-slick",
+        "quote",
+        "paypalcp"
+    ]
+}

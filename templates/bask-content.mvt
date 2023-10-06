@@ -1,0 +1,6 @@
+<section class="o-layout o-layout--wide">
+    <div class="o-layout__item u-width-12">
+        <h1 class="c-heading-delta t-account-landing-section__heading">Optional Products</h1>
+	<mvt:item name="readytheme" param="productlisting( 'optional_products' )" />
+    </div>
+</section>

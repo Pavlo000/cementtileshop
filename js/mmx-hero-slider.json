@@ -1,0 +1,21 @@
+{
+    "code": "mmx-hero-slider",
+    "type": "Z",
+    "is_global": false,
+    "active": true,
+    "attributes": [
+        {
+            "name": "type",
+            "value": "text/javascript"
+        },
+        {
+            "name": "integrity",
+            "value": "sha256-C4XRmFEFceDmO2V2XmUF1gTaGAm0vHWlX4XD9IFKWzQ= sha384-RTW1jeAEqSQ9z5mDogP1sKz8v+IxsPJ8Ftx7/SEElBQSXRQtQA65ijZq/CDAja6v sha512-izovs9sq9Pxa8bpX5lvkHXbZtNoMHTDnLcpdrRj/Q4fmN1717n4tBhBx1G+o9EXiGAcvDGi0g6r2+R0NM7rB4A=="
+        },
+        {
+            "name": "crossorigin",
+            "value": "anonymous"
+        }
+    ],
+    "linked_pages": []
+}

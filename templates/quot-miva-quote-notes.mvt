@@ -1,0 +1,52 @@
+
+	<script type = "text/javascript">
+		function Runtime_QuoteNote_Insert( quote_id, content, callback, delegator )
+		{
+			return AJAX_Call_Module(	callback,
+										'runtime', 
+										'quote',
+										'Runtime_QuoteNote_Insert',
+										'Quote_ID='	+ encodeURIComponent( quote_id ) +
+										'&Content='	+ encodeURIComponent( content ),
+										delegator );
+		}
+
+		function SubmitNote()
+		{
+			var note_content = document.getElementById( 'note_content' ).value;
+
+			Runtime_QuoteNote_Insert( '&mvtj:quote_info:quote:id;', note_content, function( response )
+			{
+				if ( !response.success )
+				{
+					return alert( response.error_message );
+				}
+
+				window.location.reload( true );
+			} );
+		}
+	</script>
+
+	<h2 align="left">Request a change for Quote #&mvte:quote_info:quote:id;</h2>
+	<table style="width: 40%; float: left;">
+		<tr rowspan="4">
+			<td style="background: #ffffff;width:30px">Request:</td>
+			<td style="background: #ffffff;"><textarea id="note_content" class="c-form-input c-form-input--long" rows="4" style="width: 95%; resize: vertical;"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="right" style="background: #ffffff"><input type="button" onclick="SubmitNote()" value="Submit" /></td>
+		</tr>
+	</table>
+	<table style="width: 60%; float: right;">
+		<tr>
+			
+			<mvt:foreach iterator="note" array="quote_notes:quote_notes">
+				<tr>
+					<td style="background: #ffffff">&mvte:note:source;</td>
+					<td style="background: #ffffff; width: 60%">&mvte:note:notetext;</td>
+					<td style="background: #ffffff">&mvte:note:formatted_dtstamp;</td>
+				</tr>
+			</mvt:foreach>
+		</tr>
+	</table>
+	

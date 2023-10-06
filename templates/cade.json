@@ -1,0 +1,34 @@
+{
+    "addressfields": {
+        "mode": "customeraddress_edit",
+        "prevent_template_auto_update": 0,
+        "template_filename": "cade-addressfields.mvc",
+        "template_id": 558
+    },
+    "hdft": {
+        "footer": {
+            "template_filename": "cade-footer.mvc",
+            "template_id": 557
+        },
+        "header": {
+            "template_filename": "cade-header.mvc",
+            "template_id": 556
+        }
+    },
+    "seo_settings": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    }
+}

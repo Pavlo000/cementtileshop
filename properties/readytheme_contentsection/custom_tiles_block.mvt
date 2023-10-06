@@ -1,0 +1,72 @@
+    <div class="l-shape">
+        <div class="l-shape__item step-1">
+            <div class="step__image">
+                <mvt:item name="readytheme" param="image( 'step_1' )" />
+            </div>
+            <div class="step__text">
+                <div class="step__title">
+                    Choose a pattern
+                </div>
+                <div class="step__description">
+Use our customizer tool for existing patterns or design your own.
+                </div>
+            </div>
+        </div>
+        <div class="l-shape__item step-2">
+            <div class="step__image">
+                <mvt:item name="readytheme" param="image( 'step-2' )" />
+            </div>
+            <div class="step__text">
+                <div class="step__title">
+                    Pick your colors
+                </div>
+                <div class="step__description">
+                    Each of our collections has 60 colors to choose from.
+                </div>
+            </div>
+        </div>
+        <div class="l-shape__item step-3">
+            <div class="step__image">
+                <mvt:item name="readytheme" param="image( 'step-3' )" />
+            </div>
+            <div class="step__text">
+                <div class="step__title">
+                    Submit your order
+                </div>
+                <div class="step__description">
+                    Submit your quote online, via phone or by email.
+                </div>
+            </div>
+        </div>
+        <div class="l-shape__item step-4">
+            <div class="step__image">
+                <mvt:item name="readytheme" param="image( 'step-4' )" />
+            </div>
+            <div class="step__text">
+                <div class="step__title">
+                    Your tile is handmade
+                </div>
+                <div class="step__description">
+                    Your handcrafted tile is made to order just like this video!
+                </div>
+            </div>
+        </div>
+        <div class="l-shape__item step-5">
+            <div class="step__image">
+                <mvt:item name="readytheme" param="image( 'step-5' )" />
+            </div>
+            <div class="step__text">
+                <div class="step__title">
+                    Delivery
+                </div>
+                <div class="step__description">
+                    Your custom order is shipped direct to your door in 8-16 weeks. (Shipping time depends on collection and quantity)
+                </div>
+            </div>
+        </div>
+        <div class="l-shape__item video">
+            <div class="step__video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qUGbxm5560c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>

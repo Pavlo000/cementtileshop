@@ -1,0 +1,125 @@
+<mvt:item name="html_profile" />
+<head>
+    <title>&mvt:store:name;: Request a Quote</title>
+    <base href="&mvt:global:basehref;" />
+    <mvt:item name="head" param="css_list" />
+    <mvt:item name="head" param="head_tag" />
+
+<style type="text/css">
+#contact { margin: 0 }
+.contactus { background-color: #e3e3e3; padding: 16px; line-height: 26px;}
+#contact label { clear: left; float: left; width: 140px; font-family: fenix,serif; color:#000; font-size: 14px; bold; white-space: nowrap; text-align: right; padding-right: 8px;}
+#contact #message { width: 100%; font-family: fenix,serif;height: 150px; }
+</style>
+
+</head>
+
+<body class="CTUS">
+<mvt:item name="hdft" param="global_header"/>
+
+<section class="o-layout">
+    <div class="o-layout__item u-width-12">
+        <section class="t-expanded-block u-bg-white">
+            <div class="o-layout__item t-expanded-block__item">
+                <br>
+                <div class="o-layout">
+                    <div class="o-layout__item u-width-12 u-width-6--l u-offset-3--l">
+                        <section class="o-layout">
+                            <div class="o-layout__item">
+                                <h1 class="c-heading-delta">&mvte:page:name;</h1>
+                                <hr class="c-keyline">
+                            </div>
+                        </section>
+
+                        <section class="o-layout">
+                            <div class="o-layout__item">
+                                <mvt:item name="hdft" param="header"/>
+                            </div>
+                        </section>
+
+                        <section class="o-layout" id="content-container">
+                            <div class="o-layout__item">
+                                <div class="o-layout">
+
+                                    <div class="o-layout__item u-width-12 u-width-12 u-width-5--w ">
+                                        <div id="basket-contents" class="editable">
+                                            <mvt:item name="basket"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="o-layout__item u-width-12 u-width-12 u-width-7--w ">
+                                        <div>
+
+                                           <mvt:item name="request_quote" />
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="o-layout">
+                            <div class="o-layout__item">
+                                <mvt:item name="hdft" param="footer"/>
+                            </div>
+                        </section>
+                    </div>
+                    <mvt:comment>
+                    <aside class="o-layout__item u-width-12 u-width-3--l category_tree_items">
+                        <mvt:item name="category_tree"/>
+                    </aside>
+                    </mvt:comment>
+                </div>
+                <br>
+            </div>
+        </section>
+    </div>
+</section>
+<br>
+
+<mvt:if expr="l.settings:messages:error_message_count">
+    <div class="error-message">
+        <mvt:foreach iterator="error" array="messages:error_messages">
+            &mvt:error;
+        </mvt:foreach>
+    </div>
+</mvt:if>
+<mvt:if expr="l.settings:messages:information_message_count">
+    <div class="information-message">
+        <mvt:foreach iterator="message" array="messages:information_messages">
+            &mvt:message;
+        </mvt:foreach>
+    </div>
+</mvt:if>
+
+
+
+
+<mvt:item name="hdft" param="global_footer"/>
+
+<!-- Google Code for European Form Conversion Page -->
+<script
+        type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 998291904;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "ffffff";
+    var google_conversion_label = "mMY9CNi4xF4QwPOC3AM";
+    var
+        google_remarketing_only = false;
+    /* ]]> */
+</script>
+<script type="text/javascript"
+        src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt=""
+             src="//www.googleadservices.com/pagead/conversion/998291904/?label=mMY9CNi4x
+F4QwPOC3AM&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+</body>
+</html>

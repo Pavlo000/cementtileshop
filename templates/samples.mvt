@@ -1,0 +1,69 @@
+<mvt:item name="html_profile" />
+<head>
+	<title>&mvt:store:name;: Samples</title>
+	<base href="&mvt:global:basehref;" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<mvt:item name="head" param="css_list" />
+<!-- Begin MailChimp Signup Form -->
+	<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+                #mc_embed_signup{background:#fff; clear:left; font-size:14px; }
+                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	</style>
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="SAMPLES">
+<mvt:item name="hdft" param="global_header" />
+
+	<section class="o-layout">
+		<div class="o-layout__item u-width-12">
+			<section class="t-expanded-block u-bg-white">
+				<div class="o-layout__item t-expanded-block__item">
+					<br>
+					<div class="o-layout o-layout--column-reverse o-layout--row-reverse--l">
+						<div class="o-layout__item u-width-12 u-width-9--l">
+							<section class="o-layout">
+								<div class="o-layout__item">
+									<h1 class="c-heading-delta">&mvte:page:name;</h1>
+									<hr class="c-keyline">
+								</div>
+							</section>
+					
+							<section class="o-layout">
+								<div class="o-layout__item">
+									<mvt:item name="hdft" param="header" />
+								</div>
+							</section>
+				
+							<section class="o-layout" id="content-container">
+								<div class="o-layout__item">
+									<p><mvt:item name="readytheme" param="image( 'sample_image' )" /></p>
+<p><p>The best way to get a true feel for the beauty of our cement tile is through seeing physical samples.</p> 
+<p>Every cement tile is part of a collection (Pacific, Mexican). Each collection we sell is made at different factories and have their own beautiful, unique characteristics. We always recommend you order samples if you have concerns or are mixing tiles from different collections.</p>
+<p>Full piece samples of our in stock patterned cement tiles are available for immediate shipment. In stock samples are available for the cost of shipping. Tile swatches are also available for all solid colors. In stock samples usually ship out same or next day.</p>
+<p>For other patterns, sample cost and lead time can vary depending upon whether the material is in stock or must be ordered from the factory. Custom sample tiles, in the colors of your choice, can also be ordered. Contact us for lead times and cost.</p>
+<p>In stock samples can be ordered online, directly from the product page, or please contact us at<strong> (800) 704-2701 </strong> or email <strong><a href="mailto:customerservice@cementtileshop.com">samples@cementtileshop.com</a></strong> for assistance.</p>
+								</div>
+							</section>
+							
+							<section class="o-layout">
+								<div class="o-layout__item">
+									<mvt:item name="hdft" param="footer" />
+								</div>
+							</section>
+						</div>
+						<aside class="o-layout__item u-width-12 u-width-3--l category_tree_items category">
+							<mvt:item name="category_tree" param="open"/>
+						</aside>
+					</div>
+					<br>
+				</div>
+			</section>
+		</div>
+	</section>
+	<br>
+	
+	<mvt:item name="hdft" param="global_footer" />
+</body>
+</html>

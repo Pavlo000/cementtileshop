@@ -1,0 +1,33 @@
+<mvt:if expr="'CTGY' CIN l.settings:page:code">
+	<link rel="canonical" href="&mvte:category:link;" itemprop="url">
+<mvt:elseif expr="'PROD' CIN l.settings:page:code OR l.settings:page:code EQ 'PATR'">
+	<link rel="canonical" href="&mvt:product:link;" itemprop="url">
+<mvt:else>
+	<link rel="canonical" href="&mvte:urls:_self:auto;" itemprop="url">
+</mvt:if>
+<mvt:item name="prodctgy_meta" param="combined" />
+
+<mvt:item name="ga_tracking" />
+
+<script type="text/javascript">var switchTo5x=true;</script>
+
+<script type="text/javascript" src="//w<mvt:if expr="g.secure">s</mvt:if>.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "86448143-5e13-4144-a4b4-81874f63bcd7"}); </script>
+
+<script>
+var CRL8_SITENAME = 'cementtileshop-kyyz4f'; !function(){var e=window.crl8=window.crl8||{},n=!1,i=[];e.ready=function(e){n?e():i.push(e)},e.pixel=e.pixel||function(){e.pixel.q.push(arguments)},e.pixel.q=e.pixel.q||[];var t=window.document,o=t.createElement("script"),c=e.debug||-1!==t.location.search.indexOf("crl8-debug=true")?"js":"min.js";o.src=t.location.protocol+"//cdn.curalate.com/sites/"+CRL8_SITENAME+"/site/latest/site."+c,o.onload=function(){n=!0,i.forEach(function(e){e()})};var r=t.getElementsByTagName("script")[0];r.parentNode.insertBefore(o,r.nextSibling)}();
+</script>
+<!-- Global site tag (gtag.js) - Google Ads: 998291904 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-998291904"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-998291904');
+  gtag('config', 'G-MB9V2TBYY0');
+</script>
+<!-- Bing tracker -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"21008547"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+
+<mvt:item name="head" param="modules" />

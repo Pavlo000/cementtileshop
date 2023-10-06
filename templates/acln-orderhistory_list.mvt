@@ -1,0 +1,43 @@
+<mvt:if expr="NOT l.settings:orders_found GT 0">
+	<p class="x-messages x-messages--info">No matching orders found.</p>
+	<mvt:exit />
+</mvt:if>
+
+<mvt:foreach iterator="order" array="orders">
+	<div class="t-account-landing__order-list">
+		<table class="c-table-responsive">
+			<tbody>
+				<tr class="c-table-responsive__row u-border-none u-color-gray-50">
+					<td class="c-table-responsive__cell c-table-responsive__cell--flush c-table-responsive__cell--flex" data-label="Order Number">
+						<span class="u-color-black u-font-tiny u-text-bold u-text-uppercase u-hidden u-block--m">Order Number</span>
+						&mvt:order:id;
+					</td>
+					<td class="c-table-responsive__cell c-table-responsive__cell--flush c-table-responsive__cell--flex" data-label="Total">
+						<span class="u-color-black u-font-tiny u-text-bold u-text-uppercase u-hidden u-block--m">Total</span>
+						&mvt:order:formatted_total;
+					</td>
+					<td class="c-table-responsive__cell c-table-responsive__cell--flush c-table-responsive__cell--flex" data-label="Status">
+						<span class="u-color-black u-font-tiny u-text-bold u-text-uppercase u-hidden u-block--m">Status</span>
+						<span class="u-text-uppercase">&mvt:order:order_status;</span>
+					</td>
+					<td class="c-table-responsive__cell c-table-responsive__cell--flush c-table-responsive__cell--flex" data-label="Shipments">
+						<span class="u-color-black u-font-tiny u-text-bold u-text-uppercase u-hidden u-block--m">Shipments</span>
+						<mvt:assign name="g.shipment_count" value="miva_array_elements(l.settings:order:shipments)"/>
+						<mvt:if expr="g.shipment_count LT 1">
+							<span class="u-color-gray-50 u-font-small">Awaiting Shipment</span>
+						<mvt:elseif expr="g.shipment_count EQ 1">
+							<mvt:foreach iterator="shipment" array="order:shipments">
+								<a class="u-color-gray-50 u-font-small u-text-underline" href="&mvt:shipment:tracklink_raw;" target="_blank">&mvt:shipment:tracknum;</a><br/>
+							</mvt:foreach>
+						<mvt:else>
+							<a class="u-color-gray-50 u-font-small u-text-underline" href="&mvte:urls:ORDS:auto_sep;Order_ID=&mvt:order:id;&amp;Order_BillEmail=&mvta:global:Order_BillEmail;&amp;Order_BillZip=&mvta:global:Order_BillZip;">View Shipping Details</a><br/>
+						</mvt:if>
+					</td>
+					<td class="c-table-responsive__cell c-table-responsive__cell--flush c-table-responsive__cell--flex" data-label="">
+						<a class="c-button c-button--clear c-button--flush u-bg-transparent u-color-black u-text-medium u-font-tiny u-text-uppercase" href="&mvte:urls:ORDS:auto_sep;Order_ID=&mvt:order:id;&amp;Order_BillEmail=&mvta:global:Order_BillEmail;&amp;Order_BillZip=&mvta:global:Order_BillZip;">View Details <span class="u-font-small u-icon-chevron-right"></span></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</mvt:foreach>

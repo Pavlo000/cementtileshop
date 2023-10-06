@@ -1,0 +1,83 @@
+<section class="o-layout u-grids-2 u-grids-4--l x-product-list ctgy-listing">
+    <mvt:foreach iterator="product" array="category_listing:products">
+
+        <mvt:if expr="NOT('_sample' CIN l.settings:product:code)">  
+            <div class="o-layout__item u-text-center x-product-list__item t-defer-object" data-defer>
+            <a class="u-block x-product-list__link" href="<mvt:if expr="'cement-tile-shop-europe' CIN l.settings:category:code">/mm5/merchant.mvc?Screen=PROD&Product_code=&mvte:product:code;&Category_code=cement-tile-shop-europe<mvt:else>&mvte:product:link;</mvt:if>">
+                <figure class="x-product-list__figure">
+                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:productimagecustomfields:alt1">
+                    <picture class="x-product-list__picture double-picture">
+                    <mvt:else>
+                    <picture class="x-product-list__picture">
+                    </mvt:if>
+                        <img class="x-product-list__image" data-src="&mvte:product:customfield_values:productimagecustomfields:main;" src="" alt="&mvt:product:name;">
+                        <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:productimagecustomfields:alt1">
+                            <img class="x-product-list__image" data-src="&mvte:product:customfield_values:productimagecustomfields:alt1;" src="" alt="&mvt:product:name;">
+                        </mvt:if>
+                    </picture>
+                    <figcaption class="x-product-list__figure-caption">
+                        <span class="x-product-list__price">&mvt:product:name;</span>
+
+                        <mvt:item name="ry_toolbelt" param="Array_FromList|l.all_settings:product:customfields:width|l.all_settings:product:customfield_values:customfields:width|'('" />
+                        <mvt:item name="ry_toolbelt" param="Array_FromList|l.all_settings:product:customfields:length|l.all_settings:product:customfield_values:customfields:length|'('" />
+                        <mvt:item name="ry_toolbelt" param="Array_FromList|l.all_settings:product:customfields:thickness|l.all_settings:product:customfield_values:customfields:thickness|'('" />
+  
+                        <mvt:if expr="l.settings:category:code EQ 'optional_products'">
+                            <mvt:else>
+                            <span class="x-product-list__name" style="font-size:0.7rem;">
+                                &mvt:product:customfields:width[1];x 
+                                &mvt:product:customfields:length[1];
+                            </span>
+                        </mvt:if>
+                            
+                        
+                        
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+            <mvt:else>
+               
+        </mvt:if> 
+    </mvt:foreach>
+</section>
+<!-- end .x-product-list -->
+
+<mvt:if expr="l.settings:category_listing:page_links:last_page GT 1">
+    <nav class="x-pagination x-pagination--centered t-pagination">
+        <ul class="o-list-inline">
+            <mvt:if expr="l.settings:category_listing:page_links:current_page NE 1">
+                <li class="o-list-inline__item">
+                    <a class="u-color-gray-40 u-icon-chevron-left t-pagination__button" href="&mvte:urls:_self:auto_sep;&mvte:category_listing:page_links:prev_link_params;" title="Go to the previous page."></a>
+                </li>
+            <mvt:else>
+                <li class="o-list-inline__item">
+                    <span class="u-color-gray-40 u-icon-chevron-left t-pagination__button" title="You are on the first page."></span>
+                </li>
+            </mvt:if>
+            <li class="o-list-inline__item o-layout--grow">
+                <div class="c-form-select">
+                    <select class="c-form-select__dropdown u-font-small u-text-uppercase u-text-bold u-color-gray-40" name="Sort_By" onchange="window.location.href=this.options[ this.selectedIndex ].value">
+                        <mvt:foreach iterator="pages" array="category_listing:page_links:pages">
+                            <mvt:if expr="l.settings:category_listing:page_links:current_page EQ l.settings:pages:page_num">
+                                <option value="&mvte:urls:_self:auto_sep;&mvte:pages:link_params;" selected>Page &mvte:pages:page_num; of &mvte:category_listing:page_links:last_page;</option>
+                            <mvt:else>
+                                <option value="&mvte:urls:_self:auto_sep;&mvte:pages:link_params;">Page &mvte:pages:page_num; of &mvte:category_listing:page_links:last_page;</option>
+                            </mvt:if>
+                        </mvt:foreach>
+                    </select>
+                </div>
+            </li>
+            <mvt:if expr="l.settings:category_listing:page_links:current_page NE l.settings:category_listing:page_links:last_page">
+                <li class="o-list-inline__item">
+                    <a class="u-color-gray-40 u-icon-chevron-right t-pagination__button" href="&mvte:urls:_self:auto_sep;&mvte:category_listing:page_links:next_link_params;" title="Go to the next page."></a>
+                </li>
+            <mvt:else>
+                <li class="o-list-inline__item">
+                    <span class="u-color-gray-40 u-icon-chevron-right t-pagination__button" title="You are on the last page."></span>
+                </li>
+            </mvt:if>
+        </ul>
+    </nav>
+    <!-- end .x-pagination -->
+</mvt:if>

@@ -1,0 +1,50 @@
+{
+    "ATTRIBUTEMACHINE": {
+        "DEPENDENCY_RESOLUTION": "first",
+        "displaydiscounts": 0,
+        "ENABLED": 1,
+        "INV_SHORT": 0,
+        "INVALID_MSG": "Please select a valid combination of attributes.",
+        "MISSING_RADIO_MSG": "<br>An option must be selected for <b>%attribute_prompt%</b>.",
+        "MISSING_TEXT_MSG": "<br>A value must be entered for <b>%attribute_prompt%</b>.",
+        "predictdiscounts": 0,
+        "PRELOAD": 1,
+        "price": "base",
+        "TEMPLATE_FILENAME": "patr-attributemachine.mvc",
+        "TEMPLATE_ID": 64
+    },
+    "HDFT": {
+        "FOOTER": {
+            "TEMPLATE_FILENAME": "patr-footer.mvc",
+            "TEMPLATE_ID": 67
+        },
+        "HEAD": {
+            "TEMPLATE_FILENAME": "patr-head.mvc",
+            "TEMPLATE_ID": 65
+        },
+        "HEADER": {
+            "TEMPLATE_FILENAME": "patr-header.mvc",
+            "TEMPLATE_ID": 66
+        }
+    },
+    "PRODUCT_ATTRIBUTES": {
+        "TEMPLATE_FILENAME": "patr-product_attributes.mvc",
+        "TEMPLATE_ID": 68
+    },
+    "SEO_SETTINGS": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    }
+}

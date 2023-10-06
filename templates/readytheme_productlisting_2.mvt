@@ -1,0 +1,48 @@
+<div class="expanded optional_products x-product-list x-product-list--slicked slick-slider--left">
+    <mvt:foreach iterator="product" array="readytheme:products">
+         <div class="u-text-center x-product-list__item">
+            
+                    <div class="u-block u-color-black x-product-list__link">
+                        <figure class="x-product-list__figure">
+                            <a href="&mvte:product:link;" style="text-decoration: none; outline: none">
+                            <picture class="x-product-list__picture">
+                                <img class="x-product-list__image" data-lazy="&mvte:product:imagetypes:main;" src="" alt="&mvte:product:name;">
+                            </picture>
+                            <figcaption class="x-product-list__figure-caption">
+                                <mvt:if expr="l.settings:product:base_price GT l.settings:product:price">
+                                    <span class="x-product-list__price"><s>&mvt:product:formatted_base_price;</s></span>
+                                    <span class="x-product-list__price-red">&mvt:product:formatted_price;</span>
+                                <mvt:else>
+                                    <span class="x-product-list__price">&mvt:product:formatted_price;</span>
+                                </mvt:if>
+                                <span class="x-product-list__name">&mvte:product:name;</span>
+                            </figcaption>
+                             <div class="info_product">
+                        <mvt:if expr="l.settings:product:inv_active">&mvt:product:inv_long;<br></mvt:if>
+                                <mvt:if expr="l.settings:product:inv_level NE 'out'">
+                            <div class="purchase-buttons">
+                                <form method="post" action="&mvte:global:sessionurl;Screen=BASK" />
+                                <input type="hidden" name="Action" value="ADPR" />
+                                <input type="hidden" name="Order" value="1" />
+                                <input type="hidden" name="Attributes" value="Yes" />
+                                <input type="hidden" name="Product_Code" value="&mvte:product:code;" />
+                                <td class="item-price">
+                                <div class="product-quantity">Quantity:
+                                    <input type="text" class="product-quantity-input textfield" value="1" maxlength="6" size="4" name="Quantity">
+                                </div>
+                                </td>
+                                <td class="item-buttons" />
+                                <input type="submit" value="Add to Cart" class="c-button c-button--full c-button--huge c-control-group__button u-bg-primary u-color-black u-text-bold u-font-small u-text-uppercase" />
+                                </td>
+                                </form>
+
+                            </div>
+                        </mvt:if>
+                    </div></a>
+                        </figure>
+                    </div>
+                </div>
+            
+    </mvt:foreach>
+    
+</div>

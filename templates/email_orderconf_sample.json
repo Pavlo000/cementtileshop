@@ -1,0 +1,41 @@
+{
+    "order_contents": {
+        "advanced": 1,
+        "b_height": 75,
+        "b_width": 75,
+        "constrain": "B",
+        "groups": 1,
+        "lineitemcoupons": 1,
+        "lineitemdiscounts": 1,
+        "lineitemprice": "base",
+        "payments": 1,
+        "template_filename": "email_orderconf_sample-order_contents.mvc",
+        "template_id": 861
+    },
+    "order_customer": {
+        "prevent_template_auto_update": 0,
+        "template_filename": "email_orderconf_sample-order_customer.mvc",
+        "template_id": 862
+    },
+    "toe_order_contents": {
+        "advanced": 1,
+        "b_height": 75,
+        "b_width": 75,
+        "constrain": "B",
+        "display": {
+            "discounts": 1,
+            "handling": 1,
+            "salestax": 1,
+            "shipping": 1
+        },
+        "groups": 1,
+        "imagetypes": [
+            "main"
+        ],
+        "lineitemcoupons": 0,
+        "lineitemdiscounts": 0,
+        "payments": 1,
+        "template_filename": "860_email_orderconf_sample-toe_order_contents.mvc",
+        "template_id": 863
+    }
+}

@@ -1,0 +1,89 @@
+<mvt:item name="html_profile" />
+<head>
+    <title>&mvt:store:name;: &mvt:category:name;</title>
+    <base href="&mvt:global:basehref;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://www.cementtileshop.com/cement-tile/&mvta:category:code;.html" />
+    <mvt:item name="prodctgy_meta" param="ctgy" />
+    <mvt:item name="category_listing_imagemachine" param="head" />
+    <mvt:item name="head" param="css_list" />
+    <mvt:item name="head" param="head_tag" />
+</head>
+<body class="CTGY">
+<div id="site-container">
+    <div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+    <div id="content-container" class="o-wrapper t-expanded-block">
+            <div id="main-content">
+
+                <div id="category-header"><mvt:item name="prod_ctgy_hdft" param="ctgy_header" /></div>
+                <div id="category-listing"><mvt:item name="category_listing" /></div>
+                <div id="category-footer"><mvt:item name="prod_ctgy_hdft" param="ctgy_footer" /></div>
+                <div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+
+                <div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+            </div>
+    </div>
+    <div id="bottom-wrap"></div>
+    <div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+
+<div id="bg_project_images" class="clearfix" style="display: none;" onclick=" location.hash = '#' + savehash;">
+    <div id="project_images"></div>
+</div>
+
+
+<script type="text/javascript">
+
+			$("#bg_project_images").on('click', function(e) {
+                 if ($(e.target).is('#bg_project_images') || $(e.target).is('.xclose')) {
+                     $(this).hide();
+                     $("html").removeClass('no-scroll');
+                 }
+            });
+
+            var savehash = "";
+            function show_pics(linkhash, bg_obj, obj_id, code, event) {
+                event.preventDefault();
+
+                $('html').addClass('no-scroll');
+                
+                document.getElementById(bg_obj).style.display = "none";
+                document.getElementById(obj_id).innerHTML = "";
+                savehash = linkhash;
+                location.hash = linkhash;
+                // dodelat'
+
+                var loadurl = '/CTGY_Project_images.html?category_code='+ code;
+             
+                var xmlhttp;
+                xmlhttp=new XMLHttpRequest();
+                xmlhttp.onreadystatechange=function() {
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                        document.getElementById(obj_id).innerHTML=xmlhttp.responseText;
+                        document.getElementById(bg_obj).style.display = "block";
+                        <mvt:comment>window.scrollTo(0, 0);</mvt:comment>
+
+                        $.loadScript(theme_path + 'plugins/slick/slick.min.js', function () {
+                
+                            $('.slider-block').slick({
+                                dots: false,
+                                infinite: true,
+                                speed: 500,
+                                fade: true,
+                                cssEase: 'linear'
+                            });
+                        });
+
+                    }
+                }
+
+                xmlhttp.open("GET",loadurl,true);
+                xmlhttp.send();
+
+                return false;
+            }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<mvt:item name="html_profile" />
+<head>
+	<title>&mvt:store:name;</title>
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="https://www.cementtileshop.com/" />  
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+	<!-- Begin MailChimp Signup Form -->
+	<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+                #mc_embed_signup{background:#fff; clear:left; font-size:14px; }
+                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+	</style>
+	<meta name="google-site-verification" content="WRWvmFCl5tX67YUjh4cPxpp4WasstNnaKWDz-YnEDwQ" />
+</head>
+<body class="SFNT">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="navigation-bar"><mvt:item name="navbar" /></div>
+	<table id="content-container">
+		<tr>
+			<td id="left-navigation"><mvt:item name="category_tree" /></td>
+			<td id="main-content">
+				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+				
+				<mvt:item name="content" />
+
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	<style>
+#crl8-homepage-carousel .jTBxSJ, #crl8-homepage-carousel-modal .jTBxSJ, #crl8-homepage-carousel-uploader .jTBxSJ {
+margin-top:20px;
+border-top: 20px solid #F1F1F1;
+}
+</style>
+	<div data-crl8-container-id="homepage"></div> 
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+
+</body>
+</html>

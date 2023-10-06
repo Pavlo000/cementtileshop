@@ -1,0 +1,74 @@
+<mvt:item name="html_profile" />
+<head>
+    <title>&mvt:store:name;: Installation</title>
+    <base href="&mvt:global:basehref;" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <mvt:item name="head" param="css_list" />
+<!-- Begin MailChimp Signup Form -->
+    <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+                #mc_embed_signup{background:#fff; clear:left; font-size:14px; }
+                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+    <mvt:item name="head" param="head_tag" />
+
+</head>
+<body class="MAINTENANCE">
+<div id="site-container">
+<mvt:item name="hdft" param="global_header" />
+
+    <section class="o-layout">
+        <div class="o-layout__item u-width-12">
+            <section class="t-expanded-block u-bg-white">
+                <div class="o-layout__item t-expanded-block__item">
+                    <br>
+                    <div class="o-layout o-layout--column-reverse o-layout--row-reverse--l">
+                        <div class="o-layout__item u-width-12 u-width-9--l">
+                            <section class="o-layout">
+                                <div class="o-layout__item">
+                                    <h1 class="c-heading-delta">&mvte:page:name;</h1>
+                                    <hr class="c-keyline">
+                                </div>
+                            </section>
+                    
+                            <section class="o-layout">
+                                <div class="o-layout__item">
+                                    <mvt:item name="hdft" param="header" />
+                                </div>
+                            </section>
+                
+                            <section class="o-layout" id="content-container">
+                                <div class="o-layout__item">
+                                  
+<p>Cement tiles are not difficult to maintain. Once they have been sealed correctly, the surface can be cleaned with products that are suitable for use on natural stone. Household cleaners such as <i>Simple Green</i> or specialty products like <i>Miracle Tile &amp; Stone Cleaner</i> have shown good results. Always follow the usage and dilution instructions from the manufacturer, and test new products in an inconspicuous area. <b>Only non-acidic cleaning products should be used.</b> Acid will etch the tiles, resulting in discoloration and/or pitting on the surface of the tile. Do not use vinegar, or products containing vinegar.</p>
+<p>For best results, sweep and mop floors regularly. Use mats at entryways to catch debris. Any spills or moisture should be cleaned up in a timely manner to best prevent staining. Should a stain occur, you can try products such as <i>Miracle Heavy-Duty Cleaner (Acid Substitute)</i>, or <i>Miracle Poultice Plus</i>, which is made to remove stains from porous surfaces. For a very stubborn stain, the tiles can be lightly wet sanded with an extra fine sandpaper, 400 grit or finer. It’s important to use water when sanding, to avoid scratching the tiles and to prevent residue from settling into the pores. The sanded area should be cleaned and allowed to dry thoroughly. Once dry, the area should be resealed.</p>
+<p>Depending on the brand of sealer used and the amount of wear experienced, the tiles may need to be resealed periodically. The specific brand of sealer used will have a recommended timeframe for resealing, typically anywhere from 3 to 10 years. Extremely heavy foot traffic may require additional cleaning and sealing.</p>
+<p>When resealing the tiles, the surface should be clean and completely dry. Any moisture in the tiles when sealed can later result in a white, chalky look called efflorescence. The tiles should be resealed using the same steps as in the installation process. Apply thin coats, wipe excess sealer before it dries, and allow the sealer to cure per the manufacturer’s instructions. We recommend <a href="https://www.cementtileshop.com/collection/511PPQT.html"><i>Miracle 511 Porous Plus</i></a>, or other high quality, penetrating sealers for natural stone such as <i>DryTreat</i> or <i>Stonetech Impregnator Pro.</i></p>
+<p>Faint stains or water spotting will diminish with time and an ongoing maintenance routine. The tiles will develop a natural patina that is part of their timeless beauty. This finish gives the tile its character and uniqueness.</p>
+            
+            
+                                </div>
+                            </section>
+                            
+                            <section class="o-layout">
+                                <div class="o-layout__item">
+                                    <mvt:item name="hdft" param="footer" />
+                                </div>
+                            </section>
+                        </div>
+                        <aside class="o-layout__item u-width-12 u-width-3--l category_tree_items category">
+                            <mvt:item name="readytheme" param="navigationset( 'resources_navigation' )" />
+                        </aside>
+                    </div>
+                    <br>
+                </div>
+            </section>
+        </div>
+    </section>
+    <br>
+    
+    <mvt:item name="hdft" param="global_footer" />
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<h1>&mvt:product:name;</h1>
+<div class="product-details-1">
+    <div class="product-image"><img id="main_image" src="graphics/en-US/cssui/blank.gif" alt="&mvte:product:name;" /></div>
+    <div class="aligncenter">Click image to zoom <img width="30" src="graphics/00000001/icon_magnifying.gif"></div>
+    <ul id="thumbnails" class="thumbnails"></ul>
+    <div id="closeup_div" class="closeup"><img id="closeup_image" src="graphics/en-US/cssui/blank.gif" alt="" /><div><a id="closeup_close">close</a></div></div>
+    <mvt:item name="product_display_imagemachine" param="body:product:id" />
+    <div class="clear product-image-margin"></div>
+</div>
+<span class='st_facebook_large' displayText='Facebook'></span>
+<span class='st_pinterest_large' displayText='Pinterest'></span>
+<span class='st_twitter_large' displayText='Tweet'></span>
+<span class='st_email_large' displayText='Email'></span>
+<span class='st_sharethis_large' displayText='ShareThis'></span>
+
+
+<script type="text/javascript">
+var coverage = &mvt:product:customfield_values:customfields:CoverageMeter; ;
+var boxprice = &mvt:product:price; ;
+
+function updateSqFeet(sqfeet){
+    var boxes = Math.ceil ( sqfeet / coverage )
+    document.addproduct.Quantity.value = boxes;
+    document.box_calc.actualsquarefeet.value = (boxes * coverage).toFixed(2);
+    document.box_calc.price.value = "£" + (boxes * boxprice).toFixed(2);
+}
+
+function updateBoxes(boxes){
+    var actualsqfeet = (boxes * coverage).toFixed(2);
+    document.box_calc.squarefeet.value = actualsqfeet;
+    document.box_calc.actualsquarefeet.value = actualsqfeet;
+    document.box_calc.price.value = "£" + (boxes * boxprice).toFixed(2);
+}
+</script>
+
+<div class="product-details-2">
+    <!-- div class="product-code prompt">Code: <span class="bold">&mvt:product:code;</span></div -->
+
+    <div class="calc_section">
+        <div class="product-price">
+            <span class="prompt">&mvt:customfield_names:customfields:PricePerPiece;: </span>
+            <mvt:item name="ry_toolbelt" param="currencyformat|g.PricePerPieceF|l.all_settings:product:customfield_values:customfields:PricePerPiece" />
+            <mvt:comment> &mvt:product:customfield_values:customfields:PricePerPiece; </mvt:comment>
+            <span id="price-value" class="bold">£&mvt:product:customfield_values:customfields:priceperpiece;</span>
+        </div>
+        <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:PricePerPiece">
+        <div id="customfields-PricePerPiece">
+            <span class="prompt">Price Per Box: </span>
+            <span class="bold">£&mvt:product:price;</span>
+         </div>
+        </mvt:if>
+    </div>
+
+    <div class="calc_section">
+        <table border="0" cellpadding="0" cellspacing="0" id="prompts">
+        <form name="box_calc">
+            <tr>
+                <td nowrap class="prompt">Sq. Meters Needed: </td>
+                <td><input type="text" size="7" name="squarefeet" onKeyUp='updateSqFeet(this.value);' value=""></td>
+            </tr>
+            <tr>
+                <td class="prompt">Actual Sq. Meters:</td>
+                <td><input type="text" size="7" name="actualsquarefeet" value="0" class="labelonly" value="&mvt:product:customfield_values:customfields:CoverageMeter;" readonly></td>
+            </tr>
+<mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:callprice">
+            <tr>
+                <td class="prompt">&nbsp;</td>
+                <td><input type="hidden" size="7" name="price" class="labelonly" value="&mvt:product:price;" readonly></td>
+            </tr>
+<mvt:else>
+            <tr>
+                <td class="prompt">Item Total: </td>
+                <td><input type="text" size="7" name="price" class="labelonly" value="£&mvt:product:price;" readonly></td>
+            </tr>
+</mvt:if>
+        </form>
+        </table>
+    </div>
+
+    <div class="calc_section">
+        <div id="inventory-message">
+            <mvt:if expr="l.settings:product:inv_active">
+            &mvt:product:inv_long;
+            </mvt:if>
+        </div>
+        <div class="product-quantity">
+	<span class="product-quantity-text">Quantity in Cart:</span>
+            <mvt:if expr="l.settings:product:quantity EQ 0">
+            <span class="italic">None</span>
+            <mvt:else>
+            <span class="bold">&mvt:product:quantity;</span>
+            </mvt:if>
+		<mvt:item name="ry_toolbelt" param="BasketEmpty" />
+		<form method="post" action="javascript:history.go(-1)">
+			<input type="submit" value="Clear Basket"  param="BasketEmpty" class="button" />	
+		</form>
+
+        </div>
+        <form name="addproduct" method="post" action="&mvt:global:sessionurl;Screen=ctus-EU">
+            <div class="product-description">&mvt:product:descrip;</div>
+            <div id="swatches" class="swatches"></div>
+            <div class="clear"></div>
+            <input type="hidden" name="Old_Screen" value="&mvte:global:Screen;" />
+            <input type="hidden" name="Old_Search" value="&mvte:global:Search;" />
+            <input type="hidden" name="Action" value="ADPR" />
+            <input type="hidden" name="Store_Code" value="&mvte:store:code;" />
+            <input type="hidden" name="Product_Code" value="&mvte:product:code;" />
+            <input type="hidden" name="Category_Code" value="&mvte:global:category_code;" />
+            <input type="hidden" name="Offset" value="&mvte:global:Offset;" />
+            <input type="hidden" name="AllOffset" value="&mvte:global:AllOffset;" />
+            <input type="hidden" name="CatListingOffset" value="&mvte:global:CatListingOffset;" />
+            <input type="hidden" name="RelatedOffset" value="&mvte:global:RelatedOffset;" />
+            <input type="hidden" name="SearchOffset" value="&mvte:global:SearchOffset;" />
+            <div class="product-attributes"><mvt:item name="product_attributes" param="product:id" /></div>
+            <div class="purchase-buttons"><span class="product-quantity-text">Quantity:&nbsp;</span><input type="text" name="Quantity" size="4" maxlength="6" value="1" onKeyUp='updateBoxes(this.value);' class="product-quantity-input textfield">&nbsp;
+	   <input type="submit" value="Request a Quote" class="button" /> </div>
+	  
+        </form>
+      
+    </div>
+    <br class="clear">
+	
+    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Coverage">
+    <div class="custom-field" id="customfields-Coverage">&mvt:customfield_names:customfields:Coverage;: <span class="bold">&mvt:product:customfield_values:customfields:Coverage;</span></div>
+    </mvt:if>
+	
+	<mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:CoverageMeter">
+    <div class="custom-field" id="customfields-CoverageMeter">&mvt:customfield_names:customfields:CoverageMeter;: <span class="bold">&mvt:product:customfield_values:customfields:CoverageMeter;</span></div>
+    </mvt:if>
+
+    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Pieces">
+    <div class="custom-field" id="customfields-Pieces">&mvt:customfield_names:customfields:Pieces;: <span class="bold">&mvt:product:customfield_values:customfields:Pieces;</span></div>
+    </mvt:if>
+
+    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Length">
+    <div class="custom-field" id="customfields-Length">&mvt:customfield_names:customfields:Length;: <span class="bold">&mvt:product:customfield_values:customfields:Length;</span></div>
+    </mvt:if>
+
+    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Width">
+    <div class="custom-field" id="customfields-Width">&mvt:customfield_names:customfields:Width;: <span class="bold">&mvt:product:customfield_values:customfields:Width;</span></div>
+    </mvt:if>
+	
+	<mvt:comment><mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Designer">
+    <div class="custom-field" id="customfields-Designer">&mvt:customfield_names:customfields:Designer;: <span class="bold">&mvt:product:customfield_values:customfields:Designer;</span></div>
+    </mvt:if></mvt:comment>
+
+    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Thickness">
+    <div class="custom-field" id="customfields-Thickness">&mvt:customfield_names:customfields:Thickness;: <span class="bold">&mvt:product:customfield_values:customfields:Thickness;</span></div>
+    </mvt:if>
+
+    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Collection">
+    <div class="custom-field" id="customfields-Collection">&mvt:customfield_names:customfields:Collection;: <span class="bold">&mvt:product:customfield_values:customfields:Collection;</span></div>
+    </mvt:if>
+
+    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Colors">
+    <div class="custom-field" id="customfields-Colors">&mvt:customfield_names:customfields:Colors;: <span class="bold">&mvt:product:customfield_values:customfields:Colors;</span></div>
+    </mvt:if>
+
+    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:ColorChart">
+    <div class="custom-field" id="customfields-ColorChart">&mvt:customfield_names:customfields:ColorChart;: <span class="bold">&mvt:product:customfield_values:customfields:ColorChart;</span></div>
+    </mvt:if>
+
+    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Availability">
+    <div class="custom-field" id="customfields-Availability">&mvt:customfield_names:customfields:Availability;: <span class="bold">&mvt:product:customfield_values:customfields:Availability;</span></div>
+    </mvt:if>
+
+    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:AsShown">
+    <div class="custom-field" id="customfields-AsShown">&mvt:customfield_names:customfields:AsShown;: <span class="bold">&mvt:product:customfield_values:customfields:AsShown;</span></div>
+    </mvt:if>
+
+    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Designer">
+    <div class="custom-field" id="customfields-Designer">&mvt:customfield_names:customfields:Designer;: <span class="bold">&mvt:product:customfield_values:customfields:Designer;</span></div>
+    </mvt:if>
+
+    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Notes">
+    <div class="custom-field" id="customfields-Notes">&mvt:customfield_names:customfields:Notes;: <span class="bold">&mvt:product:customfield_values:customfields:Notes;</span></div>
+    </mvt:if>
+
+
+</div>
+<div class="clear"></div>
+

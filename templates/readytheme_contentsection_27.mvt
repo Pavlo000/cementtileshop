@@ -1,0 +1,28 @@
+<mvt:item name="ry_toolbelt" param="assign|l.all_settings:randomlist|rndseqence(7,7)" />
+<div id="hero-slider-desktop-container" class="desktop">
+    <div id="hero-slider-desktop">
+<mvt:foreach iterator="number" array="randomlist">
+ <mvt:if expr="l.settings:number EQ 1">
+		<mvt:item name="readytheme" param="image( 'main_slider_slide1' )" />
+</mvt:if>
+ <mvt:if expr="l.settings:number EQ 2">
+		<mvt:item name="readytheme" param="image( 'main_slider_slide2' )" />
+</mvt:if>
+ <mvt:if expr="l.settings:number EQ 3">
+		<mvt:item name="readytheme" param="image( 'main_slider_slide3' )" />
+</mvt:if>
+ <mvt:if expr="l.settings:number EQ 4">
+		<mvt:item name="readytheme" param="image( 'main_slider_slide4' )" />
+</mvt:if>
+ <mvt:if expr="l.settings:number EQ 5">
+		<mvt:item name="readytheme" param="image( 'main_slider_slide5' )" />
+</mvt:if>
+ <mvt:if expr="l.settings:number EQ 6">
+		<mvt:item name="readytheme" param="image( 'main_slider_slide6' )" />
+</mvt:if>
+ <mvt:if expr="l.settings:number EQ 7">
+		<mvt:item name="readytheme" param="image( 'main_slider_slide7' )" />
+</mvt:if>
+</mvt:foreach>
+    </div>
+</div>

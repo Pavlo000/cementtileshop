@@ -1,0 +1,9 @@
+{
+    "code": "head_tag",
+    "linked_js_resources": [
+        "runtimecombofacets"
+    ],
+    "linked_css_resources": [
+        "square-payment"
+    ]
+}

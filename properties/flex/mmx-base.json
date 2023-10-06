@@ -1,0 +1,32 @@
+{
+    "conflicts": {
+        "mmx-category-carousel": "<10.07.00",
+        "mmx-featured-product": "<10.07.00",
+        "mmx-hero": "<10.07.00",
+        "mmx-hero-slider": "<10.07.00",
+        "mmx-image-across": "<10.07.00",
+        "mmx-image-and-text": "<10.07.00",
+        "mmx-product-carousel": "<10.07.00",
+        "mmx-text-area": "<10.07.00",
+        "mmx-text-banner": "<10.07.00",
+        "mmx-text-editor": "<10.07.00",
+        "mmx-video": "<10.07.00"
+    },
+    "initialization_template_disabled": 1,
+    "instance_template_disabled": 1,
+    "managed": 1,
+    "name": "MMX Base",
+    "resourcegroup_code": "mmx-base",
+    "scripts": [
+        {
+            "resource_code": "mmx-base"
+        }
+    ],
+    "styles": [
+        {
+            "resource_code": "mmx-base"
+        }
+    ],
+    "type": "library",
+    "version": "10.07.00"
+}

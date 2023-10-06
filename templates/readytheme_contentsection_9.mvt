@@ -1,0 +1,50 @@
+<mvt:item name="readytheme" param="Load_Image('fasten_header_logo', l.settings:fasten_header_logo)" />
+<section class="o-layout o-layout--align-center t-site-header__masthead" data-hook="fasten-header">
+	<div class="o-layout__item u-width-2 u-text-center t-site-header__logo">
+		<a href="&mvte:urls:SFNT:auto;" title="&mvt:global:store:name;" rel="nofollow">
+			<mvt:if expr="l.settings:readytheme:fasten_header_logo:active">
+				<img class="x-fasten-header__logo-image" src="&mvt:readytheme:fasten_header_logo:image;" alt="&mvt:readytheme:fasten_header_logo:image_alt;" style="max-width: &mvt:readytheme:fasten_header_logo:image_wdth;px; max-height: &mvt:readytheme:fasten_header_logo:image_hght;px;">
+			<mvt:else>
+				<mvt:if expr="l.settings:readytheme:logo_type EQ 'text'">
+					<div class="t-site-header__store-name">&mvt:readytheme:logo_name;</div>
+					<small class="t-site-header__store-tagline">&mvt:readytheme:logo_tagline;</small>
+				<mvt:elseif expr="l.settings:readytheme:logo_type EQ 'image'">
+					<img class="x-fasten-header__logo-image" src="&mvte:readytheme:logo_image;" alt="&mvt:readytheme:logo_alt;">
+				</mvt:if>
+			</mvt:if>
+		</a>
+	</div>
+	
+	<div class="o-layout__item u-width-2 &mvt:global:checkout_hidden;">
+		<a class="c-button u-bg-transparent x-omega-navigation__trigger t-primary-link" data-hook="open-omega" href="&mvte:urls:CTLG:auto;">Shop Categories <span class="u-font-tiny u-icon-chevron-down x-omega-navigation__trigger-icon t-prevent-events"></span></a>
+	</div>
+	
+	<div class="o-layout__item u-width-4  u-width-5--wu-text-center &mvt:global:checkout_hidden;">
+		<button class="c-button c-button--full c-button--large u-bg-transparent u-border-gray-30 u-color-gray-50 u-font-tiny t-open-search" data-hook="open-search" type="button"><span class="u-icon-search"></span> search</button>
+	</div>
+	
+	<ul class="o-layout__item o-list-bare u-flex u-grids-3 u-text-center u-width-4 u-width-3--w t-site-header__masthead-customer-block &mvt:global:checkout_hidden;">
+		<li class="o-layout__item u-block">
+			<a class="t-primary-link" href="&mvte:urls:WLST:auto;">Wish List</a>
+		</li>
+		<li class="o-layout__item">
+			<mvt:if expr="g.Basket:cust_id EQ 0">
+				<a class="t-primary-link" href="&mvte:urls:LOGN:secure;">Sign In</a>
+			<mvt:else>
+				<a class="t-primary-link" href="&mvte:urls:ACLN:secure;">My Account</a>
+			</mvt:if>
+		</li>
+		<li class="o-layout__item">
+			<a class="t-primary-link t-site-header__basket-link" href="&mvte:urls:BASK:auto;">
+				Cart
+				<span class="u-bg-primary u-color-black t-site-header__basket-link-quantity t-prevent-events" data-hook="mini-basket-count">&mvte:global_minibasket:basket_count;</span>
+			</a>
+		</li>
+	</ul>
+
+	<div class="o-layout__item u-width-12 u-width-10--l u-hidden &mvt:global:checkout_shown;">
+		<br class="u-hidden--m">
+		<span class="c-heading-echo u-block u-text-bold u-text-center u-text-right--l u-text-uppercase u-color-gray-50"><span class="u-icon-secure"></span> Secure Checkout</span>
+	</div>
+	
+</section>

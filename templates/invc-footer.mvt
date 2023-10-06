@@ -1,0 +1,8 @@
+<!-- LP GA4 Purchase Conversion -->
+<script>
+	gtag("event", "purchase", {
+		transaction_id: '&mvte:order:id;',
+        	value: &mvt:order:total;,
+        	currency: "USD",
+    	});
+</script>

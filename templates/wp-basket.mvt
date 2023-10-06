@@ -1,0 +1,7 @@
+<mvt:assign name="l.header" value="miva_output_header( 'Access-Control-Allow-Origin', 'https://mikuniwildharvest.mivamerchant.net' )" />
+<mvt:assign name="l.header" value="miva_output_header( 'Access-Control-Allow-Credentials', 'true' )" />
+<mvt:assign name="l.header" value="miva_output_header( 'Access-Control-Allow-Methods', 'POST, GET, OPTIONS, DELETE' )" />
+<div class="mini-basket">
+  <a href="&mvte:urls:BASK:auto;" rel="nofollow" id="XXX-js-mini-basket"><span data-rt-icon="&#x65;" class="bg-sky white"><span id="js-mini-basket-count" class="notification bg-red white basket-count">&mvte:global_minibasket:basket_count;</span></span><span class="align-middle ultrabold uppercase"> Shopping Cart</span></a>
+</div>
+<mvt:item name="global_minibasket" />

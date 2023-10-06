@@ -1,0 +1,447 @@
+
+
+<div class="t-expanded-block u-bg-white" data-hook="product-content">
+    <div class="o-wrapper t-wrapper">
+        <section class="o-layout o-layout--wide x-product-layout">
+            <div class="o-layout__item u-width-12 u-hidden--l">
+                <br>
+
+                <p class="x-product-layout-purchase__name" style="font-weight:bold;">
+                    <span>&mvt:product:name;</span>
+                </p>
+            </div>
+            <div class="o-layout__item u-text-center x-product-layout-images u-width-12 u-width-6--l u-width-7--w">
+                <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:product_label AND l.settings:product:customfield_values:customfields:product_label NE 'none'">
+                    <span class="x-product-label u-bg-black u-color-white u-font-tiny u-text-uppercase">&mvt:product:customfield_values:customfields:product_label;</span>
+                </mvt:if>
+                <div class="x-product-imagery">
+                    <div id="thumbnails" class="x-product-imagery__thumbnail-list" data-hook="product-thumbnails"></div>
+                    <figure class="x-product-imagery__showcase">
+                        <img id="main_image" class="x-product-layout-images__image" data-hook="product-image" data-index="0" data-mini-modal data-mini-modal-content="data-hook=photo-gallery-template" data-mini-modal-type="inline" src="graphics/en-US/cssui/blank.gif" alt="&mvte:product:name;" title="&mvte:product:name;">
+                    </figure>
+                </div>
+                <mvt:item name="product_display_imagemachine" param="body_deferred:product:id"/>
+                <mvt:item name="readytheme" param="thirdpartysharing" />
+            </div>
+            <!-- end .x-product-layout-images -->
+
+            <mvt:if expr="l.settings:category:code EQ 'cement-tile-shop-europe'">
+                <mvt:item name="content" />
+            <mvt:else>
+
+                
+                <form class="o-layout__item x-product-layout-purchase u-width-12 u-width-6--l u-width-5--w" data-hookk="purchase" action="&mvte:urls:BASK:auto;" method="post" name="add">
+                <input type="hidden" name="Old_Screen" value="&mvte:global:Screen;" />
+                <input type="hidden" name="Old_Search" value="&mvte:global:Search;" />
+                <input type="hidden" name="Action" value="ADPR" />
+                <input type="hidden" name="Product_Code" value="&mvte:product:code;" />
+                <input type="hidden" name="Category_Code" value="&mvte:global:category_code;" />
+                <input type="hidden" name="Offset" value="&mvte:global:Offset;" />
+                <input type="hidden" name="AllOffset" value="&mvte:global:AllOffset;" />
+                <input type="hidden" name="CatListingOffset" value="&mvte:global:CatListingOffset;" />
+                <input type="hidden" name="RelatedOffset" value="&mvte:global:RelatedOffset;" />
+                <input type="hidden" name="SearchOffset" value="&mvte:global:SearchOffset;" />
+                <mvt:comment>
+                    <!--
+                        This `fieldset` element has been commented out due to a potential bug in the attribute machine
+                        JavaScript which can cause the form functions to not load properly in Internet Explorer and Edge.
+                    -->
+                <fieldset>
+                </mvt:comment>
+                    <legend>Purchase &mvt:product:name;</legend>
+                    
+
+        <ul class="c-form-list">
+                        <li class="c-form-list__item c-form-list__item--full u-hidden u-block--l">
+                            <h1 class="x-product-layout-purchase__name">
+<mvt:comment>
+                                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Collection">
+                                    <span style="font-weight:bold;">&mvt:product:customfield_values:customfields:Collection;</span><br>
+                                    </mvt:if>
+</mvt:comment>
+                                <span itemprop="name"  style="font-weight:bold;">&mvt:product:name;</span>
+                            </h1>
+<mvt:comment>
+       <span class="x-product-layout-purchase__sku">
+                                    <mvt:if expr="NOT ISNULL l.settings:product:sku">
+                                        SKU: &mvt:product:sku;
+                                    <mvt:else>
+                                        SKU: &mvt:product:code;
+                                    </mvt:if>
+                                </span>
+</mvt:comment>
+                        </li>
+<mvt:item name="ry_toolbelt" param="Product_Load|g.found|g.Product_Code $ '_sample'|myproduct" />
+<mvt:if expr="l.settings:category:code EQ 'optional_products'">
+
+    <mvt:item name="readytheme" param="contentsection( 'optional_products' )" />
+                
+            <mvt:else>
+
+                            <ul class="prices">
+
+                                <mvt:comment>
+                                    Display prices for Sale items category 'cement-tile-sale'.
+                                    If reg_price is populated this is a sale item. Show strikethrough.
+                                </mvt:comment>
+
+                                <mvt:if expr="
+                                    l.settings:product:customfield_values:customfields:reg_price AND
+                                    (l.settings:product:customfield_values:customfields:reg_price GT l.settings:product:price)">
+
+                                    <mvt:item name="ry_toolbelt" param="currencyformat|g.PricePerPieceF|l.all_settings:product:customfield_values:customfields:PricePerPiece" />
+                                    <mvt:assign name="g.BoxQty" value="l.settings:product:customfield_values:customfields:Pieces" />
+                                    <mvt:item name="ry_toolbelt" param="currencyformat|g.regularPricePerPieceF|l.all_settings:product:customfield_values:customfields:reg_price / g.BoxQty" />
+                                    <li>
+                                        <span style="
+                                            position: absolute;
+                                            margin-top: -16px;
+                                            text-decoration: line-through;
+                                            font-size: 13px;
+                                            margin-left: 1px;
+                                            font-weight: bold;
+                                        ">&nbsp;&mvt:global:regularPricePerPieceF;&nbsp;</span>
+                                        <strong style="color:#D45759;" id="price-value">&mvt:global:PricePerPieceF;</strong> per piece
+                                    </li>
+
+                                <mvt:else>
+
+                                    <mvt:item name="ry_toolbelt" param="currencyformat|g.PricePerPieceF|l.all_settings:product:customfield_values:customfields:PricePerPiece" />
+                                    <li><strong id="price-value">&mvt:global:PricePerPieceF;</strong> per piece</li>
+
+                                </mvt:if>
+
+                                <mvt:item name="ry_toolbelt" param="currencyformat|g.PricePerSqFtF|(l.all_settings:product:price / l.all_settings:product:customfield_values:customfields:Coverage)" />
+                                <li><strong>&mvt:global:PricePerSqFtF;</strong> per sq.ft</li>
+
+
+                                <mvt:if expr="
+                                    l.settings:product:customfield_values:customfields:reg_price AND
+                                    (l.settings:product:customfield_values:customfields:reg_price GT l.settings:product:price)">
+
+                                        <mvt:item name="ry_toolbelt" param="currencyformat|g.BoxPriceF|l.all_settings:product:customfield_values:customfields:reg_price" />
+                                        <li>
+                                            <span style="
+                                                position: absolute;
+                                                margin-top: -16px;
+                                                text-decoration: line-through;
+                                                font-size: 13px;
+                                                margin-left: 1px;
+                                                font-weight: bold;
+                                            ">&nbsp;&mvt:global:BoxPriceF;&nbsp;</span>
+                                            <strong style="color:#D45759;">&mvt:product:formatted_price;</strong> per box
+                                        </li>      
+
+                                <mvt:else>
+                                    <li><strong>&mvt:product:formatted_price;</strong> per box</li>      
+                                </mvt:if>
+
+                            </ul>
+
+                            <div class="product-details-2 order-box">
+
+
+                                <div class="order-box__input">
+                                        <label for="sq-ft-needed">Square Feet Needed*</label>
+                                        <input type="number" id="sq-ft-needed" name="squarefeet" value="0" step="0.01">
+                                </div>
+                <span>
+                                        <select name="overage" id="overage" style="display: none; visibility: hidden;">
+                                            <option value="0.10">10% overage</option>
+                                            <option value="0.15">15% overage</option>
+                                            <option value="0.20">20% overage</option>
+                                            <option value="0.25">25% overage</option>
+                        <option value="0.0" selected>No overage</option>
+                                        </select>
+                </span>
+
+                                <div class="sqft-total">
+                                    <p class="waste-warning" id="_no-overage-warning"><small>15-20% overage is recommended for cuts/waste/layout preferences and repairs.</small></p>
+                                    <p>
+                                        <span id="boxes-needed">
+                                            <mvt:if expr="g.found">
+
+                                              <input class="c-form-input u-text-center u-color-gray-50 sample_qty" type="number" name="Quantity" value="1">
+
+                                            <mvt:else>
+                                               <input class="c-form-input u-text-center u-color-gray-50" type="number" name="Quantity" value="1"> 
+                                            </mvt:if>
+                                            
+                                            <span>box needed</span>
+                                            <strong> &nbsp;&nbsp;&nbsp;= &nbsp;&nbsp;&nbsp;</strong>
+                                        </span>
+                                        <span>
+                                            <strong id="actual-sq-ft">&mvt:product:customfield_values:customfields:Coverage;</strong> 
+                                            actual square feet
+                                        </span>
+                                    </p>
+                                </div>
+
+                          
+                            </div>
+
+
+                            
+                        </li>
+                        <mvt:item name="discount_volume" param="product:id" />
+                        <li class="o-layout c-form-list__item x-product-layout-purchase__options">
+                            <mvt:item name="product_attributes" param="product:id" />
+                        </li>
+                        <li class="c-form-list__item c-form-list__item--full x-product-layout-purchase__cta">
+                            <div class="x-product-layout-purchase__message" data-hook="purchase-message"></div>
+                            <div class="o-layout">
+                                    <div class="o-layout__item c-control-group x-product-layout-purchase__options-quantity">
+                                        <div class="c-control-group__field t-product-layout-purchase__quantity">
+                                            <label class="c-form-label u-text-bold u-font-small u-color-gray-50 is-required" for="l-quantity">Total</label>
+                                                <input id="js-total" class="c-form-input u-text-center u-color-gray-50" type="text" data-price="&mvt:product:price;" readonly value="&mvt:product:formatted_price;">
+                                        </div>
+                                        <mvt:if expr="l.settings:product:inv_level NE 'out'">
+                                            <span class="t-product-layout-purchase__add-to-cart" onclick="document.forms.add.action = 'https://www.cementtileshop.com/BASK.html'; document.forms.add.elements.Action.value = 'ADPR';">
+                                                <mvt:item name="buttons" param="AddToBasket"/>
+                                            </span>
+                                        </mvt:if>
+                                        <span class="t-product-layout-purchase__add-to-wish" data-mmnodisable="true">
+                                            <span onclick="document.forms.add.action = '&mvtj:urls:WISH:secure;'; document.forms.add.elements.Action.value = 'ATWL';">
+                                                <mvt:item name="buttons" param="AddToWishList"/>
+                                            </span>
+                                        </span>
+                                    </div>
+                            </div>
+
+                            <mvt:if expr="g.found">
+                                <input class="c-button c-button--huge c-control-group__button u-bg-primary u-color-black u-text-bold u-font-small u-text-uppercase order-sample" data-action="&mvte:urls:BASK:auto_sep;ajax=1" data-value="Order Sample" type="submit" value="Order Sample" />
+                              
+
+                                <div class="message_sample u-font-small u-flex x-messages x-messages--error" id="show_message_mixed_basket" style="display: none;">
+                                    <mvt:item name="readytheme" param="contentsection( 'mixed_basket_warning' )" />
+                                </div>
+                                <div class="message_sample u-font-small u-flex x-messages x-messages--error" id="show_message" style="display: none;"><mvt:item name="readytheme" param="contentsection( 'sample_limit_warning' )" /></div>
+                            </mvt:if>
+                        </li>
+    </mvt:if>
+                        <li class="c-form-list__item c-form-list__item--full x-product-layout-purchase__availability">
+                            <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Availability">
+                                <span>Availability: </span>
+                                <span><b>&mvt:product:customfield_values:customfields:Availability;</b></span>
+                            </mvt:if>
+                        </li>
+                    </ul>
+
+</mvt:if>
+                <div class="product-share-list">    
+                        <span class='st_facebook_large' displayText='Facebook'></span>
+                        <span class='st_pinterest_large' displayText='Pinterest'></span>
+                        <span class='st_twitter_large' displayText='Tweet'></span>
+                        <span class='st_email_large' displayText='Email'></span>
+                        <span class='st_sharethis_large' displayText='ShareThis'></span>
+                </div>
+            </form>
+
+           
+            
+            
+        </section>
+    </div>
+    <div class="x-photo-gallery-template" data-hook="photo-gallery-template"></div>
+
+    <div class="o-wrapper product-info">
+
+        <div class="o-layout o-layout--row-reverse--l">
+            <div class="o-layout__item u-width-12">
+                <br>
+                <h3 class="u-text-center u-text-uppercase" style="font-weight: 700; ">
+                    <span style="border-bottom: 2px solid; padding-bottom: 5px; ">
+                        Product details
+                    </span>
+                </h3>
+                <br>
+            </div>
+
+            <mvt:if expr="l.settings:product:descrip">
+                <div class="o-layout__item u-width-12 descrip">
+                    &mvt:product:descrip;                    
+                </div>
+            </mvt:if>
+
+            <mvt:if expr="l.settings:category:code EQ 'optional_products'">
+            
+            <div class="o-layout__item u-width-12 u-width-6--l">
+                <table> 
+                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Collection">
+                        <tr>
+                            <td>Collection:</td>
+                            <td>&mvt:product:customfield_values:customfields:Collection;</td>
+                        </tr>
+                    </mvt:if>
+                </table>
+            </div>  
+            <div class="o-layout__item u-width-12 u-width-6--l">
+                <table> 
+
+
+                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Notes">
+                            <tr>
+                                <td>&mvt:customfield_names:customfields:Notes;:</td>
+                                <td>&mvt:product:customfield_values:customfields:Notes;</td>
+                            </tr>
+                        </mvt:if>
+                    
+                </table>
+            </div>
+            <mvt:else>
+
+    
+            <div class="o-layout__item u-width-12 u-width-6--l">
+                <table> 
+
+
+                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:AsShown">
+                        <tr>
+                            <td>&mvt:customfield_names:customfields:AsShown;:</td>
+                            <td>&mvt:product:customfield_values:customfields:AsShown;</td>
+                        </tr>
+                    </mvt:if>
+
+                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Collection">
+                        <tr>
+                            <td>Collection:</td>
+                            <td>&mvt:product:customfield_values:customfields:Collection;</td>
+                        </tr>
+                    </mvt:if>
+
+                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:ColorChart">
+                        <tr>
+                            <td>&mvt:customfield_names:customfields:ColorChart;:</td>
+                            <td class="mini_modal">&mvt:product:customfield_values:customfields:ColorChart</td>
+                        </tr>
+                    </mvt:if>
+
+                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Notes">
+                            <tr>
+                                <td>&mvt:customfield_names:customfields:Notes;:</td>
+                                <td>&mvt:product:customfield_values:customfields:Notes;</td>
+                            </tr>
+                        </mvt:if>
+
+                <mvt:comment><mvt:if expr="l.settings:category:code EQ 'optional_products'">
+                        
+                    <mvt:else>
+
+                        
+
+                </mvt:if>
+</mvt:comment>
+                    
+                </table>
+            </div>
+            
+            <div class="o-layout__item u-width-12 u-width-6--l">
+                <table> 
+                    <mvt:if expr="l.settings:category:code EQ 'cement-tile-shop-europe'">
+                        <mvt:if expr="g.CoverageMeter">
+                            <mvt:assign name="g.CoverageMeter" value="g.CoverageMeter ROUND 2" />
+                                <tr>
+                                    <td>Sq. Meters per Box:</td>
+                                    <td id="sq-ft-per-box">&mvt:global:CoverageMeter;</td>
+                                </tr>
+                            </mvt:if>
+                        <mvt:else>
+                            <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Coverage">
+                                <tr>
+                                    <td>Sq. Ft. Per Box:</td> 
+                                    <td id="sq-ft-per-box">&mvt:product:customfield_values:customfields:Coverage;</td>
+                                </tr>
+                            </mvt:if>
+                    </mvt:if>
+                    
+                    
+                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Pieces">
+                        <tr>
+                            <td>&mvt:customfield_names:customfields:Pieces;:</td>
+                            <td>&mvt:product:customfield_values:customfields:Pieces;</td>
+                        </tr>
+                    </mvt:if>
+                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Length">
+                        <tr>
+                            <td>&mvt:customfield_names:customfields:Length;:</td>
+                            <td>&mvt:product:customfield_values:customfields:Length;</td>
+                        </tr>
+                    </mvt:if>
+
+                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Width">
+                        <tr>
+                            <td>&mvt:customfield_names:customfields:Width;:</td>
+                            <td>&mvt:product:customfield_values:customfields:Width;</td>
+                        </tr>
+                    </mvt:if>
+
+                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Thickness">
+                        <tr>
+
+                            <td>&mvt:customfield_names:customfields:Thickness;:</td>
+                            <td>&mvt:product:customfield_values:customfields:Thickness;</td>
+                        </tr>
+                    </mvt:if>
+
+            <mvt:comment>
+                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Collection">
+                        <tr>
+                            <td>&mvt:customfield_names:customfields:Collection;:</td>
+                            <td>&mvt:product:customfield_values:customfields:Collection;</td>
+                        </tr>
+                    </mvt:if>
+
+                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Colors">
+                        <tr>
+                            <td>&mvt:customfield_names:customfields:Colors;:</td>
+                            <td>&mvt:product:customfield_values:customfields:Colors;</td>
+                        </tr>
+                    </mvt:if>
+
+                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:ColorChart">
+                        <tr>
+                            <td>&mvt:customfield_names:customfields:ColorChart;:</td>
+                            <td>&mvt:product:customfield_values:customfields:ColorChart;</td>
+                        </tr>
+                    </mvt:if>
+            </mvt:comment>
+                <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Designer">
+                        <tr>
+                            <td>&mvt:customfield_names:customfields:Designer;:</td>
+                            <td>&mvt:product:customfield_values:customfields:Designer;</td>
+                        </tr>
+                    </mvt:if>
+
+            <mvt:comment>
+                    
+
+                    <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Notes">
+                        <tr>
+                            <td>&mvt:customfield_names:customfields:Notes;:</td>
+                            <td>&mvt:product:customfield_values:customfields:Notes;</td>
+                        </tr>
+                    </mvt:if>
+            </mvt:comment>
+                </table>
+            </div>  
+</mvt:if>  
+                <mvt:comment><mvt:if expr="l.settings:category:code EQ 'optional_products'">
+                        
+                    <div class="o-layout__item u-width-12 u-width-12--l notes_content">
+                        <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Notes">
+                            
+                                <p><b>&mvt:customfield_names:customfields:Notes;:</b> &mvt:product:customfield_values:customfields:Notes;</p>
+                            </tr>
+                        </mvt:if>  
+                    </div>
+
+                </mvt:if></mvt:comment>
+
+            
+        </div>
+                   
+    </div>
+    
+
+
+</div>

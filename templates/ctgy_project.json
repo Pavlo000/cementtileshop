@@ -1,0 +1,84 @@
+{
+    "category_listing": {
+        "advanced": 1,
+        "b_height": 234,
+        "b_width": 234,
+        "col_num": 4,
+        "constrain": "B",
+        "default_sort": "disp_order",
+        "field_name": 1,
+        "format": "X",
+        "image": "T",
+        "imagemachine_enabled": 1,
+        "invmsg": "N",
+        "items_per_page_filter": 1,
+        "linkexcludecat": 0,
+        "mode": "ctgy",
+        "page_disp_count": 3,
+        "per_page": 40,
+        "predictdiscounts": 0,
+        "reverse_default_disp_order": 0,
+        "sort_by": {
+            "best": 1,
+            "new": 1,
+            "price": 1,
+            "switch": 1
+        },
+        "template_filename": "ctgy_project-category_listing.mvc",
+        "template_id": 420
+    },
+    "category_listing_imagemachine": {
+        "closeup_active": 0,
+        "closeup_close": "closeup_close_%product_id%",
+        "closeup_div": "closeup_div_%product_id%",
+        "closeup_height": 500,
+        "closeup_image": "closeup_image_%product_id%",
+        "closeup_size": "N",
+        "closeup_width": 500,
+        "enabled": 1,
+        "head": {
+            "template_filename": "ctgy_project-category_listing_imagemachine-head.mvc",
+            "template_id": 416
+        },
+        "image_height": 140,
+        "image_size": "B",
+        "image_width": 140,
+        "legacy_image": "T",
+        "main_image": "main_image_%product_id%",
+        "preload": 0,
+        "thumb_active": 1,
+        "thumb_height": 60,
+        "thumb_width": 60,
+        "thumbnails": "thumbnails_%product_id%"
+    },
+    "hdft": {
+        "footer": {
+            "template_filename": "ctgy_project-footer.mvc",
+            "template_id": 419
+        },
+        "head": {
+            "template_filename": "ctgy_project-head.mvc",
+            "template_id": 417
+        },
+        "header": {
+            "template_filename": "ctgy_project-header.mvc",
+            "template_id": 418
+        }
+    },
+    "seo_settings": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    }
+}

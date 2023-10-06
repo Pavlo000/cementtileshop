@@ -1,0 +1,257 @@
+<mvt:item name="ry_toolbelt" param="custom_category|g.custcat|g.category_code" />
+<mvt:comment>
+    g.custcat:value:usd_gbp
+    &mvt:global:custcat:value:usd_gbp;
+    .64586967  as of 7/24/2015
+    &pound;
+</mvt:comment>
+
+<mvt:assign name="g.currency" value="'&pound;'" />
+<mvt:assign name="g.GBP_price" value="(l.settings:product:price * g.custcat:value:usd_gbp) ROUND 2" />
+<mvt:assign name="g.GBP_priceMeters" value="(g.GBP_price) ROUND 2" />
+<mvt:item name="ry_toolbelt" param="assign|g.GBP_priceF|g.currency $ g.GBP_priceMeters" />
+
+<mvt:comment> if Qty Pieces per box is available, calculate the PricePerPiece else use the custom field.</mvt:comment>
+<mvt:assign name="g.BoxQty" value="l.settings:product:customfield_values:customfields:Pieces" />
+<mvt:if expr="g.BoxQty GT 0">
+    <mvt:assign name="g.PricePerPiece" value="(l.settings:product:price / g.BoxQty) ROUND 2" />
+    <mvt:assign name="g.GBP_PricePerPiece" value="(g.GBP_priceMeters / g.BoxQty) ROUND 2" />
+<mvt:else>
+    <mvt:assign name="g.PricePerPiece" value="l.all_settings:product:customfield_values:customfields:PricePerPiece" />
+    <mvt:assign name="g.GBP_PricePerPiece" value="(g.PricePerPiece * g.custcat:value:usd_gbp)" />
+</mvt:if>
+
+<mvt:item name="ry_toolbelt" param="currencyformat|g.PricePerPieceF|g.PricePerPiece" />
+<mvt:item name="ry_toolbelt" param="assign|g.GBP_PricePerPieceF|g.currency $ g.GBP_PricePerPiece" />
+
+<mvt:comment> Per discussion with Chris
+    Alter the screen price to avoid round problems
+    Alter the actual price for the Javascript
+</mvt:comment>
+
+<mvt:assign name="g.Coverage" value="(l.settings:product:customfield_values:customfields:Coverage / 10.764) ROUND 2" />
+<mvt:assign name="g.PricePerMt" value="(g.GBP_priceMeters / g.Coverage) ROUND 2" />
+<mvt:comment><mvt:assign name="g.PricePerMt" value="(g.meters) ROUND 2" /></mvt:comment>
+<mvt:comment><mvt:assign name="g.PricePerMt" value="(g.meters) ROUND 2" /></mvt:comment>
+
+<mvt:item name="ry_toolbelt" param="assign|g.GBP_PricePerSqMeters_formatted|g.currency $ g.PricePerMt" />
+
+<mvt:comment><mvt:assign name="g.GBP_PricePerSqFtFVal" value="(l.all_settings:product:customfield_values:customfields:Coverage) ROUND 2" /></mvt:comment>
+<mvt:comment><mvt:assign name="g.Coverage" value="l.settings:product:customfield_values:customfields:CoverageMeters" /></mvt:comment>
+<mvt:comment><mvt:assign name="g.PricePerSqFtF" value="(g.GBP_price / l.settings:product:customfield_values:customfields:CoverageMeters) ROUND 2" /></mvt:comment>
+<mvt:comment><mvt:assign name="g.GBP_PricePerSqMeters_formatted" value="(g.GBP_price / l.settings:product:customfield_values:customfields:CoverageMeters) ROUND 2" /></mvt:comment>
+<mvt:comment><mvt:item name="ry_toolbelt" param="assign|g.GBP_PricePerSqMeters_formatted|g.currency $ g.PricePerSqFtF" /></mvt:comment>
+<mvt:comment><mvt:item name="ry_toolbelt" param="assign|g.GBP_PricePerSqMeters_formatted|g.currency $ g.GBP_PricePerSqMeters_formatted" /></mvt:comment>
+<mvt:comment><mvt:item name="ry_toolbelt" param="assign|g.GBP_PricePerSqMeters_formatted|g.currency $ g.GBP_PricePerPiece" /></mvt:comment>
+
+<mvt:comment><mvt:assign name="g.GBP_price" value="(g.GBP_PricePerPiece * g.BoxQty) ROUND 2" />
+<mvt:assign name="g.GBP_priceMeters" value="(g.GBP_price / 3.281) ROUND 2" />
+<mvt:item name="ry_toolbelt" param="assign|g.GBP_priceF|g.currency $ g.GBP_priceMeters" />
+
+<mvt:assign name="l.settings:product:price" value="(g.GBP_price / g.custcat:value:usd_gbp) ROUND 3" /></mvt:comment>
+
+<mvt:comment><mvt:assign name="g.CoverageMeter" value="0.092903 * l.settings:product:customfield_values:customfields:CoverageMeter" /></mvt:comment>
+<mvt:assign name="g.CoverageMeter" value="g.Coverage" />
+
+<script type="text/javascript">
+<mvt:comment> var coverage = &mvt:product:customfield_values:customfields:Coverage; ; </mvt:comment>
+
+var coverage = &mvt:global:CoverageMeter;;
+var boxprice = &mvt:product:price;;
+
+var rate = &mvt:global:custcat:value:usd_gbp;;  //Conversion rate
+var currency = "£";                             //Currency Symbol
+
+function updateSqFeet(sqfeet){
+    var boxes = Math.ceil ( sqfeet / coverage )
+    document.addproduct.Quantity.value = boxes;
+    document.box_calc.actualsquarefeet.value = (boxes * coverage).toFixed(2);
+    var dollars = (boxes * boxprice).toFixed(2)
+    document.box_calc.price.value = currency + (dollars * rate).toFixed(2) ;
+}
+
+function updateBoxes(boxes){
+    var actualsqfeet = (boxes * coverage).toFixed(2);
+    document.box_calc.squarefeet.value = actualsqfeet;
+    document.box_calc.actualsquarefeet.value = actualsqfeet;
+    var dollars = (boxes * boxprice).toFixed(2)
+    document.box_calc.price.value = currency + (dollars * rate).toFixed(2);
+}
+</script>
+
+<form class="o-layout__item x-product-layout-purchase u-width-12 u-width-6--l u-width-5--w" name="addproduct" method="post" action="&mvt:global:sessionurl;Screen=ctus-EU">
+                        <div class="product-description">&mvt:product:descrip;</div>
+            <div id="swatches" class="swatches"></div>
+            <div class="clear"></div>
+            <input type="hidden" name="Old_Screen" value="&mvte:global:Screen;" />
+            <input type="hidden" name="Old_Search" value="&mvte:global:Search;" />
+            <input type="hidden" name="Action" value="ADPR" />
+            <input type="hidden" name="Store_Code" value="&mvte:store:code;" />
+            <input type="hidden" name="Product_Code" value="&mvte:product:code;" />
+            <input type="hidden" name="Category_Code" value="&mvte:global:category_code;" />
+            <input type="hidden" name="Offset" value="&mvte:global:Offset;" />
+            <input type="hidden" name="AllOffset" value="&mvte:global:AllOffset;" />
+            <input type="hidden" name="CatListingOffset" value="&mvte:global:CatListingOffset;" />
+            <input type="hidden" name="RelatedOffset" value="&mvte:global:RelatedOffset;" />
+            <input type="hidden" name="SearchOffset" value="&mvte:global:SearchOffset;" />
+
+
+
+                    <legend>Purchase &mvt:product:name;</legend>
+
+
+                    <ul class="c-form-list">
+                        <li class="c-form-list__item c-form-list__item--full u-hidden u-block--l">
+                            <h1 class="x-product-layout-purchase__name">
+
+                                <span itemprop="name"  style="font-weight:bold;">&mvt:product:name;</span>
+                            </h1>
+
+                        </li>
+                        <li class="c-form-list__item c-form-list__item--full">
+
+
+
+
+                            <ul class="prices">
+
+                                <mvt:comment>
+                                    Display prices for Sale items category 'cement-tile-sale'.
+                                    If reg_price is populated this is a sale item. Show strikethrough.
+                                </mvt:comment>
+
+                                <mvt:if expr="(g.category_code EQ 'cement-tile-sale') AND
+                                    l.settings:product:customfield_values:customfields:reg_price AND
+                                    (l.settings:product:customfield_values:customfields:reg_price GT l.settings:product:price)">
+
+                                    <mvt:item name="ry_toolbelt" param="currencyformat|g.PricePerPieceF|l.all_settings:product:customfield_values:customfields:PricePerPiece" />
+                                    <mvt:assign name="g.BoxQty" value="l.settings:product:customfield_values:customfields:Pieces" />
+                                    <mvt:item name="ry_toolbelt" param="currencyformat|g.regularPricePerPieceF|l.all_settings:product:customfield_values:customfields:reg_price / g.BoxQty" />
+                                    <li>
+                                        <span style="
+                                            position: absolute;
+                                            margin-top: -16px;
+                                            text-decoration: line-through;
+                                            font-size: 13px;
+                                            margin-left: 1px;
+                                            font-weight: bold;
+                                        ">&nbsp;&mvt:global:regularPricePerPieceF;&nbsp;</span>
+                                        <strong style="color:#D45759;" id="price-value">&mvt:global:PricePerPieceF;</strong> per piece
+                                    </li>
+
+                                <mvt:else>
+
+                                    <mvt:item name="ry_toolbelt" param="currencyformat|g.PricePerPieceF|l.all_settings:product:customfield_values:customfields:PricePerPiece" />
+                                    <li><strong id="price-value"><!-- &mvt:global:PricePerPieceF; -->&mvt:global:GBP_PricePerPieceF;</strong> per piece</li>
+
+                                </mvt:if>
+
+                                <li><strong id="price_sqftf">&mvt:global:GBP_PricePerSqMeters_formatted;</strong> per m<sup>2</sup></li>
+
+
+                                <mvt:if expr="(g.category_code EQ 'cement-tile-sale') AND
+                                    l.settings:product:customfield_values:customfields:reg_price AND
+                                    (l.settings:product:customfield_values:customfields:reg_price GT l.settings:product:price)">
+
+                                        <mvt:item name="ry_toolbelt" param="currencyformat|g.BoxPriceF|l.all_settings:product:customfield_values:customfields:reg_price" />
+                                        <li>
+                                            <span style="
+                                                position: absolute;
+                                                margin-top: -16px;
+                                                text-decoration: line-through;
+                                                font-size: 13px;
+                                                margin-left: 1px;
+                                                font-weight: bold;
+                                            ">&nbsp;&mvt:global:BoxPriceF;&nbsp;</span>
+                                            <strong style="color:#D45759;">&mvt:product:formatted_price;</strong> per box
+                                        </li>      
+
+                                <mvt:else>
+                                    <li><strong><!-- &mvt:product:formatted_price; -->&mvt:global:GBP_priceF;</strong> per box</li>      
+                                </mvt:if>
+
+                            </ul>
+
+
+                            <div class="product-details-2 order-box">
+
+
+                                <div class="order-box__input">
+                                        <label for="sq-ft-needed">Square Meters Needed*</label>
+                                        <input type="number" id="sq-ft-needed" name="squarefeet" value="0" step="0.01">
+                                </div>
+                <span>
+                                        <select name="overage" id="overage" style="display: none; visibility: hidden;">
+                                            <option value="0.10">10% overage</option>
+                                            <option value="0.15">15% overage</option>
+                                            <option value="0.20">20% overage</option>
+                                            <option value="0.25">25% overage</option>
+                        <option value="0.0" selected>No overage</option>
+                                        </select>
+                </span>
+
+                                <div class="sqft-total">
+                                    <p class="waste-warning" id="_no-overage-warning"><small>15-20% overage is recommended for cuts/waste/layout preferences and repairs.</small></p>
+                                    <p>
+                                        <span id="boxes-needed">
+                                            <input class="c-form-input u-text-center u-color-gray-50" type="number" name="Quantity" value="1"> 
+                                            <span>box needed</span>
+                                            <strong> &nbsp;&nbsp;&nbsp;= &nbsp;&nbsp;&nbsp;</strong>
+                                        </span>
+                                        <span>
+                                            <strong id="actual-sq-ft">&mvt:global:Coverage;</strong> 
+                                            actual m<sup>2</sup>
+                                        </span>
+                                    </p>
+                                </div>
+
+
+                            </div>
+
+                            
+                        </li>
+                        <mvt:item name="discount_volume" param="product:id" />
+                        <li class="o-layout c-form-list__item x-product-layout-purchase__options">
+                            <mvt:item name="product_attributes" param="product:id" />
+                        </li>
+                        <li class="c-form-list__item c-form-list__item--full x-product-layout-purchase__cta">
+                            <div class="x-product-layout-purchase__message" data-hook="purchase-message"></div>
+                            <div class="o-layout">
+                                    <div class="o-layout__item c-control-group x-product-layout-purchase__options-quantity" style='justify-content:center;'>
+                                        <div class="c-control-group__field t-product-layout-purchase__quantity">
+                                            <label class="c-form-label u-text-bold u-font-small u-color-gray-50 is-required" for="l-quantity">Total</label>
+                                            <input id="js-total" class="c-form-input u-text-center u-color-gray-50" type="text" data-price="&mvt:global:GBP_priceMeters;" onKeyUp='updateBoxes(this.value);' readonly value="&mvt:global:GBP_priceF;">
+                                        </div>
+
+					<mvt:comment>
+                                        <mvt:if expr="l.settings:product:inv_level NE 'out'">
+                                            <span class="t-product-layout-purchase__add-to-cart" >
+                                                <input class="c-button c-button--full c-button--huge c-control-group__button u-bg-primary u-color-black u-text-bold u-font-small u-text-uppercase" type="submit" value="Request a Quote" />
+                                            </span>
+                                        </mvt:if>
+                                        <span class="t-product-layout-purchase__add-to-wish" data-mmnodisable="true">
+                                            <span onclick="document.forms.add.action = '&mvtj:urls:WISH:secure;'; document.forms.add.elements.Action.value = 'ATWL';">
+                                                <mvt:item name="buttons" param="AddToWishList"/>
+                                            </span>
+                                        </span>
+					</mvt:comment>
+					<span class="" style="
+    font-size: 14px;
+    line-height: 1.3;
+    border: 1px solid #ededed;
+    text-align: center;
+    padding: 9px;
+    max-width: 300px;
+">Please contact us at <strong style="
+    white-space: nowrap;
+">+44 (0) 1527 892885</strong> or email <a href="mailto:europeservice@cementtileshop.com">europeservice@cementtileshop.com</a> for a quote, to request a sample or to order.</span>
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="c-form-list__item c-form-list__item--full x-product-layout-purchase__availability">
+                            <mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:Availability">
+                                <span>Availability: </span>
+                                <span><b>&mvt:product:customfield_values:customfields:Availability;</b></span>
+                            </mvt:if>
+                        </li>
+                    </ul>

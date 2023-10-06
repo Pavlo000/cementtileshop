@@ -1,0 +1,29 @@
+{
+    "code": "mmx-base",
+    "type": "Z",
+    "is_global": false,
+    "active": true,
+    "attributes": [
+        {
+            "name": "type",
+            "value": "text/css"
+        },
+        {
+            "name": "media",
+            "value": "all"
+        },
+        {
+            "name": "rel",
+            "value": "stylesheet"
+        },
+        {
+            "name": "integrity",
+            "value": "sha256-fHZZQ+/Og6hPjpNrtPCCQnjm8MtDfZ2PHzun9VsBjxM= sha384-efX3ZWgvk7zrS0W09fgjd4J7wM8CH77w3Y/KrAtzqGV1ootO1jkem5FDvMKRty3B sha512-APtiDKLqek9BRhNyhudDEAIfJ+66IMdLw/caodMXWfNDNP85I4Zx9ZIOlHwoo+1KMD9tB1CsI3d2hTf1sp4K8g=="
+        },
+        {
+            "name": "crossorigin",
+            "value": "anonymous"
+        }
+    ],
+    "linked_pages": []
+}

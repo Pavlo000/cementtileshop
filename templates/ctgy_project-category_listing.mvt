@@ -1,0 +1,220 @@
+
+<style type="text/css">
+    .no-scroll {
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+    }
+#global-footer {
+    float: left;
+    width: 100%;
+}
+.clearfix:after {
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+#left-navigation {
+    display: none;
+    width: 0;
+}
+.project-group {
+    margin-bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-item .padding { height: 205px; padding: 20px 10px; }
+.project-name {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 170%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.product-item .product-thumbnail { margin: 0; }
+.product-thumbnail img { width: 215px;max-height: 150px;}
+.project-pattern { }
+.project_location {font-size: 14px; }
+
+.product-item{
+    width:25%;
+}
+
+.product-name {
+    height: 50px;
+    margin-bottom: 4px;
+}
+
+.product-item .padding{
+/*  border: 1px solid #D6D6D6; */
+    height:auto;
+    overflow:hidden;
+    padding:10px;
+    text-align:center;
+    color:#484848;
+    margin: 0;
+}
+.parent_ctgy_box .padding {
+    height:200px;
+}
+.product-item .padding a{
+    font-size: 14px;
+}
+.product-item .padding .project-viev a {
+    position: relative;
+    transition: .3s;
+}
+.product-item .padding .project-viev a img {
+    right: -19px;
+    visibility: hidden;
+    transition: .3s;
+    position: absolute;
+    top: 3px;
+}
+.slick-slide {
+    height: auto;
+}
+.slick-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.product-item .padding .project-viev a:hover img {
+    visibility: visible;
+}
+
+#bg_project_images {
+    background-color: rgba(0, 0, 0, 0.8313725490196079);
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    z-index: 9999;
+}
+.project-images-head {color:#fff;position: absolute;top:15px;left: 0;right: 0;width: 100%;}
+.slick-slider.slick-initialized,
+.slick-list {
+    height: 100%;
+}
+#project_images {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    top: 50%;
+    margin-left: 0;
+    padding: 15px;
+    position: absolute;
+    text-align: center;
+    max-width: 900px;
+    min-height: 90vh;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    padding: 80px 50px 50px;
+}
+#project_images img { 
+    max-width: 100%;
+    margin-bottom: 12px;
+    max-height: 100%;
+    margin: 0 auto;
+ }
+
+.project-group-head,
+.project-images-head {
+    font-family: georgia,times new roman,serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 0 10px;
+}
+.xclose {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    z-index: 2;
+}
+.xclose:hover {
+opacity: 1;
+}
+.xclose:before, .xclose:after {
+position: absolute;
+left: 15px;
+content: ' ';
+height: 33px;
+width: 2px;
+background-color: #fff;
+}
+.xclose:before {
+transform: rotate(45deg);
+}
+.xclose:after {
+transform: rotate(-45deg);
+}
+@media(max-width: 1024px) {
+    .product-item {
+        width: 33%;
+    }
+}
+@media(max-width: 768px) {
+    .product-item {
+        width: 50%;
+    }
+}
+</style>
+
+
+<mvt:item name="ry_toolbelt" param="category_children|l.all_settings:category:code" />
+<mvt:item name="ry_toolbelt" param="assign|l.all_settings:projects|l.all_settings:category_children" />
+<mvt:item name="ry_toolbelt" param="#eval|varlist('l', 'projects', l.all_settings)" />
+<mvt:item name="ry_toolbelt" param="assign|g.root|s.REQUEST_URI" />
+
+<mvt:if expr="l.settings:projects">
+    <mvt:foreach iterator="project" array="projects">
+<div class="project-group-head">&mvte:project:name;</div>
+        <div class="project-group">
+            
+            <mvt:item name="ry_toolbelt" param="category_children|l.all_settings:project:code" />
+
+            <mvt:foreach iterator="subcat" array="category_children">
+                <mvt:item name="ry_toolbelt" param="custom_category|g.cust_cat|l.all_settings:subcat:id" />
+                <mvt:item name="ry_toolbelt" param="assign|g.hash|Name2Code(l.all_settings:subcat:name)" />
+                <div class="product-item">
+                    <mvt:comment><a id="&mvt:global:hash;"></a></mvt:comment>
+                    <div class="padding">
+                        <div class="product-details">
+                            <div class="product-thumbnail">
+                                <a onclick="return show_pics('&mvt:global:hash;', 'bg_project_images', 'project_images', '&mvt:subcat:code;', event)" href="&mvt:global:root;#&mvt:global:hash;">
+                                    <img src="&mvt:subcat:image_title;" alt="&mvt:subcat:name;">
+                                    <div class="project-name">&mvte:subcat:name;</div>
+                                </a>
+                            </div>
+                            <mvt:if expr="g.cust_cat:value:projectcode">
+                                <mvt:item name="ry_toolbelt" param="assign|g.href|'https://' $ g.domain:name $ '/collection/' $ ea(g.cust_cat:value:projectcode) $ '.html'" />
+                                <mvt:comment><div class="project-pattern"><a href="&mvt:global:href;">&mvte:global:cust_cat:value:projectpattern;</a></div></mvt:comment>
+                                <div class="project-pattern"><a href="&mvt:global:href;" target="_blank">&mvte:global:cust_cat:value:projectpattern;</a></div>
+                            </mvt:if>
+
+                            <mvt:if expr="g.cust_cat:value:projectlocation">
+                                <div class="project_location">&mvt:global:cust_cat:value:projectlocation;</div>
+                            </mvt:if>
+                        </div>
+                    </div>
+                </div>
+
+            </mvt:foreach>
+        </div><br class="clear">
+    </mvt:foreach>
+
+
+</mvt:if>
+
+

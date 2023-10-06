@@ -1,0 +1,95 @@
+<mvt:item name="html_profile" />
+<head>
+    <title>&mvt:store:name;: Terms of Sale</title>
+    <base href="&mvt:global:basehref;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <mvt:item name="head" param="css_list" />
+<!-- Begin MailChimp Signup Form -->
+    <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+                #mc_embed_signup{background:#fff; clear:left; font-size:14px; }
+                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+    <mvt:item name="head" param="head_tag" />
+</head>
+<body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvt:global:pageClass;">
+    <mvt:item name="hdft" param="global_header" />
+
+    <section class="o-layout">
+        <div class="o-layout__item u-width-12">
+            <section class="t-expanded-block u-bg-white">
+                <div class="o-layout__item t-expanded-block__item">
+                    <br>
+                    <div class="o-layout o-layout--column-reverse o-layout--row-reverse--l">
+                        <div class="o-layout__item u-width-12 u-width-9--l">
+                            <section class="o-layout">
+                                <div class="o-layout__item">
+                                    <h1 class="c-heading-delta">&mvte:page:name;</h1>
+                                    <hr class="c-keyline">
+                                </div>
+                            </section>
+                    
+                            <section class="o-layout">
+                                <div class="o-layout__item">
+                                    <mvt:item name="hdft" param="header" />
+                                </div>
+                            </section>
+                
+                            <section class="o-layout">
+                                <div class="o-layout__item">
+                                    <p><strong>Handmade Cement Tile Appearance</strong></p>
+<p>Cement tile gets its beauty and richness from its handmade nature.</p> 
+<p>Please be aware that cement tile is a handmade product. Cement tiles will not be identical from piece to piece. Variations such as size, shade, imperfections, irregular edges and the appearance of fine cracks are inherent to this product and can vary from piece to piece. This adds to the natural appeal and does not compromise the performance of the tile. 
+<p>Due to these qualities, there will be a variance in every item. All cement tiles may suffer color tone changes over time and with regular maintenance. To ensure the best color match, place orders for all quantities to complete the installation, including extras for damage, cuts and waste. We recommend 10% to be added to all measurements. Material should be mixed from different cartons during installation to provide a cohesive installation.
+<p>Sample tiles are representative of colors, but may vary from batch to batch. Cement Tile Shop is not responsible for the appearance or differences of samples provided by manufacturers or local suppliers/showrooms.
+
+<p><b>Shipping</b></p>
+<p>Samples are shipped via UPS or Fedex Ground, but all orders (minimum order of 4 boxes) are shipped via common carrier (LTL trucking companies). Customer is responsible for all shipping charges. Commercial deliveries are to a commercial address with a loading dock or forklift. Businesses operating out of a residential address are not considered commercial deliveries. All residential deliveries are curbside on a pallet only and are charged an additional fee at checkout.</p>
+
+<p><b>Order Lead Time</b></p>
+<p>In stock orders ship within 48 hours of order time. Special/custom order tiles typically take between 8-12 weeks to ship, but can take longer based on production schedules and times of year.</p>
+
+<p><b>Payment Terms</b></p>
+<p>A 50% non-refundable deposit is required for all large or custom orders to begin production. Payment for the remaining balance will be due upon completion of your order. Once full payment is received we will release the shipment. Full payment is required in advance for all sample orders.</p>
+
+<p><b>Order Cancellation Policy</b></p>
+<p>Due to the fact that we do not stock custom designs and colors, we cannot accept order cancellations after production has begun.</p>
+
+<p><b>Sales Tax</b></p>
+<p>Sales tax will be charged on all applicable orders within the states of Florida, California and Arizona. Sales tax can be waived with a valid resale certificate.</p>
+
+<p><b>Damaged Material</b></p>
+<p>All products leave our dock in good condition and are properly packed. All claims for damaged and broken material must be made through your carrier.
+<p>Customer is responsible for the inspection of all material when received. Pictures will be required to assist in any claim for damaged material. <b>Please note any damage on the freight company Bill of Lading at the time of delivery. No claim for damage can be accepted if not noted at the time of delivery.</b></p>
+<p><b>Please do not refuse the shipment!</b> If you find damage, missing material, or incorrect quantities accept the shipment and note the issues in detail on the receipt with the driver.  If damage is properly noted, we can begin the process of getting replacement material to you.
+<p><b>Someone must sign for and inspect the material.</b> The correct quantity, correct material or any damage (see Damage below) should be noted before signing for the order. Do not allow the driver to leave without signing for the material. We must be notified immediately of any material shortage. All claims for shortage, incorrect product or damage must be made within 3 days and noted on bill of lading.</p>
+
+<p><b>Order Return Policy</b></p>
+<p>All material is considered special order. Cement Tile Shop does not accept returns on cement tile products. We encourage viewing samples prior to ordering. Please see full <a href="https://www.cementtileshop.com/SARP.html">return policy</a>.</p><p>All claims regarding  color, design, quality, or quantity must be resolved prior to installation. Any returns require a RMA number. Returns must be made in the original packaging and credited upon inspection in our warehouse. Freight is responsibility of customer. No claims will be accepted for any reason after installation.</p>
+<p><b>Legal</b></p>
+<p>Any controversy or claim arising out of or relating to your purchase, or the relative rights of you and Cement Tile Shop, shall be settled by arbitration in the City of Tampa, Florida, in accordance with the then-existing Florida Arbitration Code. One arbitrator shall be mutually agreed upon by all parties to the arbitration. If all parties cannot agree on a single arbitrator, each party shall choose an arbitrator, who shall in turn select another individual to act as the arbitrator. This provision will be specifically enforceable. The decision of the arbitrator will be final and binding on the parties, and judgment upon the award rendered may be entered in any court having jurisdiction thereof. The expenses of arbitration will be borne by the losing parties to the proceeding.</p>
+<p>These Terms will be governed by the internal laws of the State of Florida (without regard to conflict of laws or similar concepts).  Jurisdiction and venue will lie, and any legal proceedings brought outside of arbitration will be brought and exclusively maintained, in the Thirteenth Judicial Circuit in and for Hillsborough County, Florida, or if in federal court, in the United States District Court for the Middle District of Florida located in the City of Tampa, Florida.</p>
+                                </div>
+                            </section>
+                            
+                            <section class="o-layout">
+                                <div class="o-layout__item">
+                                    <mvt:item name="hdft" param="footer" />
+                                </div>
+                            </section>
+                        </div>
+                        <aside class="o-layout__item u-width-12 u-width-3--l category_tree_items category">
+                            <mvt:item name="readytheme" param="navigationset( 'static_navigation' )" />
+                        </aside>
+                    </div>
+                    <br>
+                </div>
+            </section>
+        </div>
+    </section>
+    <br>
+    
+    <mvt:item name="hdft" param="global_footer" />
+</body>
+</html>

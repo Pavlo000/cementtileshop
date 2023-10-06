@@ -1,0 +1,62 @@
+
+
+	<table style="width: 100%">
+		<tr class="quote-heading">
+			<td class="item-name">Code</td>
+			<td class="item-name">Product</td>
+			<td class="item-quantity">Qty.</td>
+			<td class="item-price">Price</td>
+			<td class="item-price">Total</td>
+		</tr>
+
+		<mvt:foreach iterator="quote_item" array="quote_content:quote_items">
+
+			
+			<mvt:assign name="g.category_code" value="'cement-tile-shop-europe'" />
+<mvt:item name="ry_toolbelt" param="custom_category|g.custcat|g.category_code" />
+
+
+<mvt:assign name="g.currency" value="'&pound;'" />
+<mvt:assign name="l.settings:quote_item:gbp_price" value="(l.settings:quote_item:price * g.custcat:value:usd_gbp) ROUND 2" />
+
+<mvt:assign name="l.settings:quote_item:gbp_subtotal" value="(l.settings:quote_item:gbp_price * l.settings:quote_item:quantity)" />
+<mvt:assign name="l.settings:quote_content:gbp_total" value="(l.settings:quote_content:total * g.custcat:value:usd_gbp) ROUND 2" />
+
+			<tr>
+				
+				<td>&mvte:quote_item:code;</td>
+				<td>&mvte:quote_item:name;<br />
+				
+				</td>
+				<td>&mvte:quote_item:quantity;</td>
+				<td>&mvt:global:currency;&mvte:quote_item:gbp_price;</td>
+				<td>&mvt:global:currency;&mvte:quote_item:gbp_subtotal;</td>
+			</tr>
+
+			<mvt:foreach iterator="quote_option" array="quote_item:options">
+				<tr>
+					<td colspan="1" style="background: #ffffff">&nbsp;</td>
+					<mvt:if expr="l.settings:quote_option:option_id">
+						<td style="background: #ffffff">&mvte:quote_option:attr_code;: &mvte:quote_option:opt_code;</td>
+					<mvt:elseif expr="NOT ISNULL l.settings:quote_option:data">
+						<td style="background: #ffffff">&mvt:quote_option:attr_code;: &mvt:quote_option:data;</td>
+					<mvt:elseif expr="NOT ISNULL l.settings:quote_option:data_long">
+						<td style="background: #ffffff">&mvt:quote_option:attr_code;: &mvt:quote_option:data_long;</td>
+					<mvt:else>
+						<td style="background: #ffffff">&mvt:quote_option:attr_code;</td>
+					</mvt:if>
+					<td style="background: #ffffff">&mvte:quote_option:quantity;</td>
+					<td style="background: #ffffff">&mvte:quote_option:formatted_price;</td>
+					<td style="background: #ffffff" />
+				</tr>
+			</mvt:foreach>
+		</mvt:foreach>
+
+		<tr id="basket-totals">
+			
+			<td colspan="3">&nbsp;</td>
+			<td class="total-prompt">Total:</td>
+			<td class="formatted-total">&mvt:global:currency;&mvte:quote_content:gbp_total;</td>
+		</tr>
+	</table>
+	

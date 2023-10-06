@@ -1,0 +1,30 @@
+{
+    "advanced": 1,
+    "b_height": 0,
+    "b_width": 0,
+    "button_add": 1,
+    "button_buy": 0,
+    "col_num": 2,
+    "constrain": "N",
+    "default_sort": "disp_order",
+    "displaydiscounts": 0,
+    "field_code": 0,
+    "field_desc": 0,
+    "field_name": 1,
+    "field_price": 1,
+    "field_sku": 1,
+    "field_weight": 0,
+    "format": "X",
+    "image": "type:main",
+    "imagetypes": [
+        "main"
+    ],
+    "invmsg": "L",
+    "linkexcludecat": 1,
+    "per_page": 10,
+    "predictdiscounts": 0,
+    "price": "base",
+    "prod_cat": "optional_products",
+    "prod_disp": "C",
+    "reverse_default_disp_order": 0
+}

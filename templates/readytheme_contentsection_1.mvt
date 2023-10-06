@@ -1,0 +1,38 @@
+<div id="mc_embed_signup">
+<form action="https://cementtileshop.us5.list-manage.com/subscribe/post?u=0a330c8f8b85daf42e5db75b8&amp;id=57c7a4c3bd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="" _lpchecked="1">
+<label for="mce-EMAIL">Subscribe to receive cement tile inspiration!</label>
+<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
+<div class="clear" style="display:block;margin-top: 10px;"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="c-button c-control-group__button u-bg-primary u-color-black u-text-bold u-font-small u-text-uppercase" onclick="gtag_report_conversion();"></div>
+</form>
+</div>
+<!--
+<form class="t-newsletter-form" action="#" id="mc-embedded-subscribe-form">
+	<h5 class="c-menu__title u-color-gray-50 u-font-tiny u-text-center u-text-left--l u-text-medium u-text-uppercase">Stay In The Know</h5>
+	<fieldset>
+		<legend>Join Our Newsletter</legend>
+		<ul class="c-form-list">
+			<li class="c-form-list__item c-control-group u-flex">
+				<input class="c-form-input c-form-input--large c-control-group__field u-font-tiny u-text-uppercase" type="email" name="email" value="" aria-label="Enter your email" placeholder="Enter your email" required>
+				<button class="o-layout--no-shrink c-button c-button--large	c-control-group__button u-bg-black u-font-small u-text-uppercase" onclick="gtag_report_conversion();">Sign Up</button>
+			</li>
+		</ul>
+	</fieldset>
+</form>
+<br>
+-->
+<!-- Event snippet for Email SignUp conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-998291904/iaISCJqt7rcBEMDzgtwD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>

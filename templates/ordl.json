@@ -1,0 +1,54 @@
+{
+    "HDFT": {
+        "FOOTER": {
+            "TEMPLATE_FILENAME": "ordl-footer.mvc",
+            "TEMPLATE_ID": 81
+        },
+        "HEAD": {
+            "TEMPLATE_FILENAME": "ordl-head.mvc",
+            "TEMPLATE_ID": 79
+        },
+        "HEADER": {
+            "TEMPLATE_FILENAME": "ordl-header.mvc",
+            "TEMPLATE_ID": 80
+        }
+    },
+    "paypalcp_buttons": {
+        "color": "gold",
+        "disable_funding": "card",
+        "label": "paypal",
+        "layout": "vertical",
+        "shape": "rect",
+        "size": 35,
+        "tagline": 0
+    },
+    "paypalcp_credit": {
+        "flex": {
+            "color": "blue",
+            "ratio": "1x1"
+        },
+        "layout": "text",
+        "placement": "payment",
+        "text": {
+            "color": "black",
+            "logo": "primary",
+            "position": "left"
+        }
+    },
+    "SEO_SETTINGS": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    }
+}

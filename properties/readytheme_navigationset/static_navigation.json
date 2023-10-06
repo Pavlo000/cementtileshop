@@ -1,0 +1,98 @@
+{
+    "descrip": "This is the side navigation for all static content pages.",
+    "items": [
+        {
+            "active": 1,
+            "disp_order": 269,
+            "id": 269,
+            "link": "<a href=\"https://www.cementtileshop.com/ABUS.html\" target=\"_self\">About Us</a>",
+            "link_dest": "ABUS",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "About Us",
+            "parent_id": 0,
+            "set_id": 4,
+            "url": "https://www.cementtileshop.com/ABUS.html"
+        },
+        {
+            "active": 1,
+            "disp_order": 300,
+            "id": 957,
+            "link": "<a href=\"https://www.cementtileshop.com/STLP.html\" target=\"_self\">Store Locations</a>",
+            "link_dest": "STLP",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Store Locations",
+            "parent_id": 0,
+            "set_id": 4,
+            "url": "https://www.cementtileshop.com/STLP.html"
+        },
+        {
+            "active": 1,
+            "disp_order": 301,
+            "id": 958,
+            "link": "<a href=\"https://www.cementtileshop.com/TERMS.html\" target=\"_self\">Terms of Sale</a>",
+            "link_dest": "TERMS",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Terms of Sale",
+            "parent_id": 0,
+            "set_id": 4,
+            "url": "https://www.cementtileshop.com/TERMS.html"
+        },
+        {
+            "active": 1,
+            "disp_order": 355,
+            "id": 356,
+            "link": "<a href=\"https://www.cementtileshop.com/PRPO.html\" target=\"_self\">Privacy Policy</a>",
+            "link_dest": "PRPO",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Privacy Policy",
+            "parent_id": 0,
+            "set_id": 4,
+            "url": "https://www.cementtileshop.com/PRPO.html"
+        },
+        {
+            "active": 1,
+            "disp_order": 356,
+            "id": 353,
+            "link": "<a href=\"https://www.cementtileshop.com/FAQS.html\" target=\"_self\">Frequently Asked Questions</a>",
+            "link_dest": "FAQS",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Frequently Asked Questions",
+            "parent_id": 0,
+            "set_id": 4,
+            "url": "https://www.cementtileshop.com/FAQS.html"
+        },
+        {
+            "active": 1,
+            "disp_order": 359,
+            "id": 300,
+            "link": "<a href=\"https://www.cementtileshop.com/CTUS.html\" target=\"_self\">Contact</a>",
+            "link_dest": "CTUS",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Contact",
+            "parent_id": 0,
+            "set_id": 4,
+            "url": "https://www.cementtileshop.com/CTUS.html"
+        },
+        {
+            "active": 1,
+            "disp_order": 360,
+            "id": 357,
+            "link": "<a href=\"https://www.cementtileshop.com/SARP.html\" target=\"_self\">Shipping &amp; Delivery</a>",
+            "link_dest": "SARP",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Shipping & Delivery",
+            "parent_id": 0,
+            "set_id": 4,
+            "url": "https://www.cementtileshop.com/SARP.html"
+        }
+    ],
+    "layout": "S",
+    "name": "Static Page Navigation"
+}

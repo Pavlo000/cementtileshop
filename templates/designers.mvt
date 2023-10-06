@@ -1,0 +1,96 @@
+<mvt:item name="html_profile" />
+<head>
+    <title>&mvt:store:name;: Cement Tile Description</title>
+    <base href="&mvt:global:basehref;" />
+    <mvt:item name="head" param="css_list" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin MailChimp Signup Form -->
+    <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+                #mc_embed_signup{background:#fff; clear:left; font-size:14px; }
+                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+    <mvt:item name="head" param="head_tag" />
+</head>
+<body class="DESIGNERS">
+<mvt:item name="hdft" param="global_header" />
+
+    <section class="o-layout">
+        <div class="o-layout__item u-width-12">
+            <section class="t-expanded-block u-bg-white">
+                <div class="o-layout__item t-expanded-block__item">
+                    <br>
+                    <div class="o-layout o-layout--column-reverse o-layout--row-reverse--l">
+                        <div class="o-layout__item u-width-12 u-width-9--l">
+                            <section class="o-layout">
+                                <div class="o-layout__item">
+                                    <h1 class="c-heading-delta">&mvte:page:name;</h1>
+                                    <hr class="c-keyline">
+                                </div>
+                            </section>
+                    
+                            <section class="o-layout">
+                                <div class="o-layout__item">
+                                    <mvt:item name="hdft" param="header" />
+                                </div>
+                            </section>
+                
+                            <section class="o-layout" id="content-container">
+                                <div class="o-layout__item">
+                                    
+<div>
+  <p><strong>Dana Berkowitz</strong><br/>
+</div>
+<p><img src="graphics/00000001/DanaBerkowitz.jpg" align="right" style="PADDING-LEFT: 5px" alt="Dana Berkowitz" width="200" height="213" />Dana is the Founder and Creative Director of Hacienda Design Studio, a graphic and interior design firm whose main focus is creating modern designs for cement tile.</p>
+
+<p>With degrees in English and French from Binghamton University, Dana began her career in the world of design at Pierre Frey, Inc. in NYC.  Having developed a passion for beautifully designed spaces and luxurious home furnishings, she spent the next decade working at Waterworks in the heart of the NY Design District.</p>
+
+<p>Throughout these years, Dana traveled the world extensively, inspired and fulfilled by different cultures and the rich beauty of foreign lands.  In 2008, she moved to Mérida, the capital city of Yucatan, Mexico, to restore a 170 year-old carriage house whose only salvageable remains were the cement tile floors.
+When the restoration was complete and the floors were polished to their original glory, Dana became enamored with this affordable, customizable and sustainable material.  Determined to expose cement tile to a wider audience, she set forth to design her own modern collection.</p>
+
+<p>She now lives in Red Bank, NJ with her husband, Guy.  With her interior design experience and his contracting skills, they renovate homes together, always finding new and inspiring ways to install cement tile. </p> 
+
+  </p><p></p>
+<p></p>
+<p><div>
+
+<div>
+  <p><strong>Erin Adams</strong> <br />
+</div>
+<p><img src="graphics/00000001/ErinAdams.jpg" align="right" style="PADDING-LEFT: 5px" alt="Erin Adams" width="200" height="213" />One of America's leading tile designers, Erin’s work has graced the homes of Cameron Diaz, Jack Black, Burt Bacharach, Sharon and Ozzy Osbourne, and many other celebrities. Her designs have been featured on MTV’s The Real World, HGTV’s Dream Home 2010, and the LifeStyle channel’s Women on Top. She has also received accolades in Dwell; O, The Oprah Magazine; and Architect; and has won numerous awards for her work.
+  </p>
+</p>
+<p>Erin’s reputation traces back to Erin Adams Design, where from 1998 to 2010 she was the exclusive creator of six collections for Ann Sacks Tile and Stone. In the 1990s, Erin was commissioned to design the lobby for famed fashion designer Cynthia Steffe. Her work for Steffe included a groundbreaking twelve-by-eight-foot mosaic rug for the foyer of Steffe’s showroom. The mosaic tile rug has been featured in many national publications, and earned Erin numerous commissions for similar pieces from celebrities and major hotels in New York City, including Versace and Donna Karan.</p>
+<p>Erin graduated from University of Texas at Austin and then went on to study for her master’s degree in ceramics at the Pratt School of Art and Design.
+  </p><p></p>
+<p></p>
+<p><div>
+<p></p>
+  <p><strong>Anna Burrous</strong> <br />
+   
+<p><img src="graphics/00000001/AnnaBurrous.jpg" align="right" style="PADDING-LEFT: 5px" alt="Anna Burrous" width="200" height="213" />Anna&rsquo;s lifelong passion for creating visual stories began at  the age of two, scribbling with colored pencils under her father&rsquo;s drafting  board in the basement of their Greenville, South Carolina home. An advertising  degree from the University of South Carolina landed her a job in the cutthroat  world of media sales, but she soon realized her creative drive wasn&rsquo;t being  fulfilled and made the decision to return to school to study graphic design and  photography.</p>
+<p>Anna is inspired by the energy of people who have a genuine  zest and appreciation for life. Her work reflects the good fortune of past  travel experiences, unique architecture and natural environments. She focuses  on keeping an open mind and loves searching for a unique angle in every  project. Welcoming new techniques and methods, Anna&rsquo;s ultimate goal is to keep  the eye intrigued and guessing.</p>
+                                </div>
+                            </section>
+                            
+                            <section class="o-layout">
+                                <div class="o-layout__item">
+                                    <mvt:item name="hdft" param="footer" />
+                                </div>
+                            </section>
+                        </div>
+                        <aside class="o-layout__item u-width-12 u-width-3--l category_tree_items category">
+                            <mvt:item name="readytheme" param="navigationset( 'resources_navigation' )" />
+                        </aside>
+                    </div>
+                    <br>
+                </div>
+            </section>
+        </div>
+    </section>
+    <br>
+    
+    <mvt:item name="hdft" param="global_footer" />
+</body>
+</html>

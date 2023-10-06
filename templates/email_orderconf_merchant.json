@@ -1,0 +1,37 @@
+{
+    "ORDER_CONTENTS": {
+        "advanced": 1,
+        "B_HEIGHT": 75,
+        "B_WIDTH": 75,
+        "CONSTRAIN": "B",
+        "payments": 0,
+        "TEMPLATE_FILENAME": "email_orderconf_merchant-order_contents.mvc",
+        "TEMPLATE_ID": 231
+    },
+    "ORDER_CUSTOMER": {
+        "prevent_template_auto_update": 0,
+        "TEMPLATE_FILENAME": "email_orderconf_merchant-order_customer.mvc",
+        "TEMPLATE_ID": 230
+    },
+    "toe_order_contents": {
+        "advanced": 1,
+        "b_height": 75,
+        "b_width": 75,
+        "constrain": "B",
+        "display": {
+            "discounts": 1,
+            "handling": 1,
+            "salestax": 1,
+            "shipping": 1
+        },
+        "groups": 1,
+        "imagetypes": [
+            "main"
+        ],
+        "lineitemcoupons": 0,
+        "lineitemdiscounts": 0,
+        "payments": 1,
+        "template_filename": "email_orderconf_merchant-toe_order_contents.mvc",
+        "template_id": 864
+    }
+}

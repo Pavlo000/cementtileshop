@@ -1,0 +1,230 @@
+{
+    "CATEGORY_LISTING": {
+        "additionalprice": "base",
+        "ADVANCED": 1,
+        "B_HEIGHT": 360,
+        "B_WIDTH": 360,
+        "BUTTON_ADD": 1,
+        "BUTTON_BUY": 1,
+        "COL_NUM": 2,
+        "COL_SEL": "D",
+        "CONSTRAIN": "B",
+        "DEFAULT_SORT": "disp_order",
+        "displaydiscounts": 0,
+        "field_code": 1,
+        "field_desc": 0,
+        "FIELD_NAME": 1,
+        "field_price": 1,
+        "field_sku": 0,
+        "field_weight": 0,
+        "fields_custom": [
+            {
+                "code": "alt1",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt10",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt11",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt12",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt13",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt14",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt15",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt16",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt17",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt18",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt19",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt2",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt20",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt3",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt4",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt5",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt6",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt7",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt8",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "alt9",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "main",
+                "module": "productimagecustomfields"
+            },
+            {
+                "code": "Length",
+                "module": "customfields"
+            },
+            {
+                "code": "Thickness",
+                "module": "customfields"
+            },
+            {
+                "code": "Width",
+                "module": "customfields"
+            }
+        ],
+        "FORMAT": "X",
+        "IMAGE": "T",
+        "IMAGEMACHINE_ENABLED": 1,
+        "INVMSG": "L",
+        "ITEMS_PER_PAGE_FILTER": 1,
+        "LINKEXCLUDECAT": 1,
+        "MODE": "ctgy",
+        "PAGE_DISP_COUNT": 0,
+        "PER_PAGE": 0,
+        "predictdiscounts": 1,
+        "price": "sale",
+        "reverse_default_disp_order": 0,
+        "SORT_BY": {
+            "BEST": 1,
+            "code": 0,
+            "name": 0,
+            "NEW": 1,
+            "PRICE": 1,
+            "SWITCH": 1
+        },
+        "TEMPLATE_FILENAME": "ctgy-category_listing.mvc",
+        "TEMPLATE_ID": 39
+    },
+    "CATEGORY_LISTING_IMAGEMACHINE": {
+        "CLOSEUP_ACTIVE": 0,
+        "CLOSEUP_CLOSE": "closeup_close_%product_id%",
+        "CLOSEUP_DIV": "closeup_div_%product_id%",
+        "CLOSEUP_HEIGHT": 500,
+        "CLOSEUP_IMAGE": "closeup_image_%product_id%",
+        "CLOSEUP_SIZE": "N",
+        "CLOSEUP_WIDTH": 500,
+        "ENABLED": 1,
+        "HEAD": {
+            "TEMPLATE_FILENAME": "ctgy-category_listing_imagemachine-head.mvc",
+            "TEMPLATE_ID": 285
+        },
+        "IMAGE_HEIGHT": 140,
+        "IMAGE_SIZE": "B",
+        "IMAGE_WIDTH": 140,
+        "LEGACY_IMAGE": "T",
+        "MAIN_IMAGE": "main_image_%product_id%",
+        "PRELOAD": 0,
+        "THUMB_ACTIVE": 1,
+        "THUMB_HEIGHT": 60,
+        "THUMB_WIDTH": 60,
+        "THUMBNAILS": "thumbnails_%product_id%"
+    },
+    "facets": {
+        "b_height": 234,
+        "b_width": 234,
+        "button_add": 1,
+        "button_buy": 1,
+        "button_wish": 0,
+        "col_num": 2,
+        "constrain": "B",
+        "default_sort": "disp_order",
+        "displaydiscounts": 0,
+        "field_code": 1,
+        "field_desc": 0,
+        "field_name": 1,
+        "field_price": 1,
+        "field_sku": 0,
+        "format": "X",
+        "image": "T",
+        "invmsg": "L",
+        "items_per_page_filter": 1,
+        "linkexcludecat": 1,
+        "mode": "ctgy",
+        "page_disp_count": 3,
+        "per_page": 10,
+        "predictdiscounts": 0,
+        "price": "base",
+        "reverse_default_disp_order": 0,
+        "sort_by": {
+            "best": 1,
+            "code": 0,
+            "name": 0,
+            "new": 1,
+            "price": 1,
+            "switch": 1
+        }
+    },
+    "HDFT": {
+        "FOOTER": {
+            "TEMPLATE_FILENAME": "ctgy-footer.mvc",
+            "TEMPLATE_ID": 38
+        },
+        "HEAD": {
+            "TEMPLATE_FILENAME": "ctgy-head.mvc",
+            "TEMPLATE_ID": 36
+        },
+        "HEADER": {
+            "TEMPLATE_FILENAME": "ctgy-header.mvc",
+            "TEMPLATE_ID": 37
+        }
+    },
+    "SEO_SETTINGS": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    }
+}

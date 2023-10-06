@@ -1,0 +1,18 @@
+{
+    "bg_horiz": "center",
+    "bg_repeat": "no-repeat",
+    "bg_vert": "center",
+    "limg_hght": 0,
+    "limg_size": 0,
+    "limg_wdth": 0,
+    "logo_type": "image",
+    "s_active": 1,
+    "s_facebook": "https://www.facebook.com/CementTileShop",
+    "s_instgram": "https://www.instagram.com/cementtileshop/",
+    "s_pintrest": "https://www.pinterest.com/cementtileshop/",
+    "s_twitter": "https://twitter.com/@cementtileshop",
+    "s_youtube": "https://www.youtube.com/user/CementTileShop",
+    "tps_active": 0,
+    "tps_text": "<span class=\"o-layout__item\">\r\n\t<!-- Place your social sharing code here. -->\r\n</span>",
+    "trs_active": 0
+}

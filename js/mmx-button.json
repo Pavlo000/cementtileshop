@@ -1,0 +1,21 @@
+{
+    "code": "mmx-button",
+    "type": "Z",
+    "is_global": false,
+    "active": true,
+    "attributes": [
+        {
+            "name": "type",
+            "value": "text/javascript"
+        },
+        {
+            "name": "integrity",
+            "value": "sha256-AW+6oJHi6upog19y1WtT1WXW6u+Z8zD0GP4WP1NpMTk= sha384-4KZzx4PNeuYQkxqUQuqmmpN9v3GtyRbjs/c27relgnt8eahWTGV1MPdi/9T91X4r sha512-DWoHbKwyqtXCIKxpLGSanovEDzH+AWmrZ77LKp/r75fKlIrOA57ZtAnGQC7VqJUoLQ5saXXSSbQlgEz+QWSzeg=="
+        },
+        {
+            "name": "crossorigin",
+            "value": "anonymous"
+        }
+    ],
+    "linked_pages": []
+}

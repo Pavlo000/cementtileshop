@@ -1,0 +1,16 @@
+<div class="xclose"></div>
+
+<div class="project-images-head">&mvte:category:name;</div>
+<mvt:foreach iterator="product" array="category_listing:products">
+    <mvt:item name="ry_toolbelt" param="product_images|EXTRA|images:extra|l.all_settings:product:code" />
+
+    <div class="slider-block">
+        <mvt:if expr="l.settings:images:extra">
+          <mvt:foreach iterator="image" array="images:extra">
+            <img src="&mvt:image:src;" width="840">
+          </mvt:foreach>
+        </mvt:if>
+    </div>
+    
+
+</mvt:foreach>

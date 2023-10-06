@@ -1,0 +1,40 @@
+<section class="u-bg-white t-expanded-block t-spotlight t-defer-object" data-defer>
+    <div class="o-layout t-expanded-block__item t-spotlight__wrap">
+        <div class="o-layout__item u-width-12 u-width-6--l t-spotlight-img">
+            <figure class="o-layout__item u-width-12 t-spotlight__figure" data-hook="spotlight__figure">
+                <mvt:item name="readytheme" param="image( 'spotlight_image_one' )" />
+            </figure>
+        </div>
+
+        <div class="o-layout__item u-width-12 u-width-6--l t-spotlight__figure-text-content order_block">
+            <article class="u-text-bold u-text-center u-text-left--l">
+                <p class="u-text-bold u-text-italic">Try on our tiles before you buy!</p>
+                <p>Try our Visualizer tool to experiment with all of your favorite patterns in preexisting room scenes or even upload and try your own space! From kitchens and bathrooms to outdoor areas and commercial applications, there are plenty to choose from to make sure you are getting the tile of your dreams. Create, save and share all of your favorite rooms. </p> 
+                <a href="https://cementtileshop.chameleonpower.com/" class="spot_btn" target="_blank">Visualizer</a>
+                </p>
+            </article>
+        </div>
+
+        <div class="o-layout__item u-width-12 u-width-6--l t-spotlight__figure-text-content">
+            <article class="u-text-bold u-text-center u-text-left--l">
+ <p class="u-text-bold u-text-italic">Create the custom tile of your dreams!</p>
+                <p>Since all patterns are handcrafted, each design can be customized and created to your exact color specifications. Use this tool to create the custom tile of your dreams!</p>
+                <a href="https://customizer.cementtileshop.com/" class="spot_btn" target="_blank">Customizer</a>
+                            </article>
+        </div>
+        
+        <div class="o-layout__item u-width-12 u-width-6--l t-spotlight-img">
+            <figure class="o-layout__item u-width-12 t-spotlight__figure top_block" data-hook="spotlight__figure">
+                <mvt:item name="readytheme" param="image( 'spotlight_image_two' )" />
+            </figure>
+        </div>
+        
+       <mvt:comment> <figure class="o-layout__item u-width-12 u-width-5--l t-spotlight__figure t-spotlight__figure--highlighted" data-hook="spotlight__figure">
+            <mvt:item name="readytheme" param="image( 'spotlight_image_two' )" />
+        </figure></mvt:comment>
+        
+        
+    </div>
+</section>
+<br>
+<!-- end t-spotlight -->

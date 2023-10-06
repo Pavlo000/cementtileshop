@@ -1,0 +1,46 @@
+{
+    "HDFT": {
+        "FOOTER": {
+            "TEMPLATE_FILENAME": "ordh-footer.mvc",
+            "TEMPLATE_ID": 179
+        },
+        "HEAD": {
+            "TEMPLATE_FILENAME": "ordh-head.mvc",
+            "TEMPLATE_ID": 177
+        },
+        "HEADER": {
+            "TEMPLATE_FILENAME": "ordh-header.mvc",
+            "TEMPLATE_ID": 178
+        }
+    },
+    "ORDERHISTORY_LIST": {
+        "ADVANCED": 1,
+        "INVOICE": 1,
+        "ORDER_DATE": 1,
+        "ORDER_TOTAL": 1,
+        "PAGINATE": 1,
+        "PER_PAGE": 20,
+        "PRODUCTS_BOUGHT": 1,
+        "QUANTITY_BOUGHT": 1,
+        "STATUS": 1,
+        "TEMPLATE_FILENAME": "ordh-orderhistory_list.mvc",
+        "TEMPLATE_ID": 180,
+        "TRACKING": 1
+    },
+    "SEO_SETTINGS": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    }
+}

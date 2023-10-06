@@ -1,0 +1,79 @@
+{
+    "feed_id": 2,
+    "templatefeed": {
+        "footer_template": {
+            "id": 684,
+            "name": "TEMPLATEFEED_footer-templatefeed_ugcfeed-templatefeed.mvc"
+        },
+        "header_template": {
+            "id": 682,
+            "name": "TEMPLATEFEED_header-templatefeed_ugcfeed-templatefeed.mvc"
+        },
+        "iterator_template": {
+            "id": 683,
+            "name": "TEMPLATEFEED_iterator-templatefeed_ugcfeed-templatefeed.mvc"
+        },
+        "settings_template": {
+            "advanced": 0,
+            "delimiter": "comma",
+            "encoding": "csv",
+            "id": 681,
+            "load": "active",
+            "mode": "product",
+            "name": "TEMPLATEFEED_settings-templatefeed_ugcfeed-templatefeed.mvc",
+            "products": {
+                "customfields": [
+                    {
+                        "code": "main",
+                        "module": "productimagecustomfields"
+                    }
+                ],
+                "fields": {
+                    "active": 0,
+                    "alternate_display_page": 0,
+                    "canonical_category": 0,
+                    "canonical_uri": 0,
+                    "code": 1,
+                    "cost": 0,
+                    "description": 0,
+                    "dt_created": 0,
+                    "dt_updated": 0,
+                    "fullsize_image": 0,
+                    "inventory": 0,
+                    "name": 1,
+                    "page_title": 0,
+                    "price": 0,
+                    "shipping_height": 0,
+                    "shipping_length": 0,
+                    "shipping_width": 0,
+                    "sku": 0,
+                    "taxable": 0,
+                    "thumbnail_image": 0,
+                    "url": 1,
+                    "weight": 0
+                },
+                "load_variants": 0,
+                "predict_discounts": 0,
+                "variant_fields": {
+                    "active": 0,
+                    "code": 0,
+                    "cost": 0,
+                    "description": 0,
+                    "dt_created": 0,
+                    "dt_updated": 0,
+                    "fullsize_image": 0,
+                    "inventory": 0,
+                    "name": 0,
+                    "price": 0,
+                    "shipping_height": 0,
+                    "shipping_length": 0,
+                    "shipping_width": 0,
+                    "sku": 0,
+                    "taxable": 0,
+                    "thumbnail_image": 0,
+                    "weight": 0
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+<mvt:item name="html_profile" />
+<head>
+	<title>&mvt:store:name;: Instagram Feed</title>
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+	<script src="https://use.fontawesome.com/247d9b1821.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="instagram_feed/instagram.js"></script>
+
+</head>
+<body class="insta_feed">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="navigation-bar"><mvt:item name="navbar" /></div>
+		<mvt:item name="hdft" param="header" />
+
+
+	
+	<mvt:item name="all_products"/>
+	
+
+		
+		    <mvt:if expr="g.customer:login EQ 'InstagramManager'">
+			    <mvt:item name="Backend"/>
+			    <script>
+			        iFeed.init();  
+			    </script>
+		    <mvt:else>
+			    <mvt:item name="Frontend"/>
+			    <script>
+			        iFeed.init({
+			            displayPage: 'front'
+			        }); 
+			    </script>
+		    </mvt:if>
+		    
+		    
+
+		<mvt:item name="hdft" param="footer" />
+
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

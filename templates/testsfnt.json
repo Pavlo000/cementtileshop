@@ -1,0 +1,74 @@
+{
+    "content": {
+        "template_filename": "testsfnt-content.mvc",
+        "template_id": 390
+    },
+    "featured_products": {
+        "b_height": 234,
+        "b_width": 234,
+        "button_add": 1,
+        "button_buy": 1,
+        "button_wish": 0,
+        "col_num": 2,
+        "constrain": "B",
+        "default_sort": "disp_order",
+        "displaydiscounts": 0,
+        "field_code": 1,
+        "field_name": 1,
+        "field_price": 1,
+        "format": "X",
+        "image": "T",
+        "imagemachine_enabled": 0,
+        "invmsg": "L",
+        "items_per_page_filter": 1,
+        "linkexcludecat": 1,
+        "mode": "ctgy",
+        "page_disp_count": 3,
+        "per_page": 10,
+        "predictdiscounts": 0,
+        "price": "base",
+        "reverse_default_disp_order": 0,
+        "sort_by": {
+            "best": 1,
+            "new": 1,
+            "price": 1,
+            "switch": 1
+        },
+        "template_filename": "testsfnt-featured_products.mvc",
+        "template_id": 391
+    },
+    "hdft": {
+        "footer": {
+            "template_filename": "testsfnt-footer.mvc",
+            "template_id": 389
+        },
+        "head": {
+            "template_filename": "testsfnt-head.mvc",
+            "template_id": 387
+        },
+        "header": {
+            "template_filename": "testsfnt-header.mvc",
+            "template_id": 388
+        }
+    },
+    "seo_settings": {
+        "cat_lit": "cement-tile",
+        "cat_lit_choice": "Custom",
+        "plit_in_bc": 0,
+        "prod_lit": "collection",
+        "prod_lit_choice": "Custom",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://www.cementtileshop.com/",
+        "url_delim": "/",
+        "urlprefix": "https://www.cementtileshop.com/"
+    },
+    "welcome_text": {
+        "template_filename": "testsfnt-welcome_text.mvc",
+        "template_id": 392
+    }
+}

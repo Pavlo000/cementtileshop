@@ -1,0 +1,244 @@
+<mvt:item name="ry_toolbelt" param="custom_category|g.custcat|l.all_settings:category:code" />
+<mvt:if expr="s.Remote_Addr IN '73.192.75.104 / 99.157.185.121'">
+
+<mvt:item name="ry_toolbelt" param="eval|varlist('g', 'custcat', l.all_settings)" />
+
+</mvt:if>
+
+<mvt:item name="ry_toolbelt" param="category_children|l.all_settings:category:code" />
+<mvt:if expr="l.settings:category_children">
+	<mvt:foreach iterator="subcat" array="category_children">
+		<div class="product-item parent_ctgy_box">
+			<div class="padding">
+				<div class="product-details">
+					<div class="product-thumbnail">
+						<a href="&mvt:subcat:href;"><img src="&mvt:subcat:image_title;" border="0" height="140px" width="140px"></a>
+					</div>
+					<div class="product-name"><a href="&mvt:subcat:href;">&mvte:subcat:name;</a></div>
+				</div>
+			</div>
+		</div>
+	</mvt:foreach>
+</mvt:if>
+<div class="expanded"><div id="filter-items-container"><mvt:if expr="l.settings:category_listing:products_on_page_count GT 1">
+	<div class="sorting">
+		<form method="get" action="&mvte:global:sessionurl;">
+			<input type="hidden" name="Screen" value="&mvte:global:Screen;" />
+			<input type="hidden" name="Store_Code" value="&mvte:global:Store_Code;" />
+			<input type="hidden" name="Category_Code" value="&mvte:global:Category_Code;" />
+			<input type="hidden" name="Product_Code" value="&mvte:global:Product_Code;" />
+			<input type="hidden" name="Search" value="&mvte:global:Search;" />
+			<input type="hidden" name="Per_Page" value="&mvte:global:Per_Page;" />
+			<label for="Sort_By">Sort By:</label>
+			<select name="Sort_By" onchange="this.form.submit();">
+				<mvt:if expr="ISNULL g.Sort_By">
+					<option value="disp_order" selected="selected">Default</option>
+					<mvt:else>
+						<option value="disp_order">Default</option>
+				</mvt:if>
+				<mvt:if expr="g.Sort_By EQ 'bestsellers'">
+					<option value="bestsellers" selected="selected">Best Selling</option>
+					<mvt:else>
+						<option value="bestsellers">Best Selling</option>
+				</mvt:if>
+				<mvt:if expr="g.Sort_By EQ 'price_asc'">
+					<option value="price_asc" selected="selected">Lowest Price</option>
+					<mvt:else>
+						<option value="price_asc">Lowest Price</option>
+				</mvt:if>
+				<mvt:if expr="g.Sort_By EQ 'price_desc'">
+					<option value="price_desc" selected="selected">Highest Price</option>
+					<mvt:else>
+						<option value="price_desc">Highest Price</option>
+				</mvt:if>
+				<mvt:if expr="g.Sort_By EQ 'newest'">
+					<option value="newest" selected="selected">Newest Items</option>
+					<mvt:else>
+						<option value="newest">Newest Items</option>
+				</mvt:if>
+			</select>
+			<noscript><input type="submit" value="go"></noscript>
+		</form>
+	</div></mvt:if><mvt:if expr="l.settings:category_listing:products_on_page_count GT 1">
+	<div class="per-page">
+		<form method="get" action="&mvte:global:sessionurl;">
+			<input type="hidden" name="Screen" value="&mvte:global:Screen;" />
+			<input type="hidden" name="Store_Code" value="&mvte:global:Store_Code;" />
+			<input type="hidden" name="Category_Code" value="&mvte:global:Category_Code;" />
+			<input type="hidden" name="Product_Code" value="&mvte:global:Product_Code;" />
+			<input type="hidden" name="Search" value="&mvte:global:Search;" />
+			<input type="hidden" name="Sort_By" value="&mvte:global:Sort_By;" />
+			<label for="Per_Page">View:</label>
+			<select name="Per_Page" onchange="this.form.submit();">
+				<mvt:if expr="g.Per_Page EQ 40">
+					<option value="40" selected="selected">40</option>
+					<mvt:else>
+						<option value="40">40</option>
+				</mvt:if>
+				<mvt:if expr="g.Per_Page EQ 80">
+					<option value="80" selected="selected">80</option>
+					<mvt:else>
+						<option value="80">80</option>
+				</mvt:if>
+				<mvt:if expr="g.Per_Page EQ 120">
+					<option value="120" selected="selected">120</option>
+					<mvt:else>
+						<option value="120">120</option>
+				</mvt:if>
+				<mvt:if expr="g.Per_Page EQ -1">
+					<option value="-1" selected="selected">All</option>
+					<mvt:else>
+						<option value="-1">All</option>
+				</mvt:if>
+			</select>
+			<noscript><input type="submit" value="go"></noscript>
+		</form>
+	</div></mvt:if>
+	<mvt:if expr="l.settings:category_listing:page_links:last_page GT 1">
+		<div class="page-links">
+			<span class="page-links-title">Page(s):</span>
+			<span class="page-links-container">
+				<mvt:if expr="l.settings:category_listing:page_links:current_page NE 1">
+					<a href="&mvte:category_listing:page_links:prev_link;" class="page-links-previous">&lt;</a>
+					<mvt:else>
+						<span class="page-links-previous page-links-deactivated">&lt;</span>
+				</mvt:if>
+				<mvt:if expr="l.settings:category_listing:page_links:current_page NE l.settings:category_listing:page_links:last_page">
+					<a href="&mvte:category_listing:page_links:next_link;" class="page-links-next">&gt;</a>
+					<mvt:else>
+						<span class="page-links-next page-links-deactivated">&gt;</span>
+				</mvt:if>
+				<span class="page-disp">
+					<mvt:if expr="NOT l.settings:category_listing:page_links:contains_first">
+						<a href="&mvte:category_listing:page_links:first_link;" class="page-links-inactive">1</a>...
+					</mvt:if>
+					<mvt:foreach iterator="pages" array="category_listing:page_links:pages">
+						<mvt:if expr="l.settings:category_listing:page_links:current_page EQ l.settings:pages:page_num">
+							<span class="page-links-active">&mvte:pages:page_num;</span>
+							<mvt:else>
+								<a href="&mvte:pages:link;" class="page-links-inactive">&mvte:pages:page_num;</a>
+						</mvt:if>
+					</mvt:foreach>
+					<mvt:if expr="NOT l.settings:category_listing:page_links:contains_last">
+						...<a href="&mvte:category_listing:page_links:last_link;" class="page-links-inactive">&mvte:category_listing:page_links:last_page;</a>
+					</mvt:if>
+				</span>
+			</span>
+		</div>
+
+	</mvt:if>
+</div><div class="clear"></div>
+<mvt:foreach iterator="product" array="category_listing:products">
+	<div class="product-item child_ctgy_box">
+		<div class="padding">
+			<div class="product-details">
+				<div class="product-thumbnail">
+					<a href="https://www.cementtileshop.com/mm5/merchant.mvc?Screen=PROD-EU&Product_Code=&mvt:product:code;"><img id="main_image_&mvte:product:id;" src="graphics/en-US/cssui/blank.gif" alt="&mvte:product:name;" /></a>
+				</div>
+				<mvt:item name="category_listing_imagemachine" param="body:product:id" />
+				<div class="product-name"><a href="https://www.cementtileshop.com/mm5/merchant.mvc?Screen=PROD-EU&Product_Code=&mvt:product:code;">&mvt:product:name;</a></div>
+				<mvt:if expr="NOT ISNULL l.settings:product:customfield_values:customfields:PricePerPiece">
+					<div class="custom-field" id="customfields-PricePerPiece">&mvte:customfield_names:customfields:PricePerPiece;: <span class="bold">$&mvt:product:customfield_values:customfields:PricePerPiece;</span></div>
+				</mvt:if>
+				<mvt:if expr="l.settings:product:inv_active">&mvt:product:inv_long;<br></mvt:if>
+			</div>
+			<div class="purchase-buttons">
+				<form method="post" action="&mvte:global:sessionurl;Screen=PROD-EU">
+					<input type="hidden" name="Store_Code" value="&mvte:store:code;" />
+					<input type="hidden" name="Product_Code" value="&mvte:product:code;" />
+					<input type="hidden" name="Current_Product_Code" value="&mvte:global:Product_Code;" />
+					<input type="hidden" name="Category_Code" value="&mvte:global:Category_Code;" />
+					<input type="hidden" name="Offset" value="&mvte:global:CatListingOffset;" />
+					<input type="hidden" name="AllOffset" value="&mvte:global:AllOffset;" />
+					<input type="hidden" name="CatListingOffset" value="&mvte:global:CatListingOffset;" />
+					<input type="hidden" name="RelatedOffset" value="&mvte:global:RelatedOffset;" />
+					<input type="hidden" name="SearchOffset" value="&mvte:global:SearchOffset;" />
+					<input type="submit" class="button" value="Show Details">
+				</form>
+			</div>
+		</div>
+	</div>
+</mvt:foreach>
+<div class="clear"></div>
+<mvt:if expr="NOT l.settings:category_listing:page_disp_count GT 0">
+	<mvt:if expr="g.CatListingOffset OR g.CatListingNextOffset">
+		<div class="next-previous">
+			<mvt:if expr="g.CatListingOffset GT 0">
+				<div class="previous-button">
+					<form method="post" action="&mvte:global:sessionurl;">
+						<input type="hidden" name="Screen" value="&mvte:global:Screen;" />
+						<input type="hidden" name="Store_Code" value="&mvte:global:Store_Code;" />
+						<input type="hidden" name="Category_Code" value="&mvte:global:Category_Code;" />
+						<input type="hidden" name="Product_Code" value="&mvte:global:Product_Code;" />
+						<input type="hidden" name="Search" value="&mvte:global:Search;" />
+						<input type="hidden" name="Per_Page" value="&mvte:global:Per_Page;" />
+						<input type="hidden" name="Sort_By" value="&mvte:global:Sort_By;" />
+						<input type="hidden" name="Offset" value = "&mvte:global:CatListingPrevOffset;" />
+						<input type="hidden" name="AllOffset" value = "&mvte:global:AllOffset;" />
+						<input type="hidden" name="CatListingOffset" value = "&mvte:global:CatListingPrevOffset;" />
+						<input type="hidden" name="RelatedOffset" value = "&mvte:global:RelatedOffset;" />
+						<input type="hidden" name="SearchOffset" value = "&mvte:global:SearchOffset;" />
+						<mvt:item name="buttons" param="Previous" />
+					</form>
+				</div>
+			</mvt:if>
+
+			<mvt:if expr="g.CatListingNextOffset GT 0">
+				<div class="next-button">
+					<form method="post" action="&mvte:global:sessionurl;">
+						<input type="hidden" name="Screen" value="&mvte:global:Screen;" />
+						<input type="hidden" name="Store_Code" value="&mvte:global:Store_Code;" />
+						<input type="hidden" name="Category_Code" value="&mvte:global:Category_Code;" />
+						<input type="hidden" name="Product_Code" value="&mvte:global:Product_Code;" />
+						<input type="hidden" name="Search" value="&mvte:global:Search;" />
+						<input type="hidden" name="Per_Page" value="&mvte:global:Per_Page;" />
+						<input type="hidden" name="Sort_By" value="&mvte:global:Sort_By;" />
+						<input type="hidden" name="Offset" value = "&mvte:global:CatListingNextOffset;" />
+						<input type="hidden" name="AllOffset" value = "&mvte:global:AllOffset;" />
+						<input type="hidden" name="CatListingOffset" value = "&mvte:global:CatListingNextOffset;" />
+						<input type="hidden" name="RelatedOffset" value = "&mvte:global:RelatedOffset;" />
+						<input type="hidden" name="SearchOffset" value = "&mvte:global:SearchOffset;" />
+						<mvt:item name="buttons" param="Next" />
+					</form>
+				</div>
+			</mvt:if>
+		</div>
+	</mvt:if>
+</mvt:if>
+
+<mvt:if expr="l.settings:category_listing:page_links:last_page GT 1">
+	<div class="page-links">
+		<span class="page-links-title">Page(s):</span>
+			<span class="page-links-container">
+				<mvt:if expr="l.settings:category_listing:page_links:current_page NE 1">
+					<a href="&mvte:category_listing:page_links:prev_link;" class="page-links-previous">&lt;</a>
+					<mvt:else>
+						<span class="page-links-previous page-links-deactivated">&lt;</span>
+				</mvt:if>
+				<mvt:if expr="l.settings:category_listing:page_links:current_page NE l.settings:category_listing:page_links:last_page">
+					<a href="&mvte:category_listing:page_links:next_link;" class="page-links-next">&gt;</a>
+					<mvt:else>
+						<span class="page-links-next page-links-deactivated">&gt;</span>
+				</mvt:if>
+				<span class="page-disp">
+					<mvt:if expr="NOT l.settings:category_listing:page_links:contains_first">
+						<a href="&mvte:category_listing:page_links:first_link;" class="page-links-inactive">1</a>...
+					</mvt:if>
+					<mvt:foreach iterator="pages" array="category_listing:page_links:pages">
+						<mvt:if expr="l.settings:category_listing:page_links:current_page EQ l.settings:pages:page_num">
+							<span class="page-links-active">&mvte:pages:page_num;</span>
+							<mvt:else>
+								<a href="&mvte:pages:link;" class="page-links-inactive">&mvte:pages:page_num;</a>
+						</mvt:if>
+					</mvt:foreach>
+					<mvt:if expr="NOT l.settings:category_listing:page_links:contains_last">
+						...<a href="&mvte:category_listing:page_links:last_link;" class="page-links-inactive">&mvte:category_listing:page_links:last_page;</a>
+					</mvt:if>
+				</span>
+			</span>
+	</div>
+
+</mvt:if>
+
+
+</div>

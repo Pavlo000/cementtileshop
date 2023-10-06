@@ -1,0 +1,7 @@
+{
+    "shipment": {
+        "b_height": 75,
+        "b_width": 75,
+        "constrain": "B"
+    }
+}

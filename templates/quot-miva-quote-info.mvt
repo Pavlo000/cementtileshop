@@ -1,0 +1,88 @@
+
+    <section class="o-layout">
+        <h2 class="o-layout__item c-heading-delta t-account-landing-section__heading">Requester</h2>
+        <div class="o-layout__item u-width-12" id="requester-fields">
+            <div id="bill-to">
+                
+                <div id="bill-to-fields">
+                    <div class="form_row">
+                        <label>First Name:</label>
+                        <div>&mvte:quote_info:quote:fname;</div>
+                    </div>
+                
+                    <div class="form_row">
+                        <label>Last Name:</label>
+                        <div>&mvte:quote_info:quote:lname;</div>
+                    </div>
+                
+                
+                    <div class="form_row">
+                        <label>Email Address:</label>
+                        <div>&mvte:quote_info:quote:email;</div>
+                    </div>
+                
+                
+                    <div class="form_row">
+                        <label>Phone Number:</label>
+                        <div>&mvte:quote_info:quote:phone;</div>
+                    </div>
+                
+                
+                    <div class="form_row">
+                        <label>Zip/Postal Code:</label>
+                        <div>&mvte:quote_info:quote:zip;</div>
+                    </div>
+                
+                
+                    <div class="form_row">
+                        <label>Country:</label>
+                        <div>&mvte:quote_info:quote:country;</div>
+                    </div>
+                
+                
+                    <div class="form_row">
+                        <label>Comment:</label>
+                        <div>&mvte:quote_info:quote:comment;</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bill-to">
+                <h2 class="fields-heading">Additional Information</h2>
+
+                <mvt:foreach iterator="custom_field" array="quote_info:quote:custom_fields">
+                    <table>
+                        <tr>
+                            <th>&mvte:custom_field:field_code;:</th>
+                            <mvt:if expr="l.settings:custom_field:option_id">
+                                <td>&mvte:custom_field:opt_code;</td>
+                            <mvt:elseif expr="NOT ISNULL l.settings:custom_field:data">
+                                <td>&mvte:custom_field:data;</td>
+                            <mvt:elseif expr="NOT ISNULL l.settings:custom_field:data_long">
+                                <td>&mvte:custom_field:data_long;</td>
+                            <mvt:else>
+                                <td>&nbsp;</td>
+                            </mvt:if>
+                        </tr>
+                    </table>
+                </mvt:foreach>
+            </div>
+        </div>
+        
+        <mvt:if expr="NOT ISNULL l.settings:quote:terms">
+            <p>&mvte:quote:terms;</p>
+        </mvt:if>
+    </section>
+
+    <style type="text/css">
+        #requester-fields label {
+            float: left;
+            width: 185px;
+            white-space: nowrap;
+            text-align: left;
+            padding: 2px 22px 3px 0;
+            clear: both;
+            font-weight: 700;
+        }
+    </style>
+    

@@ -1,0 +1,8 @@
+{
+    "code": "x-mini-basket",
+    "type": "L",
+    "branchless_filepath": "themes/colossus/extensions/mini-basket/mini-basket.css",
+    "is_global": true,
+    "active": true,
+    "attributes": []
+}

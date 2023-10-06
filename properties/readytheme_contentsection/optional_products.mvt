@@ -1,0 +1,46 @@
+
+                        <li class="c-form-list__item c-form-list__item--full">
+                            <span class="x-product-layout-purchase__pricing-current">
+                                <span id="price-value" style="font-weight:bold;" itemprop="price" content="&mvt:product:price;">&mvt:product:formatted_price;</span>
+                            </span>
+                        </li>
+
+                        <mvt:item name="discount_volume" param="product:id" />
+                        <li class="o-layout c-form-list__item x-product-layout-purchase__options">
+                            <mvt:item name="product_attributes" param="product:id" />
+                        </li>
+                        <li class="c-form-list__item c-form-list__item--full x-product-layout-purchase__cta">
+                            <div class="x-product-layout-purchase__message" data-hook="purchase-message"></div>
+                            <div class="o-layout">
+                                <mvt:if expr="l.settings:subscription:enabled AND l.settings:subscription:mandatory">
+                                    <mvt:if expr="l.settings:product:inv_level NE 'out'">
+                                        <div class="o-layout__item c-control-group x-product-layout-purchase__options-quantity">
+                                            <div class="c-control-group__field t-product-layout-purchase__quantity">
+                                                <label class="c-form-label u-text-bold u-font-small u-color-gray-40 is-required" for="l-quantity">qty</label>
+                                                <input id="l-quantity" class="c-form-input u-text-center u-color-gray-40" type="tel" name="Quantity" value="1">
+                                            </div>
+                                            <span class="t-product-layout-purchase__add-to-cart" onclick="document.forms.add.action = '&mvtj:urls:BASK:auto;'; document.forms.add.elements.Action.value = 'ADPR';">
+                                                <mvt:item name="buttons" param="AddToBasket"/>
+                                            </span>
+                                        </div>
+                                    </mvt:if>
+                                <mvt:else>
+                                    <div class="o-layout__item c-control-group x-product-layout-purchase__options-quantity">
+                                        <div class="c-control-group__field t-product-layout-purchase__quantity">
+                                            <label class="c-form-label u-text-bold u-font-small u-color-gray-50 is-required" for="l-quantity">qty</label>
+                                            <input id="l-quantity" class="c-form-input u-text-center u-color-gray-50" type="tel" name="Quantity" value="1">
+                                        </div>
+                                        <mvt:if expr="l.settings:product:inv_level NE 'out'">
+                                            <span class="t-product-layout-purchase__add-to-cart" onclick="document.forms.add.action = '&mvtj:urls:BASK:auto;'; document.forms.add.elements.Action.value = 'ADPR';">
+                                                <mvt:item name="buttons" param="AddToBasket"/>
+                                            </span>
+                                        </mvt:if>
+                                        <span class="t-product-layout-purchase__add-to-wish" data-mmnodisable="true">
+                                            <span onclick="document.forms.add.action = '&mvtj:urls:WISH:secure;'; document.forms.add.elements.Action.value = 'ATWL';">
+                                                <mvt:item name="buttons" param="AddToWishList"/>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </mvt:if>
+                            </div>
+                        </li>

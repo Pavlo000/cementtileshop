@@ -1,0 +1,9 @@
+<p class="u-text-bold u-text-uppercase">Helpful Info</p>
+<mvt:item name="readytheme" param="contentsection( 'shipping_delay' )" />
+<p class="u-color-gray-50 u-font-small u-text-regular">
+	<strong>We can help you along the way.</strong><br>
+	Give us a call or email.<br><br>
+	<strong>&mvt:global:store:email;</strong><br><br>
+	<strong>&mvt:global:store:phone;</strong><br><br>
+	<span class="u-font-small">M-F &nbsp; 9:00 am - 8:00 pm EST</span><br>
+</p>
