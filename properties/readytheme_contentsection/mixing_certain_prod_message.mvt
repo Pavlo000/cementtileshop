@@ -1,0 +1,13 @@
+<mvt:item name="ry_toolbelt" param="Array_Elements|g.length|g.marble_items" />
+<mvt:if expr="g.length GT 1">
+  The following marble items have to be shipped separately, please create a separate cart:
+<mvt:else>
+  The following marble item has to be shipped separately, please create a separate cart:
+</mvt:if>
+<br>
+<mvt:assign name="l.settings:index" value="1" />
+<mvt:foreach iterator="item" array="global:marble_items">
+  <br>
+  &emsp;&mvte:index;. &mvte:item:name;
+  <mvt:assign name="l.settings:index" value="l.settings:index + 1" />
+</mvt:foreach>

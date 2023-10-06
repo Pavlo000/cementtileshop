@@ -57,6 +57,12 @@
 			</div>
 		</mvt:if>
 
+		<mvt:if expr="g.mix_certain_prod_error">
+			<div class="message_sample u-font-small u-flex x-messages x-messages--error">
+				<mvt:item name="readytheme" param="contentsection( 'mixing_certain_prod_message' )" />
+			</div>
+		</mvt:if>
+
 
 		<br>
 		<table class="c-table-responsive t-basket__product-summary">
@@ -409,7 +415,7 @@
 					<td>
 						<br>
 
-		<mvt:if expr="g.minimum_qty_error">
+		<mvt:if expr="g.minimum_qty_error OR g.mix_certain_prod_error">
 			<mvt:assign name="l.settings:disabled" value="' disabled '" />
 		</mvt:if>
 	<mvt:if expr="g.Basket:sub_count GT 0 AND g.Basket:cust_id EQ 0">
@@ -432,7 +438,7 @@
 							<br>
 							<hr class="c-keyline">
 						</mvt:comment>
-					<mvt:if expr="NOT g.minimum_qty_error">
+					<mvt:if expr="NOT g.minimum_qty_error AND NOT g.mix_certain_prod_error">
 						<mvt:item name="readytheme" param="contentsection( 'paypalcp_configuration' )" />
 					</mvt:if>
 					</td>

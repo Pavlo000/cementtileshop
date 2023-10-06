@@ -9,8 +9,6 @@
     <mvt:assign name="l.result" value="miva_output_header( 'Status', '302 Moved Temporarily' )" />
 </mvt:if>     
 
-<mvt:comment><mvt:item name="ry_toolbelt" param="eval|varlist('l', 'basket', l.all_settings)" /></mvt:comment>
-
 
 <mvt:assign name="g.cart_has_samples" value="0" />
 <mvt:assign name="g.cart_has_non_samples" value="0" />
@@ -26,8 +24,31 @@
     </mvt:if>
 </mvt:foreach>
 
+
+<mvt:assign name="g.is_bskt_contns_marble_prod" value="0" />
+<mvt:assign name="g.is_bskt_contns_ordn_prod" value="0" />
+
+<mvt:foreach iterator="item" array="global_minibasket:items">
+  <mvt:if expr="(l.settings:item:price EQ 0) OR l.settings:item:code $ '!' CIN '511PPGAL!,511PPQT!,FLXCQ-1G!,FLXCQ-1G-00!,FLXCQ-1G-10!,FLXCQ-1G-27!,FLXCQ-1G-93!'">
+    <mvt:foreachcontinue />
+  </mvt:if>
+  
+  <mvt:assign name="g.is_marble" value="substring(l.settings:item:code, 1, 1) EQ 'K' AND len(l.settings:item:code) EQ 5 AND isxdigit(substring(l.settings:item:code, 2, 1)) AND isxdigit(substring(l.settings:item:code, 3, 1)) AND isxdigit(substring(l.settings:item:code, 4, 1)) AND isxdigit(substring(l.settings:item:code, 5, 1))" />
+
+  <mvt:if expr="g.is_marble">
+    <mvt:assign name="g.is_bskt_contns_marble_prod" value="1" />
+    <mvt:item name="ry_toolbelt" param="Assign|l.success|miva_array_insert( g.marble_items, l.all_settings:item, -1 )" />
+  <mvt:else>
+    <mvt:assign name="g.is_bskt_contns_ordn_prod" value="1" />
+  </mvt:if>
+</mvt:foreach>
+
 <mvt:if expr="g.cart_has_non_samples AND l.settings:global_minibasket:basket_count LT 4">
-    <mvt:assign name="g.minimum_qty_error" value="1" /> 
+    <mvt:assign name="g.minimum_qty_error" value="1" />
+</mvt:if>
+
+<mvt:if expr="g.is_bskt_contns_marble_prod GT 0 AND g.is_bskt_contns_ordn_prod GT 0">
+    <mvt:assign name="g.mix_certain_prod_error" value="1" /> 
 </mvt:if>
 
     
@@ -36,11 +57,8 @@
     <mvt:if expr="g.cart_has_samples AND g.cart_has_non_samples">
         <mvt:assign name="l.result" value="miva_output_header( 'Location', l.settings:urls:BASK:auto $ '?Action=RGRP&r=mixed_basket&Basket_group=' $ g.group_id )" />
         <mvt:assign name="l.result" value="miva_output_header( 'Status', '302 Moved Temporarily' )" />
-    </mvt:if>   
-
+    </mvt:if>
 </mvt:if>
-
-
 
 <mvt:comment>
     /**
